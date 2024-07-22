@@ -1,0 +1,102 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    background-color: $black;
+    color: $white;
+}
+body{
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(10,1fr);
+}
+
+header{
+    grid-column: 1/3;
+    .home{
+        display: flex;
+        flex-direction: column;
+        background-color: $gray;
+        gap: 1em;
+        padding: 1.4em 1.5em;
+        border-radius: $radius;
+        margin: 10px  5px;
+        box-sizing: border-box;
+        font-size: 1rem;
+        & a {
+            display: inline-block;
+            color: $white;
+            font-style: normal;
+            text-decoration: none;
+        }
+        & img {
+            width: 24px;
+            margin-right: 22px;
+            vertical-align: middle;
+            margin-bottom: 0.4em;
+        }
+      
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: column;
+        background-color: $gray;
+        gap: 1em;
+        padding: 1em 1em 0 1em ;
+        border-radius: $radius $radius 0 0;
+        margin: 0px 5px 0 5px;
+        box-sizing: border-box;
+        font-size: 1rem;
+    }
+
+    .playlist{
+        display: flex;
+        flex-direction: column;
+        background-color: $gray;
+        gap: .5em;
+        padding: .5em .7em;
+        border-radius: 0  0 $radius $radius;
+        margin: 0 5px 10px 5px;
+        box-sizing: border-box;
+        font-size: 1rem;
+    }
+}
+
+main{
+    grid-column: 3/9;
+    .portade{
+        background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
+        background-size: cover; 
+        background-position: center 4%; 
+        background-repeat: no-repeat; 
+        margin: 10px  5px 0 5px;
+        border-radius: $radius $radius 0 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+    .content{
+        background: linear-gradient( rgb(5 124 136) 0%, $gray 8%,);
+        padding: 20px;
+        margin: 0  5px 0 5px;
+    }
+}
+
+footer{
+    grid-column: 3/9;
+    .about__img{
+        background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
+        background-size: cover; 
+        background-position: center 4%; 
+        background-repeat: no-repeat; 
+        margin: 10px  5px 0 5px;
+        border-radius: $radius $radius 0 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;   
+    }
+  }
