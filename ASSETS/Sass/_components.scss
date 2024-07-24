@@ -513,5 +513,46 @@ main{
         }
     }
 }
-   
+
+footer{
+    .about{
+        .about__portade{
+            .about__title{
+                color: $whiteLight;
+                font-size: 20px;
+            }
+            .about__img{
+                height: 540px;
+                background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
+                background-size: cover; 
+                background-position: center 4%; 
+                background-repeat: no-repeat; 
+                margin: 10px  5px 0 5px;
+                border-radius: $radius $radius 0 0;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                gap: 10px;   
+                opacity: .8;
+                h4,p{
+                    color: $whiteLight;
+                    margin: 0;
+                }
+                p{
+                    color: $whiteLight;
+                    text-align: justify;
+                    width: 655px;
+                    max-height: 70px;
+                    line-height: 25px;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3; /* Limita a 3 líneas (ajústalo según tus necesidades) */
+                    -webkit-box-orient: vertical; /* Orientación vertical */
+                    overflow: hidden; /* Oculta el desbordamiento */
+                }
+            }
+        }
+    }
+}
 

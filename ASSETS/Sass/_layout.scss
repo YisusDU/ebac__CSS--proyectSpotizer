@@ -87,16 +87,12 @@ main{
 
 footer{
     grid-column: 3/9;
-    .about__img{
-        background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
-        background-size: cover; 
-        background-position: center 4%; 
-        background-repeat: no-repeat; 
-        margin: 10px  5px 0 5px;
-        border-radius: $radius $radius 0 0;
+    .about{
+        background-color:  $gray;
         padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 80px;   
+        margin: 0  5px 0 5px;
+        
     }
+    
+
   }

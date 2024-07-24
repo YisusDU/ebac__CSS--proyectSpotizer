@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -86,17 +87,10 @@ main .content {
 footer {
   grid-column: 3/9;
 }
-footer .about__img {
-  background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
-  background-size: cover;
-  background-position: center 4%;
-  background-repeat: no-repeat;
-  margin: 10px 5px 0 5px;
-  border-radius: 10px 10px 0 0;
+footer .about {
+  background-color: #0f0f0f;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
+  margin: 0 5px 0 5px;
 }
 
 header .nav a {
@@ -1061,4 +1055,40 @@ main .findOn .findOn__albums .album p {
 }
 main .findOn .findOn__albums .album .other_caption {
   text-transform: capitalize;
+}
+
+footer .about .about__portade .about__title {
+  color: #fff;
+  font-size: 20px;
+}
+footer .about .about__portade .about__img {
+  height: 540px;
+  background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
+  background-size: cover;
+  background-position: center 4%;
+  background-repeat: no-repeat;
+  margin: 10px 5px 0 5px;
+  border-radius: 10px 10px 0 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  opacity: 0.8;
+}
+footer .about .about__portade .about__img h4, footer .about .about__portade .about__img p {
+  color: #fff;
+  margin: 0;
+}
+footer .about .about__portade .about__img p {
+  color: #fff;
+  text-align: justify;
+  width: 655px;
+  max-height: 70px;
+  line-height: 25px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limita a 3 líneas (ajústalo según tus necesidades) */
+  -webkit-box-orient: vertical; /* Orientación vertical */
+  overflow: hidden; /* Oculta el desbordamiento */
 }/*# sourceMappingURL=main.css.map */
