@@ -9,13 +9,18 @@ $radius: 10px;
 $almostTrans: rgba(41, 41, 41, 0.4);
 $circleRadius: 30px ;
 
-@mixin artist{
+@mixin artist-album($shape){
     display: flex;
     flex-direction: row;
     align-items: center;
     img{
         width: 55px;
-        border-radius: 50%;
+        @if $shape == circle{  
+            border-radius: 50%;
+        } @else{
+            border-radius: $radius;
+        }
+        
     }
     h4, p{
         padding-top: 5px;
@@ -24,21 +29,7 @@ $circleRadius: 30px ;
         margin: 5px 0 0 0;
     }
 }
-@mixin album{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    img{
-        width: 55px;
-        border-radius: $radius;
-    }
-    h4, p{
-        padding-top: 5px;
-    }
-    p {
-        margin: 5px 0 0 0;
-    }
-}
+
 
 @mixin discografy{
     display: flex;
@@ -86,7 +77,6 @@ $circleRadius: 30px ;
     }
     p{
         margin-top: 5px;
-
         max-width: 195px;
         max-height: 33px;
         font-size: .8rem;

@@ -1076,6 +1076,7 @@ footer .about .about__portade .about__img {
   align-items: flex-start;
   gap: 10px;
   opacity: 0.8;
+  border-radius: 10px;
 }
 footer .about .about__portade .about__img h4, footer .about .about__portade .about__img p {
   color: #fff;
@@ -1091,4 +1092,61 @@ footer .about .about__portade .about__img p {
   -webkit-line-clamp: 3; /* Limita a 3 líneas (ajústalo según tus necesidades) */
   -webkit-box-orient: vertical; /* Orientación vertical */
   overflow: hidden; /* Oculta el desbordamiento */
+}
+footer .about .articlesPromotion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .about .articlesPromotion .articlesPromotion__title {
+  font-size: 1.5em;
+  margin: 5px 5px 0px 5px;
+  color: #fff;
+}
+footer .about .articlesPromotion .articlesPromotion__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 240px;
+  gap: 20px;
+}
+footer .about .articlesPromotion .articlesPromotion__content .promotion {
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .about .articlesPromotion .articlesPromotion__content .promotion img {
+  width: 55px;
+  border-radius: 10px;
+}
+footer .about .articlesPromotion .articlesPromotion__content .promotion h4, footer .about .articlesPromotion .articlesPromotion__content .promotion p {
+  padding-top: 5px;
+}
+footer .about .articlesPromotion .articlesPromotion__content .promotion p {
+  margin: 5px 0 0 0;
+}
+footer .about .articlesPromotion .articlesPromotion__content .promotion img {
+  border-radius: 2px;
+}
+footer .about .articlesPromotion .articlesPromotion__content .promotion h4 {
+  margin: 0;
+  color: #fff;
+  width: 450px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+footer .about .articlesPromotion .articlesPromotion__content .promotion p {
+  font-size: 0.9rem;
+  width: 450px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+footer .about .articlesPromotion .articlesPromotion__content .promotion .promotion__link {
+  width: 20px;
+  position: relative;
+  bottom: 13px;
+  right: 10px;
 }/*# sourceMappingURL=main.css.map */

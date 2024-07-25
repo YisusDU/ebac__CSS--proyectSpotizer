@@ -138,11 +138,11 @@ header{
             }
         }
         .artist{
-            @include artist;
+            @include artist-album(circle);
             
         }
         .album{
-            @include album;
+            @include artist-album(square);
         }
     }
 }
@@ -536,6 +536,7 @@ footer{
                 align-items: flex-start;
                 gap: 10px;   
                 opacity: .8;
+                border-radius: $radius;
                 h4,p{
                     color: $whiteLight;
                     margin: 0;
@@ -550,6 +551,51 @@ footer{
                     -webkit-line-clamp: 3; /* Limita a 3 líneas (ajústalo según tus necesidades) */
                     -webkit-box-orient: vertical; /* Orientación vertical */
                     overflow: hidden; /* Oculta el desbordamiento */
+                }
+            }
+        }
+        .articlesPromotion{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .articlesPromotion__title{
+                font-size: 1.5em;
+                margin: 5px 5px 0px 5px;
+                color: $whiteLight;
+            }
+            .articlesPromotion__content{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                height: 240px;
+                gap: 20px;
+                .promotion{
+                    gap: 15px;
+                    @include artist-album(square);
+                    img{
+                        border-radius: 2px;
+                    }
+                   h4{
+                    margin: 0;
+                    color: $whiteLight;
+                    width: 450px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                   }
+                   p{
+                    font-size: .9rem;
+                    width: 450px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                   }
+                   .promotion__link{
+                    width: 20px;
+                    position: relative;
+                    bottom: 13px;
+                    right: 10px;
+                   }
                 }
             }
         }
