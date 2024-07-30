@@ -522,7 +522,7 @@ footer{
                 font-size: 20px;
             }
             .about__img{
-                height: 540px;
+                height: 520px;
                 background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
                 background-size: cover; 
                 background-position: center 4%; 
@@ -549,6 +549,7 @@ footer{
                     line-height: 25px;
                     display: -webkit-box;
                     -webkit-line-clamp: 3; /* Limita a 3 líneas (ajústalo según tus necesidades) */
+                    line-clamp: 3;
                     -webkit-box-orient: vertical; /* Orientación vertical */
                     overflow: hidden; /* Oculta el desbordamiento */
                 }
@@ -598,6 +599,66 @@ footer{
                    }
                 }
             }
+        }
+//experimentación con Blackbox//
+        .aboutLinks{
+            
+            h2{
+                color: $whiteLight;
+                font-size: 1rem;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                list-style-type: none;
+                padding: 0;
+                justify-content: flex-start;
+            }
+
+        a {
+            color: $white;
+            text-decoration: none;
+            text-wrap: wrap;
+            i{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            img{
+                width: 20px;
+            }
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: $whiteLight;
+        }
+
+        .social-media {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-media a {
+            display: flex;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgb(51, 51, 51);
+            color: black;
+            text-align: center;
+            line-height: 30px;
+           /* transition: background-color 0.3s;*/
+            justify-content: center;
+            align-items: center;
+            padding: 3px;
+        }
+
+        .social-media a:hover {
+            background-color: #686868;
+        }
         }
     }
 }
