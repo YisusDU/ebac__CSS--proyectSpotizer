@@ -635,13 +635,13 @@ footer{
             color: $whiteLight;
         }
 
-        .social-media {
+        .social__media {
             margin-top: 20px;
             display: flex;
             gap: 10px;
         }
 
-        .social-media a {
+        .social__media a {
             display: flex;
             width: 30px;
             height: 30px;
@@ -656,10 +656,19 @@ footer{
             padding: 3px;
         }
 
-        .social-media a:hover {
+        .social__media a:hover {
             background-color: #686868;
         }
         }
+        .lastLinks{
+            .footer__links{
+                @include footerLastLinks;
+            }
+            .copyright {
+                margin-left: 170px;
+            }
+        }
+
     }
 }
 
