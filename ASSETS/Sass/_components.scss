@@ -419,6 +419,8 @@ main{
         .discografy__popular{
             display: flex;
             overflow: hidden;
+            justify-content: center;
+            gap: 7px;
             .popular{
                 @include discografy;
             }
@@ -426,9 +428,12 @@ main{
         .discografy__albums{
             display: flex;
             overflow: hidden;
+            justify-content: center;
+            gap: 7px;
             .albums{
                 @include discografy;
             }
+            
         }
     }
     .withPxndx{
@@ -438,8 +443,16 @@ main{
         .withPxndx__collabs{
             display: flex;
             overflow: hidden;
+            justify-content: center;
+            gap: 7px;
         .collab{
             @include discografy;
+            figure{
+                width: 180px;
+            }
+            p{
+                width: 180px;
+            }
         }
         }
        
@@ -452,6 +465,8 @@ main{
         .fansLikes__artist{
             display: flex;
             overflow: hidden;
+            justify-content: center;
+            gap: 7px;
             .artist{
                 @include discografy;
                 img:first-of-type{
@@ -467,6 +482,8 @@ main{
         .displayon__others{
             display: flex;
             overflow: hidden;
+            justify-content: center;
+            gap: 7px;
             .other{
                 @include discografy;
                 .other_caption{
@@ -487,6 +504,8 @@ main{
         .playlist__song{
             display: flex;
             overflow: hidden;
+            justify-content: flex-start;
+            gap: 7px;
             .song{
                 @include discografy;
             }
@@ -503,6 +522,8 @@ main{
         .findOn__albums{
             display: flex;
             overflow: hidden;
+            justify-content: center;
+            gap: 7px;
             .album{
                 @include discografy;
                 .other_caption{
