@@ -92,17 +92,17 @@ footer .about {
   padding: 20px;
   margin: 0 5px 0 5px;
 }
-footer .aboutLinks {
+footer .about .aboutLinks {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
 }
-footer hr {
+footer .about hr {
   width: 95%;
   border: 0.1px solid rgba(192, 192, 192, 0.1);
 }
-footer .lastLinks {
+footer .about .lastLinks {
   padding-top: 30px;
   display: flex;
   flex-direction: row;
@@ -114,7 +114,6 @@ footer .lastLinks {
   font-size: 0.8rem;
   height: 100px;
 }
-
 header .nav a {
   display: inline-block;
   color: #c0c0c0;

@@ -91,29 +91,31 @@ footer{
         background-color:  $gray;
         padding: 20px;
         margin: 0  5px 0 5px;
+        .aboutLinks{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        hr{
+            width: 95%;
+            border: 0.1px solid rgba($color: $white, $alpha: .1);
+        }
+        .lastLinks{
+            padding-top: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: baseline;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: .8rem;
+            height: 100px;
+        }
+    }
+    .reproductionBar{
         
-    }
-    .aboutLinks{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 20px;
-    }
-    hr{
-        width: 95%;
-        border: 0.1px solid rgba($color: $white, $alpha: .1);
-    }
-    .lastLinks{
-        padding-top: 30px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: baseline;
-        max-width: 1200px;
-        margin: 0 auto;
-        text-align: center;
-        font-size: .8rem;
-        height: 100px;
     }
 
   }
