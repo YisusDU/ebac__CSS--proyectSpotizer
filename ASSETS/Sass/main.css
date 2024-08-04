@@ -82,28 +82,31 @@ main .portade {
   display: flex;
   flex-direction: column;
   gap: 80px;
+  width: 965px;
 }
 main .content {
   grid-column: 1/9;
   background: linear-gradient(rgb(5, 124, 136) 0%, #0f0f0f 8%);
   padding: 20px;
   margin: 0 5px 0 5px;
+  width: 965px;
 }
 main .rigthSide {
   grid-column: 9/11;
   grid-row: 1/3;
   background-color: #0f0f0f;
-  padding: 20px;
-  margin: 10px 5px 0px 5px;
-  width: 300px;
+  padding: 15px;
+  margin: 10px 5px 0px 3px;
+  width: 377px;
   border-radius: 10px 10px;
 }
 
 footer {
   grid-column: 3/9;
+  width: 965px;
 }
 footer .about {
-  width: 1023px;
+  width: 965px;
   grid-column: 2/3;
   background-color: #0f0f0f;
   padding: 20px;
@@ -1124,6 +1127,98 @@ main .findOn .findOn__albums .album p {
 }
 main .findOn .findOn__albums .album .other_caption {
   text-transform: capitalize;
+}
+main aside .amentesSunt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+main aside .amentesSunt .amentes__Song {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 57px;
+  gap: 225px;
+  margin: 0px;
+  width: 405px;
+  position: relative;
+}
+main aside .amentesSunt .amentes__Song .actualSong__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main aside .amentesSunt .amentes__Song .actualSong__buttons a:first-of-type {
+  color: #fff;
+  text-decoration: none;
+  font-size: 22px;
+}
+main aside .amentesSunt .amentes__Song .actualSong__buttons a:first-of-type h4 {
+  margin-bottom: 15px;
+}
+main aside .amentesSunt .amentes__Song .actualSong__buttons a:last-of-type {
+  color: #c0c0c0;
+  opacity: 0.8;
+  text-decoration: none;
+  font-size: 14px;
+}
+main aside .amentesSunt .amentes__Song .actualSong__buttons:first-child .button__title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+main aside .amentesSunt .amentes__Song .actualSong__buttons:last-child {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+main aside .amentesSunt .amentes__Song .actualSong__buttons:last-child img {
+  scale: 0.8;
+  cursor: pointer;
+}
+main aside .amentesSunt .amentes__img {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0;
+}
+main aside .amentesSunt .amentes__img .img__figure {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 375px;
+  align-items: flex-start;
+}
+main aside .amentesSunt .amentes__img .img__figure .img__portade {
+  width: 375px;
+  border-radius: 10px;
+}
+main aside .amentesSunt .amentes__img .img__figure .img__title {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  margin-bottom: 0;
+}
+main aside .amentesSunt .amentes__img .img__figure .img__description {
+  margin: 0;
+}
+main aside .amentesSunt .amentes__img i {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #00ff6a;
+  border-radius: 50%;
+  padding: 3px;
+  position: relative;
+  bottom: 35px;
+  scale: 0.7;
+  left: 5px;
 }
 
 footer .about .about__portade .about__title {

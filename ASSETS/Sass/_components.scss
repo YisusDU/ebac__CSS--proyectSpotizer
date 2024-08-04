@@ -533,6 +533,87 @@ main{
             
         }
     }
+    aside{
+        .amentesSunt{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            .amentes__Song{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                height: 57px;
+                gap: 225px;
+                margin: 0px;
+                width: 405px;
+                position: relative;
+               .actualSong__buttons{
+                    @include titleButtons;
+                    &:first-child{
+                        .button__title{
+                            font-size: 1rem;
+                            font-weight: bold;
+                    }
+                    }
+                    &:last-child{
+                        display: flex;
+                        flex-direction: row;
+                        gap: 20px;
+                        img {
+                            scale: .8;
+                            cursor: pointer;
+                        }
+                    }
+                
+               }
+            }
+            .amentes__img{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                padding: 0;
+                .img__figure{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0;
+                    margin: 0;
+                    width: 375px;
+                    align-items: flex-start;
+                    .img__portade{
+                        width: 375px;
+                        border-radius: $radius;
+                    }
+                    .img__title{
+                        color: $whiteLight;
+                        font-weight: bolder;
+                        font-size: 1.4rem;
+                        margin-bottom: 0;
+                    }
+                    .img__description{
+                        margin: 0;
+                    }
+                }
+                
+                i{
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #00ff6a;
+                    border-radius: 50%;
+                    padding: 3px;
+                    position: relative;
+                    bottom: 35px;
+                    scale: 0.7;
+                    left: 5px;
+                }
+               }
+        }
+    }
 }
 
 footer{
