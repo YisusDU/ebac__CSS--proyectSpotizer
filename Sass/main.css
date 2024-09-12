@@ -1128,14 +1128,14 @@ main .findOn .findOn__albums .album p {
 main .findOn .findOn__albums .album .other_caption {
   text-transform: capitalize;
 }
-main aside .amentesSunt {
+main .rigthSide .amentesSunt {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   position: relative;
 }
-main aside .amentesSunt .amentes__Song {
+main .rigthSide .amentesSunt .amentes__Song {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -1145,46 +1145,46 @@ main aside .amentesSunt .amentes__Song {
   width: 405px;
   position: relative;
 }
-main aside .amentesSunt .amentes__Song .actualSong__buttons {
+main .rigthSide .amentesSunt .amentes__Song .actualSong__buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-main aside .amentesSunt .amentes__Song .actualSong__buttons a:first-of-type {
+main .rigthSide .amentesSunt .amentes__Song .actualSong__buttons a:first-of-type {
   color: #fff;
   text-decoration: none;
   font-size: 22px;
 }
-main aside .amentesSunt .amentes__Song .actualSong__buttons a:first-of-type h4 {
+main .rigthSide .amentesSunt .amentes__Song .actualSong__buttons a:first-of-type h4 {
   margin-bottom: 15px;
 }
-main aside .amentesSunt .amentes__Song .actualSong__buttons a:last-of-type {
+main .rigthSide .amentesSunt .amentes__Song .actualSong__buttons a:last-of-type {
   color: #c0c0c0;
   opacity: 0.8;
   text-decoration: none;
   font-size: 14px;
 }
-main aside .amentesSunt .amentes__Song .actualSong__buttons:first-child .button__title {
+main .rigthSide .amentesSunt .amentes__Song .actualSong__buttons:first-child .button__title {
   font-size: 1rem;
   font-weight: bold;
 }
-main aside .amentesSunt .amentes__Song .actualSong__buttons:last-child {
+main .rigthSide .amentesSunt .amentes__Song .actualSong__buttons:last-child {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
-main aside .amentesSunt .amentes__Song .actualSong__buttons:last-child img {
+main .rigthSide .amentesSunt .amentes__Song .actualSong__buttons:last-child img {
   scale: 0.8;
   cursor: pointer;
 }
-main aside .amentesSunt .amentes__img {
+main .rigthSide .amentesSunt .amentes__img {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding: 0;
 }
-main aside .amentesSunt .amentes__img .img__figure {
+main .rigthSide .amentesSunt .amentes__img .img__figure {
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -1192,20 +1192,20 @@ main aside .amentesSunt .amentes__img .img__figure {
   width: 375px;
   align-items: flex-start;
 }
-main aside .amentesSunt .amentes__img .img__figure .img__portade {
+main .rigthSide .amentesSunt .amentes__img .img__figure .img__portade {
   width: 375px;
   border-radius: 10px;
 }
-main aside .amentesSunt .amentes__img .img__figure .img__title {
+main .rigthSide .amentesSunt .amentes__img .img__figure .img__title {
   color: #fff;
   font-weight: bolder;
   font-size: 1.4rem;
   margin-bottom: 0;
 }
-main aside .amentesSunt .amentes__img .img__figure .img__description {
+main .rigthSide .amentesSunt .amentes__img .img__figure .img__description {
   margin: 0;
 }
-main aside .amentesSunt .amentes__img i {
+main .rigthSide .amentesSunt .amentes__img i {
   margin: 0;
   padding: 0;
   display: flex;
@@ -1219,6 +1219,78 @@ main aside .amentesSunt .amentes__img i {
   bottom: 35px;
   scale: 0.7;
   left: 5px;
+}
+main .rigthSide .about__artist {
+  width: 375px;
+  margin: 20px auto;
+  background-color: #181818;
+  border-radius: 10px;
+  overflow: hidden;
+}
+main .rigthSide .about__artist .artist__photo {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 240px;
+  background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
+  background-size: cover;
+  background-position: center;
+}
+main .rigthSide .about__artist .artist__photo h2 {
+  padding: 19px;
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  height: 20px;
+}
+main .rigthSide .about__artist .artist__descript {
+  padding: 20px;
+  height: 130px;
+}
+main .rigthSide .about__artist .artist__descript h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #ffffff;
+}
+main .rigthSide .about__artist .artist__descript .artist__ear {
+  font-size: 16px;
+  color: #b3b3b3;
+  margin-bottom: 0;
+}
+main .rigthSide .about__artist .artist__descript .artist__text {
+  font-size: 13px;
+  color: #b3b3b3;
+  margin-top: 0;
+  padding: 0;
+  text-align: justify;
+  word-spacing: -2px;
+  position: relative;
+  bottom: 13px;
+  height: 45px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: auto;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .rigthSide .about__artist .artist__descript button {
+  position: relative;
+  left: 224px;
+  bottom: 25px;
+  display: inline-block;
+  padding: 7px 14px;
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0;
+}
+main .rigthSide .about__artist .artist__descript .button:hover {
+  background-color: #444;
 }
 
 footer .about .about__portade .about__title {
