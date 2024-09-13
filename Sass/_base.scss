@@ -34,11 +34,12 @@ $circleRadius: 30px ;
 @mixin discografy{
     display: flex;
     flex-direction: column;
-    margin: 5px;
+    align-items: center;
+    margin: 0px;
     figure{
         display: flex;
         flex-direction: column;
-        margin: 5px;
+        margin: 0px;
         width: 180px;
         img{
             position: relative;
@@ -129,5 +130,41 @@ $circleRadius: 30px ;
         text-decoration: none;
         color: $whiteLight;
     }
+}
+
+@mixin promotion{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 240px;
+    gap: 20px;
+    .promotion{
+        gap: 15px;
+        @include artist-album(square);
+        img{
+            border-radius: 2px;
+        }
+       h4{
+        margin: 0;
+        color: $whiteLight;
+        width: 450px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+       }
+       p{
+        font-size: .9rem;
+        width: 450px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+       }
+       .promotion__link{
+        width: 20px;
+        position: relative;
+        bottom: 13px;
+        right: 10px;
+       }
+}
 }
 
