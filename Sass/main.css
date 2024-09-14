@@ -1,4 +1,17 @@
 @charset "UTF-8";
+header .nav .menu i:hover, header .home i:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+header .nav .options i:hover img:hover, header .nav .menu div i:hover img:hover {
+  background-color: #242424;
+}
+
+header .nav .buttons button:hover {
+  background-color: #393939;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -138,6 +151,32 @@ footer .reproductionBar {
   background-color: black;
 }
 
+body i, body a {
+  opacity: 0.7 !important;
+}
+body i:hover, body a:hover {
+  opacity: 1 !important;
+  color: #fff !important;
+  transition: 0.5s;
+}
+body img {
+  z-index: 0 !important;
+}
+body img i img {
+  z-index: 1 !important;
+}
+body button:hover {
+  scale: 1.05;
+  transition: 0.5s;
+}
+
+header .home i:hover a {
+  color: #fff;
+  font-weight: bold;
+}
+header .home i:hover img {
+  scale: 1.1;
+}
 header .nav a {
   display: inline-block;
   color: #c0c0c0;
@@ -157,6 +196,17 @@ header .nav .menu {
 header .nav .menu div {
   margin-right: -25px;
 }
+header .nav .menu div i:hover img:hover {
+  opacity: 1;
+  border-radius: 50%;
+}
+header .nav .menu i:hover a {
+  color: #fff;
+  font-weight: bold;
+}
+header .nav .menu i:hover img {
+  scale: 1.1;
+}
 header .nav .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -166,7 +216,7 @@ header .nav .buttons {
 }
 header .nav .buttons .buttons__playlist, header .nav .buttons .buttons__artist, header .nav .buttons .buttons__albums {
   background-color: #242424;
-  color: #c0c0c0;
+  color: #fff;
   padding: 10px;
   border-radius: 30px;
   border: none;
@@ -175,8 +225,13 @@ header .nav .options {
   display: flex;
   justify-content: space-between;
 }
+header .nav .options i:hover img:hover {
+  opacity: 1;
+  border-radius: 50%;
+}
 header .nav .options img {
   vertical-align: -7px;
+  scale: 1.1;
 }
 header .nav .options .options__list img {
   width: 25px;
@@ -1303,7 +1358,7 @@ main .rigthSide .about__artist .artist__descript .artist__text {
 }
 main .rigthSide .about__artist .artist__descript button {
   position: relative;
-  left: 224px;
+  left: 220px;
   bottom: 25px;
   display: inline-block;
   padding: 7px 14px;
@@ -1316,9 +1371,6 @@ main .rigthSide .about__artist .artist__descript button {
   background-color: transparent;
   border: 1px solid #464646;
   font-weight: bold;
-}
-main .rigthSide .about__artist .artist__descript .button:hover {
-  background-color: #444;
 }
 main .rigthSide .credits {
   width: 375px;
@@ -1589,6 +1641,12 @@ footer .about .about__portade .about__img p {
   line-clamp: 3;
   -webkit-box-orient: vertical; /* Orientación vertical */
   overflow: hidden; /* Oculta el desbordamiento */
+}
+footer .about .about__portade .about__img:hover {
+  color: #fff;
+  scale: 1.02;
+  transition: 0.5s;
+  opacity: 0.9;
 }
 footer .about .articlesPromotion {
   display: flex;

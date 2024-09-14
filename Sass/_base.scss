@@ -8,6 +8,47 @@ $greenStrong: #00ff6a;
 $radius: 10px;
 $almostTrans: rgba(41, 41, 41, 0.4);
 $circleRadius: 30px ;
+$fontBold: bold;
+
+%hovercolor1{
+    color: $whiteLight;
+    opacity: 1;
+}
+
+%hoversize{
+    scale: 1.1;
+}
+
+%hoverBackground{
+    background-color: $graylight;
+}
+
+%hoverbackGround2{
+    background-color: #393939;
+}
+
+@mixin hoverI{
+    i{
+        &:hover{
+            img:hover{
+                opacity: 1;
+                border-radius: 50%;
+                @extend %hoverBackground;
+            }
+        }
+    }
+
+}
+
+@mixin hoversVarios1{
+    a {
+        color: $whiteLight;
+        font-weight: $fontBold;
+    }
+    img{
+        scale: 1.1;
+    }
+}
 
 @mixin artist-album($shape){
     display: flex;
@@ -167,4 +208,6 @@ $circleRadius: 30px ;
        }
 }
 }
+
+
 

@@ -1,4 +1,37 @@
+body{
+    i,a{
+        opacity: .7 !important;
+        &:hover{
+            opacity: 1 !important;
+            color: $whiteLight !important;
+            transition: .5s;
+        }
+    }
+    img{
+        z-index: 0 !important;
+        i{
+            img{
+                z-index: 1 !important;
+            }
+        }
+    }
+    button:hover{
+        scale: 1.05;
+        transition: .5s;
+    }
+    
+}
+
 header{
+    .home{
+        i{
+            &:hover{
+            @extend %hovercolor1;
+            @include hoversVarios1; 
+            }
+        }
+    }
+    
     .nav{
         & a {
             display: inline-block;
@@ -18,27 +51,41 @@ header{
             justify-content: space-between;
             & div{
                 margin-right: -25px;
+                @include hoverI;
             }
+            i{
+                &:hover{
+                    @extend %hovercolor1;
+                    @include hoversVarios1; 
+                }
+            
+            }
+
         }
         .buttons{
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            justify-content: first baseline;
+            justify-content:first baseline;
             gap: 10px;
             .buttons__playlist, .buttons__artist, .buttons__albums{
                 background-color: $graylight;
-                color: $white;
+                color: $whiteLight;
                 padding: 10px;
                 border-radius: $circleRadius;
                 border: none;
+            }
+            button:hover{
+                @extend %hoverbackGround2;
             }
         }
         .options{
             display: flex;
             justify-content: space-between;
+            @include hoverI;
             & img{
                 vertical-align: -7px;
+                scale: 1.1;
             }
             .options__list img{
                 width:25px ;
@@ -677,7 +724,7 @@ main{
                 }
                 button {
                     position: relative;
-                    left: 224px;
+                    left: 220px;
                     bottom: 25px;
                     display: inline-block;
                     padding: 7px 14px;
@@ -690,11 +737,9 @@ main{
                     background-color: transparent;
                     border: 1px solid #464646;
                     font-weight: bold;
+                    
+                }
                 
-                }
-                .button:hover {
-                    background-color: #444;
-                }
             }
             
         }
@@ -886,6 +931,12 @@ footer{
                     line-clamp: 3;
                     -webkit-box-orient: vertical; /* Orientación vertical */
                     overflow: hidden; /* Oculta el desbordamiento */
+                }
+                &:hover{
+                    color: $whiteLight;
+                    scale: 1.02;
+                    transition: .5s;
+                    opacity: .9;
                 }
             }
         }
