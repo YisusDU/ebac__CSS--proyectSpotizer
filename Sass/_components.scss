@@ -95,6 +95,9 @@ header{
     }
     
     .playlist{
+        overflow-y: auto;
+        height: 530px;
+
         & a {
             display: inline-block;
             color: $white;
@@ -340,6 +343,7 @@ main{
             align-items: center;
             gap: 10px;
             margin: 10px 0 10px 0;
+            position: relative;
            .song__name{
             display: flex;
             flex-direction: row;
@@ -427,6 +431,7 @@ main{
     }
     .see{
         margin-top: 20px;
+        position: relative;
         .see__more{
             font-weight: bold;
             color: $white;
