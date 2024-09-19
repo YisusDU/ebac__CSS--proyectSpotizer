@@ -9,11 +9,11 @@ html{
 body{
     display: grid;
     margin: 0;
-    grid-template-columns: repeat(10,1fr);
+    grid-template-columns: repeat(5,1fr);
 }
 
 header{
-    grid-column: 1/3;
+    grid-column: 1/2;
     max-width: 597px;
     width: 434px;
     height: 810px;
@@ -67,16 +67,16 @@ header{
     }
 }
 
-.container__central{
+
+main{
+    z-index: .5;
+    display: grid;
+    grid-column: 3/5;
+    grid-template-columns: 2fr 1fr;
     overflow: hidden;
     width: max-content;
     overflow-y: auto;
     height: 815px;
-}
-main{
-    display: grid;
-    grid-column: 3/11;
-    grid-template-columns: 2fr 1fr;
     .portade{
         grid-column: 1/9;
         background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
@@ -115,9 +115,9 @@ main{
     }
 }
 
-footer{
+.footer{
     grid-column: 3/9;
-    width: 965px;
+    width: 1015px;
     .about{
         width: 965px;
         grid-column: 2/3;
@@ -147,9 +147,21 @@ footer{
             height: 100px;
         }
     }
-    .reproductionBar{
-        background-color: black;
-    }
-
+  }
+ 
+  .controls{
+    grid-column: 3/5;
+    background-color: #979797;
+    color: #fff;
+    width: 1870px;
+    height: 105px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    left: -430px;
+    bottom: -5px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 10px;
+    box-sizing: border-box;
   }
 
