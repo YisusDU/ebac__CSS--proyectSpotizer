@@ -27,6 +27,195 @@ $fontBold: bold;
     background-color: #393939;
 }
 
+@mixin scrollBar{
+    /*Estilos para la escroll bar*/
+    -webkit-scrollbar{
+        /* Firefox scrollbar */
+        scrollbar-width: thin; /* Opción: auto, thin */
+        scrollbar-color: #888 transparent; /* thumb color y track color */
+        opacity: 0;
+        display: none;
+        z-index: 1;
+        transition: all 0.25s;
+    }
+    /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
+    &::-webkit-scrollbar {
+        width: 7px; /* Ancho de la barra de desplazamiento */
+        opacity: 0;
+        display: none;
+        transition: all 0.25s;
+        z-index: 1;
+    }
+
+    /* Estilo del "track" de la barra (fondo de la barra de scroll) */
+    &::-webkit-scrollbar-track {
+        background: transparent; /* Color del track */
+        border-radius: 6px;   /* Bordes redondeados */
+        opacity: 0;
+        display: none;
+        transition: all 0.25s;
+        z-index: 1;
+    }
+
+
+    /* Estilo de la "thumb" (la parte que se mueve) */
+    &::-webkit-scrollbar-thumb {
+        background-color: #888; /* Color de la thumb */
+        border-radius: 6px;     /* Bordes redondeados */
+        border: 3px solid transparent; /* Espacio alrededor de la thumb */
+        opacity: 0;
+        display: none;
+        transition: all 0.25s;
+        z-index: 1;
+    }
+
+    /* Estilo de la thumb al pasar el ratón por encima */
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #555; /* Cambia el color al pasar el ratón */
+        opacity: .9;
+        display: none;
+        transition: all 0.25s;
+        z-index: 1;
+    }
+    //---------------------------------
+    &:hover{
+        -webkit-scrollbar{
+            /* Firefox scrollbar */
+            scrollbar-width: thin; /* Opción: auto, thin */
+            scrollbar-color: #888 transparent; /* thumb color y track color */
+            opacity: .9;
+            display: block;
+            z-index: 0;
+            transition: all 0.25s;
+            z-index: 1;
+            &:hover{
+                scrollbar-color: #b1b1b1 transparent;
+                opacity: .9;
+                transition: all 0.25s;
+                z-index: 1;
+            }
+        }
+        /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
+        &::-webkit-scrollbar {
+            width: 7px; /* Ancho de la barra de desplazamiento */
+            opacity: .9;
+            display: block;
+            transition: all 0.25s;
+            z-index: 1;
+            &:hover{
+                scrollbar-color: #b1b1b1 transparent;
+                opacity: .9;
+                display: block;
+                transition: all 0.25s;
+                z-index: 1;
+            }
+        }
+
+        /* Estilo del "track" de la barra (fondo de la barra de scroll) */
+        &::-webkit-scrollbar-track {
+            background: transparent; /* Color del track */
+            border-radius: 6px;   /* Bordes redondeados */
+            opacity: .9;
+            display: block;
+            transition: all 0.25s;
+            z-index: 1;
+            &:hover{
+                display: block;
+                opacity: .9;
+                transition: all 0.25s;
+                z-index: 1;
+            }
+        }
+        /* Estilo de la "thumb" (la parte que se mueve) */
+    &::-webkit-scrollbar-thumb {
+        background-color: #888; /* Color de la thumb */
+        border-radius: 6px;     /* Bordes redondeados */
+        border: 3px solid transparent; /* Espacio alrededor de la thumb */
+        opacity: .9;
+        display: block;
+        transition: all 0.25s;
+        z-index: 1;
+    }
+
+    /* Estilo de la thumb al pasar el ratón por encima */
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: #acacac; /* Cambia el color al pasar el ratón */
+        display: block;
+        opacity: .9;
+        transition: all 0.25s;
+        z-index: 1;
+    }
+    }
+}
+
+@mixin inputRange {
+    /* Estilo para el rango (la barra) */
+
+    
+   &{
+       -webkit-appearance: none; /* Quitar estilo predeterminado en WebKit */
+       appearance: none; /* Quitar estilo predeterminado en navegadores compatibles */
+       height: 5px; /* Altura del control */
+       border-radius: 10px; /* Bordes redondeados */
+       outline: none; /* Quitar el borde por defecto */
+       background-color: $white;
+   }
+
+   //Mostrar thumb al hacer hover
+   &:hover{
+       &::-webkit-slider-thumb{
+           display:block;
+       }
+   }
+
+   /* Pseudo-clase para el estilo del thumb (círculo que se mueve) en navegadores WebKit (Chrome, Safari, etc.) */
+   &::-webkit-slider-thumb {
+       -webkit-appearance: none; /* Quitar estilo predeterminado */
+       appearance: none;
+       width: 15px; /* Tamaño del thumb */
+       height: 15px;
+       background: $whiteLight; /* Color del thumb */
+       border-radius: 50%; /* Bordes redondeados para que sea un círculo */
+       cursor: pointer; /* Cambiar el cursor cuando se pasa por encima */
+       display: none;
+       
+   }
+
+   /* Pseudo-clase para el thumb en Firefox */
+   &::-moz-range-thumb {
+       width: 20px;
+       height: 20px;
+       background: $whiteLight;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+
+   /* Estilo para el track (barra de progreso) en Firefox */
+   &::-moz-range-track {
+       background: linear-gradient(to right, #4caf50, #f44336);
+       height: 10px;
+       border-radius: 10px;
+   }
+
+   /* Estilo para el thumb en Edge y IE */
+   &::-ms-thumb {
+       width: 20px;
+       height: 20px;
+       background: #000;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+
+   /* Estilo para la barra (track) en Edge y IE */
+   &::-ms-track {
+       background: linear-gradient(to right, #4caf50, #f44336);
+       height: 10px;
+       border-radius: 10px;
+       border: none;
+       color: transparent; /* Quitar estilos predeterminados */
+   }
+}
+
 @mixin hoverI{
     i{
         &:hover{

@@ -97,6 +97,7 @@ header{
     .playlist{
         overflow-y: auto;
         height: 530px;
+        @include scrollBar;
 
         & a {
             display: inline-block;
@@ -200,6 +201,8 @@ header{
 
 
 main{
+    z-index: 0;
+    @include scrollBar;
     .navbar{
         display: flex;
         flex-direction: row;
@@ -591,6 +594,7 @@ main{
             
         }
     }
+    //-----------------Aside
     .rigthSide{
         .amentes__Song{
             display: flex;
@@ -621,6 +625,14 @@ main{
             
            }
         }
+        .content__scrollable{
+            width: 382px;
+            box-sizing: border-box;
+            height: 720px;
+            overflow: hidden;
+            overflow-y: auto;
+            @include scrollBar;
+        /*Secciones de contenido*/
         .amentesSunt{
             display: flex;
             flex-direction: column;
@@ -895,7 +907,9 @@ main{
                 
             }
         }
+        }
     }
+
     .footer{
         .about{
             .about__portade{
@@ -1032,12 +1046,6 @@ main{
 
 .controls{
     .actualSong{
-        grid-column: 1/2;
-        background-color: #000000;
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
-        align-items: baseline;
         .actualSong__song{
             width: 340px;
             display: flex;
@@ -1082,12 +1090,85 @@ main{
         }        
     }
     .reproduction{
-        grid-column: 2/3;
-        background-color: #d1770f;
+        .reproduction__buttons{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            i:active{
+                img{
+                    transition: 0.15s;
+                    scale: 0.90;
+                    opacity: .7;
+                }
+            }
+            img{
+                width: 25px;
+            }
+            .button__i{
+                opacity: 1 !important;
+                &:active{
+                    transition: 0.15s;
+                    scale: 0.90;
+                    opacity: .7;
+                }
+                .button__play{
+                width: 45px;
+                &:hover{
+                    scale: 1.05;
+                    transition: all 0.20s;
+                }
+            }
+            }
+            
+        }
+        .reproduction__bar{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            span{
+                color: $white;
+            }
+            .reproduction__range{
+                width: 65%;
+               @include inputRange;
+
+            }
+
+        }
+
     }
     .settings{
-        grid-column: 3/4;
-        background-color: #0011fd;
+        i{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;        
+            img{
+                width: 25px;
+                height: 25px;
+            }
+            .setting__range{
+                width: 65%;
+                @include inputRange;
+            }
+        }
+
+
+       .setting__devices{
+       padding: 0;
+       width: 30px;
+        svg{
+            width: 25px;
+            height: 25px;
+            margin: 0;
+            padding: 0;
+           }
+       }
     }
 }
 

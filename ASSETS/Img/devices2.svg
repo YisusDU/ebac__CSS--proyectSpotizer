@@ -1,0 +1,6 @@
+<svg width="250" height="250">
+  <rect y="25" x="70" width="150" height="200" fill="transparent" stroke-width="10" stroke="#fff" rx="20"/>
+  <circle cy="160" cx="140" r="40" fill="#fff"/>
+  <circle cy="80" cx="140" r="25" fill="#fff"/>
+  <path stroke="#fff" stroke-width="15" stroke-linecap="round" d="M55 50H15m0 0v120m40 0H15m40 30H34"/>
+</svg>
