@@ -98,6 +98,7 @@ header{
         overflow-y: auto;
         height: 530px;
         @include scrollBar;
+        @include playlistHover;
 
         & a {
             display: inline-block;
@@ -116,6 +117,10 @@ header{
             margin: 1.5px 10px 0 0;
             border-radius: $radius;
         }
+        section{
+            padding: 10px 0 10px 10px;
+        }
+        
         .favsongs{
             display: flex;
             align-items: center;
@@ -318,6 +323,9 @@ main{
             padding: 12px;
             border-radius: 50%;
             opacity: .8;
+            &:hover{
+                scale: 1.1;
+            }
         }
         .options__follow{
             border-radius: $circleRadius;

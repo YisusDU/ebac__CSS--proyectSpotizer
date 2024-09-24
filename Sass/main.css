@@ -412,6 +412,40 @@ header .playlist:hover::-webkit-scrollbar-thumb:hover {
   transition: all 0.25s;
   z-index: 1;
 }
+header .playlist section > i:first-of-type {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  flex-wrap: wrap;
+  margin-left: -47px;
+  margin-right: 23px;
+  opacity: 0.9 !important;
+}
+header .playlist section > i:first-of-type img {
+  width: 24px;
+  height: 24px;
+}
+header .playlist div:first-of-type {
+  margin-left: 0px;
+}
+header .playlist div:first-of-type div {
+  margin-left: 0px;
+}
+header .playlist section:hover i:first-of-type {
+  display: flex;
+}
+header .playlist section:hover:hover {
+  background-color: #272626;
+  opacity: 1;
+}
+header .playlist section:hover:hover i:hover {
+  opacity: 1 !important;
+  scale: 1.01;
+  transition: none !important;
+}
 header .playlist a {
   display: inline-block;
   color: #c0c0c0;
@@ -428,6 +462,9 @@ header .playlist section, header .playlist h4, header .playlist img {
   display: flex;
   margin: 1.5px 10px 0 0;
   border-radius: 10px;
+}
+header .playlist section {
+  padding: 10px 0 10px 10px;
 }
 header .playlist .favsongs {
   display: flex;
@@ -765,6 +802,9 @@ main .options .options__play {
   padding: 12px;
   border-radius: 50%;
   opacity: 0.8;
+}
+main .options .options__play:hover {
+  scale: 1.1;
 }
 main .options .options__follow {
   border-radius: 30px;
