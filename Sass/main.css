@@ -218,6 +218,7 @@ body img i img {
 body button:hover {
   scale: 1.05;
   transition: 0.5s;
+  color: #fff !important;
 }
 
 header .home i:hover a {
@@ -572,6 +573,7 @@ main {
   /* Estilo del "track" de la barra (fondo de la barra de scroll) */
   /* Estilo de la "thumb" (la parte que se mueve) */
   /* Estilo de la thumb al pasar el ratón por encima */
+  border-radius: 10px;
 }
 main -webkit-scrollbar {
   /* Firefox scrollbar */
@@ -716,12 +718,16 @@ main .navbar .navbar__buttons .button__premium {
   border-radius: 30px;
   height: 30px;
   border: none;
+  cursor: pointer;
 }
 main .navbar .navbar__buttons .button__premium p {
   display: inline;
   margin: 0;
   padding: 0;
   font-weight: bold;
+}
+main .navbar .navbar__buttons .button__premium:hover {
+  color: #000 !important;
 }
 main .navbar .navbar__buttons .button__install {
   height: 30px;
@@ -735,6 +741,10 @@ main .navbar .navbar__buttons .button__install {
   color: #c0c0c0;
   background-color: rgba(41, 41, 41, 0.4);
   font-weight: bold;
+  cursor: pointer;
+}
+main .navbar .navbar__buttons .button__notification {
+  cursor: pointer;
 }
 main .navbar .navbar__buttons .button__notification img {
   width: 20px;
@@ -743,6 +753,9 @@ main .navbar .navbar__buttons .button__notification img {
   background-color: rgba(41, 41, 41, 0.4);
   border-radius: 30px;
 }
+main .navbar .navbar__buttons .button__notification:hover {
+  scale: 1.1;
+}
 main .navbar .navbar__buttons .button__perfil {
   border-radius: 60%;
   border: none;
@@ -750,6 +763,10 @@ main .navbar .navbar__buttons .button__perfil {
   height: 30px;
   padding: 6px;
   background-color: rgba(41, 41, 41, 0.4);
+  cursor: pointer;
+}
+main .navbar .navbar__buttons .button__perfil:hover {
+  scale: 1.1;
 }
 main .band {
   color: #fff;
@@ -802,6 +819,7 @@ main .options .options__play {
   padding: 12px;
   border-radius: 50%;
   opacity: 0.8;
+  cursor: pointer;
 }
 main .options .options__play:hover {
   scale: 1.1;
@@ -815,23 +833,38 @@ main .options .options__follow {
   border: solid #8f8f8f 1px;
   font-weight: bold;
   opacity: 0.8;
+  cursor: pointer;
 }
 main .options .option__more {
   scale: 1.3;
   opacity: 0.8;
+  cursor: pointer;
+}
+main .songs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 main .songs .songs__popular {
   color: #fff;
   font-size: 1.2rem;
+  align-self: flex-start;
 }
 main .songs .song__1 {
   display: flex;
+  width: 95%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  margin: 10px 0 10px 0;
+  gap: 0px;
+  margin: 0;
   position: relative;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+main .songs .song__1:nth-of-type(3) .song__name .song__title {
+  color: #00ff6a;
 }
 main .songs .song__1 .song__name {
   display: flex;
@@ -854,6 +887,13 @@ main .songs .song__1 .song__name .name__order p, main .songs .song__1 .song__nam
 main .songs .song__1 .song__name .name__order p {
   position: absolute;
 }
+main .songs .song__1 .song__name .name__order .song-no {
+  opacity: 0.8;
+}
+main .songs .song__1 .song__name .name__order .song-play {
+  opacity: 0;
+  width: 15px;
+}
 main .songs .song__1 .song__name .song__picture {
   width: 50px;
   border-radius: 10px;
@@ -862,6 +902,7 @@ main .songs .song__1 .song__name .song__picture {
 }
 main .songs .song__1 .song__name .song__title {
   color: #fff;
+  cursor: pointer;
 }
 main .songs .song__1 .song__heared {
   display: flex;
@@ -891,32 +932,70 @@ main .songs .song__1 .song__option .options img {
   padding: 0;
 }
 main .songs .song__1 .song__option .options .option__add {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  opacity: 0.8;
   margin: 0;
   padding: 0;
   position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 main .songs .song__1 .song__option .options .option__added {
   margin: 0;
   padding: 0;
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #00ff6a;
   border-radius: 50%;
   padding: 3px;
+  opacity: 0;
+  cursor: pointer;
 }
 main .songs .song__1 .song__option .options .option__added img {
   width: 17px;
 }
+main .songs .song__1 .song__option .option__more {
+  opacity: 0;
+  cursor: pointer;
+}
+main .songs .song__1:hover {
+  background-color: rgba(79, 76, 76, 0.431372549);
+  opacity: 0.9;
+}
+main .songs .song__1:hover .song__heared p {
+  color: #fff;
+  opacity: 1;
+}
+main .songs .song__1:hover .option__more {
+  opacity: 1;
+}
+main .songs .song__1:hover .option__more:hover {
+  scale: 1.1;
+}
+main .songs .song__1:hover .options .option__add {
+  align-items: center;
+  opacity: 0.8;
+  display: flex;
+}
+main .songs .song__1:hover .name__order .song-no {
+  opacity: 0;
+}
+main .songs .song__1:hover .name__order i .song-play {
+  opacity: 1;
+}
+main .songs .song__1:hover .song__title {
+  text-decoration: underline;
+}
 main .see {
-  margin-top: 20px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
   position: relative;
+  margin-bottom: 50px;
 }
 main .see .see__more {
   font-weight: bold;
@@ -924,12 +1003,15 @@ main .see .see__more {
   background-color: transparent;
   border: none;
   position: absolute;
+  padding: 10px;
 }
 main .see .see__less {
   font-weight: bold;
   color: #c0c0c0;
   background-color: transparent;
   border: none;
+  display: none;
+  padding: 10px;
 }
 main .discografy {
   margin: 20px auto 20px auto;
@@ -2073,6 +2155,9 @@ main .rigthSide .content__scrollable .next .next__song .next__link {
 }
 main .rigthSide .content__scrollable .next .next__song .next__link img {
   width: 25px;
+}
+main .footer {
+  border-radius: 0 0 20px 20px;
 }
 main .footer .about .about__portade .about__title {
   color: #fff;

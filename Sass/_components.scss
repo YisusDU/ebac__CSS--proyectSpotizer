@@ -18,6 +18,7 @@ body{
     button:hover{
         scale: 1.05;
         transition: .5s;
+        color: $whiteLight !important;
     }
     
 }
@@ -208,6 +209,7 @@ header{
 main{
     z-index: 0;
     @include scrollBar;
+    border-radius: $radius;
     .navbar{
         display: flex;
         flex-direction: row;
@@ -233,11 +235,15 @@ main{
                 border-radius: $circleRadius;
                 height: 30px;
                 border: none;
+                cursor: pointer;
                 & p {
                     display: inline;
                     margin: 0;
                     padding: 0;
                     font-weight: bold;
+                }
+                &:hover{
+                    color: $black !important;
                 }
             }
             .button__install{
@@ -252,15 +258,19 @@ main{
                 color: $white;
                 background-color: $almostTrans;
                 font-weight: bold;
-                
+                cursor: pointer;
             }
             .button__notification{
+                cursor: pointer;
                 & img{
                     width: 20px;
                     height: 20px;
                     padding: 9px;
                     background-color: $almostTrans;
                     border-radius: $circleRadius;
+                }
+                &:hover{
+                    scale: 1.1;
                 }
             }
             .button__perfil{
@@ -270,6 +280,10 @@ main{
                 height: 30px;
                 padding: 6px;
                 background-color: $almostTrans;
+                cursor: pointer;
+                &:hover{
+                    scale: 1.1;
+                }
             }
         }
     }
@@ -323,6 +337,7 @@ main{
             padding: 12px;
             border-radius: 50%;
             opacity: .8;
+            cursor: pointer;
             &:hover{
                 scale: 1.1;
             }
@@ -336,25 +351,43 @@ main{
             border: solid #8f8f8f 1px;
             font-weight: bold;
             opacity: .8;
+            cursor: pointer;
         }
         .option__more{
             scale: 1.3;
             opacity: .8;
+            cursor: pointer;
         }
     }
     .songs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .songs__popular{
             color: #fff;
             font-size: 1.2rem;
+            align-self: flex-start;
         }
         .song__1{
             display: flex;
+            width: 95%;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            gap: 10px;
-            margin: 10px 0 10px 0;
+            gap: 0px;
+            margin: 0;
             position: relative;
+            padding:  10px  20px;
+            border-radius: $radius;
+            &:nth-of-type(3){
+                .song__name{
+                    .song__title{
+                        color: $greenStrong;
+                    }
+                }
+            }
+
            .song__name{
             display: flex;
             flex-direction: row;
@@ -374,6 +407,13 @@ main{
                 p{
                     position: absolute;
                 }
+                .song-no{
+                    opacity: .8;
+                }
+                .song-play{
+                    opacity: 0;
+                    width: 15px;
+                }
             }
             .song__picture{
                 width: 50px;
@@ -383,8 +423,10 @@ main{
             }
             .song__title{
                 color: $whiteLight;
-                
+                cursor: pointer;
             }
+            
+
            }
 
            .song__heared{
@@ -413,48 +455,94 @@ main{
                     padding: 0;
                 }
                 .option__add{
-                    display: flex;
+                    display: none;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
-                    opacity: .8;
                     margin: 0;
                     padding: 0;
                     position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
                 }
                 .option__added{
                     margin: 0;
                     padding: 0;
-                    display: flex;
+                    display: none;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
                     background-color: $greenStrong;
                     border-radius: 50%;
                     padding: 3px;
+                    opacity: 0;
+                    cursor: pointer;
                     img{
                         width: 17px;
                     }
                 }
+                
             }
+            .option__more{
+               opacity: 0;
+               cursor: pointer;
+            }
+            }
+            &:hover{
+                background-color: #4f4c4c6e;
+                opacity: 0.9;
+                .song__heared p{
+                    color: $whiteLight;
+                    opacity: 1;
+                }
+                .option__more{
+                    opacity: 1;
+                    &:hover{
+                        scale: 1.1;
+                    }
+                 }
+                .options{
+                    .option__add{
+                        align-items: center;
+                        opacity: .8;
+                        display: flex;
+                    }
+                }
+                .name__order{
+                    .song-no{
+                        opacity: 0;
+                    }
+                    i .song-play{
+                        opacity: 1;
+                    }
+                }
+                .song__title{
+                    text-decoration: underline;
+                }
             }
         }
     }
     .see{
-        margin-top: 20px;
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
         position: relative;
+        margin-bottom: 50px;
         .see__more{
             font-weight: bold;
             color: $white;
             background-color: transparent;
             border: none;
             position: absolute;
+            padding: 10px;
         }
         .see__less{
             font-weight: bold;
             color: $white;
             background-color: transparent;
             border: none;
+            display: none;
+            padding: 10px;
         }
     }
     .discografy{
@@ -919,6 +1007,7 @@ main{
     }
 
     .footer{
+        border-radius: 0 0 20px 20px;
         .about{
             .about__portade{
                 .about__title{
