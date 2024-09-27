@@ -87,7 +87,7 @@ main {
   overflow: hidden;
   width: -moz-max-content;
   width: max-content;
-  overflow-y: auto;
+  overflow-y: scroll;
   height: 815px;
 }
 main .portade {
@@ -118,9 +118,9 @@ main .rigthSide {
   grid-column: 9/11;
   grid-row: 1/3;
   background-color: #0f0f0f;
-  padding: 15px;
+  padding: 20px;
   margin: 10px 5px 0px 3px;
-  width: 405px;
+  width: 410px;
   border-radius: 10px 10px;
   height: 805px;
   position: fixed;
@@ -202,7 +202,7 @@ main .rigthSide {
 }
 
 body i, body a {
-  opacity: 0.7 !important;
+  opacity: 0.7;
 }
 body i:hover, body a:hover {
   opacity: 1 !important;
@@ -573,6 +573,7 @@ main {
   /* Estilo del "track" de la barra (fondo de la barra de scroll) */
   /* Estilo de la "thumb" (la parte que se mueve) */
   /* Estilo de la thumb al pasar el ratón por encima */
+  overscroll-behavior: none;
   border-radius: 10px;
 }
 main -webkit-scrollbar {
@@ -1065,17 +1066,20 @@ main .discografy .discografy__popular .popular {
   flex-direction: column;
   align-items: center;
   margin: 0px;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 main .discografy .discografy__popular .popular figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 180px;
+  width: 170px;
 }
 main .discografy .discografy__popular .popular figure img {
   position: relative;
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
@@ -1087,38 +1091,54 @@ main .discografy .discografy__popular .popular figure i {
   align-items: center;
 }
 main .discografy .discografy__popular .popular figure i img {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   padding: 10px;
   background-color: #00ff6a;
   position: relative;
-  left: 65px;
-  bottom: 30px;
+  left: 60px;
+  bottom: 15px;
   z-index: 2;
   border-radius: 30px;
+  opacity: 0;
+  box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .discografy .discografy__popular .popular figure figcaption {
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 195px;
+  max-width: 170px;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .discografy .discografy__popular .popular p {
-  width: 180px;
+  width: 170px;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
-  padding-left: 10px;
+  padding: 5px 5px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+main .discografy .discografy__popular .popular:hover {
+  background-color: rgba(79, 76, 76, 0.431372549);
+}
+main .discografy .discografy__popular .popular:hover i {
+  opacity: 1 !important;
+}
+main .discografy .discografy__popular .popular:hover i img {
+  transition: 0.2s;
+  bottom: 30px;
+  opacity: 1;
+}
+main .discografy .discografy__popular .popular:hover i img:hover {
+  scale: 1.1;
+}
 main .discografy .discografy__albums {
-  display: flex;
+  display: none;
   overflow: hidden;
   justify-content: center;
   gap: 0px;
@@ -1128,17 +1148,20 @@ main .discografy .discografy__albums .albums {
   flex-direction: column;
   align-items: center;
   margin: 0px;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 main .discografy .discografy__albums .albums figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 180px;
+  width: 170px;
 }
 main .discografy .discografy__albums .albums figure img {
   position: relative;
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
@@ -1150,35 +1173,51 @@ main .discografy .discografy__albums .albums figure i {
   align-items: center;
 }
 main .discografy .discografy__albums .albums figure i img {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   padding: 10px;
   background-color: #00ff6a;
   position: relative;
-  left: 65px;
-  bottom: 30px;
+  left: 60px;
+  bottom: 15px;
   z-index: 2;
   border-radius: 30px;
+  opacity: 0;
+  box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .discografy .discografy__albums .albums figure figcaption {
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 195px;
+  max-width: 170px;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .discografy .discografy__albums .albums p {
-  width: 180px;
+  width: 170px;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
-  padding-left: 10px;
+  padding: 5px 5px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+main .discografy .discografy__albums .albums:hover {
+  background-color: rgba(79, 76, 76, 0.431372549);
+}
+main .discografy .discografy__albums .albums:hover i {
+  opacity: 1 !important;
+}
+main .discografy .discografy__albums .albums:hover i img {
+  transition: 0.2s;
+  bottom: 30px;
+  opacity: 1;
+}
+main .discografy .discografy__albums .albums:hover i img:hover {
+  scale: 1.1;
 }
 main .withPxndx {
   margin: 30px auto 30px auto;
@@ -1207,24 +1246,27 @@ main .withPxndx .withPxndx__collabs {
   display: flex;
   overflow: hidden;
   justify-content: center;
-  gap: 7px;
+  gap: 0px;
 }
 main .withPxndx .withPxndx__collabs .collab {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 main .withPxndx .withPxndx__collabs .collab figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 180px;
+  width: 170px;
 }
 main .withPxndx .withPxndx__collabs .collab figure img {
   position: relative;
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
@@ -1236,41 +1278,57 @@ main .withPxndx .withPxndx__collabs .collab figure i {
   align-items: center;
 }
 main .withPxndx .withPxndx__collabs .collab figure i img {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   padding: 10px;
   background-color: #00ff6a;
   position: relative;
-  left: 65px;
-  bottom: 30px;
+  left: 60px;
+  bottom: 15px;
   z-index: 2;
   border-radius: 30px;
+  opacity: 0;
+  box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .withPxndx .withPxndx__collabs .collab figure figcaption {
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 195px;
+  max-width: 170px;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .withPxndx .withPxndx__collabs .collab p {
-  width: 180px;
+  width: 170px;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
-  padding-left: 10px;
+  padding: 5px 5px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+main .withPxndx .withPxndx__collabs .collab:hover {
+  background-color: rgba(79, 76, 76, 0.431372549);
+}
+main .withPxndx .withPxndx__collabs .collab:hover i {
+  opacity: 1 !important;
+}
+main .withPxndx .withPxndx__collabs .collab:hover i img {
+  transition: 0.2s;
+  bottom: 30px;
+  opacity: 1;
+}
+main .withPxndx .withPxndx__collabs .collab:hover i img:hover {
+  scale: 1.1;
+}
 main .withPxndx .withPxndx__collabs .collab figure {
-  width: 180px;
+  width: 170px;
 }
 main .withPxndx .withPxndx__collabs .collab p {
-  width: 180px;
+  width: 170px;
 }
 main .fansLikes {
   margin: 30px auto 30px auto;
@@ -1306,17 +1364,20 @@ main .fansLikes .fansLikes__artist .artist {
   flex-direction: column;
   align-items: center;
   margin: 0px;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 main .fansLikes .fansLikes__artist .artist figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 180px;
+  width: 170px;
 }
 main .fansLikes .fansLikes__artist .artist figure img {
   position: relative;
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
@@ -1328,35 +1389,51 @@ main .fansLikes .fansLikes__artist .artist figure i {
   align-items: center;
 }
 main .fansLikes .fansLikes__artist .artist figure i img {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   padding: 10px;
   background-color: #00ff6a;
   position: relative;
-  left: 65px;
-  bottom: 30px;
+  left: 60px;
+  bottom: 15px;
   z-index: 2;
   border-radius: 30px;
+  opacity: 0;
+  box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .fansLikes .fansLikes__artist .artist figure figcaption {
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 195px;
+  max-width: 170px;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .fansLikes .fansLikes__artist .artist p {
-  width: 180px;
+  width: 170px;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
-  padding-left: 10px;
+  padding: 5px 5px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+main .fansLikes .fansLikes__artist .artist:hover {
+  background-color: rgba(79, 76, 76, 0.431372549);
+}
+main .fansLikes .fansLikes__artist .artist:hover i {
+  opacity: 1 !important;
+}
+main .fansLikes .fansLikes__artist .artist:hover i img {
+  transition: 0.2s;
+  bottom: 30px;
+  opacity: 1;
+}
+main .fansLikes .fansLikes__artist .artist:hover i img:hover {
+  scale: 1.1;
 }
 main .fansLikes .fansLikes__artist .artist img:first-of-type {
   border-radius: 50%;
@@ -1395,17 +1472,20 @@ main .displayon .displayon__others .other {
   flex-direction: column;
   align-items: center;
   margin: 0px;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 main .displayon .displayon__others .other figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 180px;
+  width: 170px;
 }
 main .displayon .displayon__others .other figure img {
   position: relative;
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
@@ -1417,35 +1497,51 @@ main .displayon .displayon__others .other figure i {
   align-items: center;
 }
 main .displayon .displayon__others .other figure i img {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   padding: 10px;
   background-color: #00ff6a;
   position: relative;
-  left: 65px;
-  bottom: 30px;
+  left: 60px;
+  bottom: 15px;
   z-index: 2;
   border-radius: 30px;
+  opacity: 0;
+  box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .displayon .displayon__others .other figure figcaption {
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 195px;
+  max-width: 170px;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .displayon .displayon__others .other p {
-  width: 180px;
+  width: 170px;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
-  padding-left: 10px;
+  padding: 5px 5px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+main .displayon .displayon__others .other:hover {
+  background-color: rgba(79, 76, 76, 0.431372549);
+}
+main .displayon .displayon__others .other:hover i {
+  opacity: 1 !important;
+}
+main .displayon .displayon__others .other:hover i img {
+  transition: 0.2s;
+  bottom: 30px;
+  opacity: 1;
+}
+main .displayon .displayon__others .other:hover i img:hover {
+  scale: 1.1;
 }
 main .displayon .displayon__others .other .other_caption {
   text-transform: capitalize;
@@ -1487,17 +1583,20 @@ main .playlist .playlist__song .song {
   flex-direction: column;
   align-items: center;
   margin: 0px;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 main .playlist .playlist__song .song figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 180px;
+  width: 170px;
 }
 main .playlist .playlist__song .song figure img {
   position: relative;
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
@@ -1509,35 +1608,51 @@ main .playlist .playlist__song .song figure i {
   align-items: center;
 }
 main .playlist .playlist__song .song figure i img {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   padding: 10px;
   background-color: #00ff6a;
   position: relative;
-  left: 65px;
-  bottom: 30px;
+  left: 60px;
+  bottom: 15px;
   z-index: 2;
   border-radius: 30px;
+  opacity: 0;
+  box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .playlist .playlist__song .song figure figcaption {
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 195px;
+  max-width: 170px;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .playlist .playlist__song .song p {
-  width: 180px;
+  width: 170px;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
-  padding-left: 10px;
+  padding: 5px 5px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+main .playlist .playlist__song .song:hover {
+  background-color: rgba(79, 76, 76, 0.431372549);
+}
+main .playlist .playlist__song .song:hover i {
+  opacity: 1 !important;
+}
+main .playlist .playlist__song .song:hover i img {
+  transition: 0.2s;
+  bottom: 30px;
+  opacity: 1;
+}
+main .playlist .playlist__song .song:hover i img:hover {
+  scale: 1.1;
 }
 main .findOn {
   margin: 30px auto 30px auto;
@@ -1576,17 +1691,20 @@ main .findOn .findOn__albums .album {
   flex-direction: column;
   align-items: center;
   margin: 0px;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 main .findOn .findOn__albums .album figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 180px;
+  width: 170px;
 }
 main .findOn .findOn__albums .album figure img {
   position: relative;
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
@@ -1598,35 +1716,51 @@ main .findOn .findOn__albums .album figure i {
   align-items: center;
 }
 main .findOn .findOn__albums .album figure i img {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   padding: 10px;
   background-color: #00ff6a;
   position: relative;
-  left: 65px;
-  bottom: 30px;
+  left: 60px;
+  bottom: 15px;
   z-index: 2;
   border-radius: 30px;
+  opacity: 0;
+  box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .findOn .findOn__albums .album figure figcaption {
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 195px;
+  max-width: 170px;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .findOn .findOn__albums .album p {
-  width: 180px;
+  width: 170px;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
-  padding-left: 10px;
+  padding: 5px 5px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+main .findOn .findOn__albums .album:hover {
+  background-color: rgba(79, 76, 76, 0.431372549);
+}
+main .findOn .findOn__albums .album:hover i {
+  opacity: 1 !important;
+}
+main .findOn .findOn__albums .album:hover i img {
+  transition: 0.2s;
+  bottom: 30px;
+  opacity: 1;
+}
+main .findOn .findOn__albums .album:hover i img:hover {
+  scale: 1.1;
 }
 main .findOn .findOn__albums .album .other_caption {
   text-transform: capitalize;
@@ -1679,12 +1813,14 @@ main .rigthSide .content__scrollable {
   box-sizing: border-box;
   height: 720px;
   overflow: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   /*Estilos para la escroll bar*/
   /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
   /* Estilo del "track" de la barra (fondo de la barra de scroll) */
   /* Estilo de la "thumb" (la parte que se mueve) */
   /* Estilo de la thumb al pasar el ratón por encima */
+  overscroll-behavior: none;
+  box-sizing: border-box;
   /*Secciones de contenido*/
 }
 main .rigthSide .content__scrollable -webkit-scrollbar {
@@ -1837,7 +1973,22 @@ main .rigthSide .content__scrollable .amentesSunt .amentes__img .img__figure .im
 main .rigthSide .content__scrollable .amentesSunt .amentes__img .img__figure .img__description {
   margin: 0;
 }
-main .rigthSide .content__scrollable .amentesSunt .amentes__img i {
+main .rigthSide .content__scrollable .amentesSunt .amentes__img .img__icons {
+  width: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  position: relative;
+  bottom: 25px;
+  left: 5px;
+}
+main .rigthSide .content__scrollable .amentesSunt .amentes__img .img__icons #img__link {
+  opacity: 0;
+  position: relative;
+  left: 30px;
+  transition: all 0.4s;
+}
+main .rigthSide .content__scrollable .amentesSunt .amentes__img .img__icons .option__added {
   margin: 0;
   padding: 0;
   display: flex;
@@ -1847,10 +1998,10 @@ main .rigthSide .content__scrollable .amentesSunt .amentes__img i {
   background-color: #00ff6a;
   border-radius: 50%;
   padding: 3px;
-  position: relative;
-  bottom: 35px;
   scale: 0.7;
-  left: 5px;
+}
+main .rigthSide .content__scrollable .amentesSunt .amentes__img .img__icons .option__added:hover {
+  scale: 0.8;
 }
 main .rigthSide .content__scrollable .about__artist {
   width: 375px;
@@ -1995,10 +2146,15 @@ main .rigthSide .content__scrollable .articlesPromotion {
   padding: 20px;
 }
 main .rigthSide .content__scrollable .articlesPromotion .promotion {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
   gap: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
+  padding: 10px;
 }
 main .rigthSide .content__scrollable .articlesPromotion .promotion img {
   width: 55px;
@@ -2033,6 +2189,13 @@ main .rigthSide .content__scrollable .articlesPromotion .promotion .promotion__l
   position: relative;
   bottom: 13px;
   right: 10px;
+  opacity: 0;
+}
+main .rigthSide .content__scrollable .articlesPromotion .promotion:hover {
+  background-color: rgba(79, 76, 76, 0.431372549);
+}
+main .rigthSide .content__scrollable .articlesPromotion .promotion:hover .promotion__link {
+  opacity: 0.7;
 }
 main .rigthSide .content__scrollable .articlesPromotion h5 {
   margin: 0px;
@@ -2062,10 +2225,15 @@ main .rigthSide .content__scrollable .next {
   padding: 20px;
 }
 main .rigthSide .content__scrollable .next .promotion {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
   gap: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
+  padding: 10px;
 }
 main .rigthSide .content__scrollable .next .promotion img {
   width: 55px;
@@ -2100,6 +2268,13 @@ main .rigthSide .content__scrollable .next .promotion .promotion__link {
   position: relative;
   bottom: 13px;
   right: 10px;
+  opacity: 0;
+}
+main .rigthSide .content__scrollable .next .promotion:hover {
+  background-color: rgba(79, 76, 76, 0.431372549);
+}
+main .rigthSide .content__scrollable .next .promotion:hover .promotion__link {
+  opacity: 0.7;
 }
 main .rigthSide .content__scrollable .next .next__title {
   display: flex;
@@ -2118,18 +2293,37 @@ main .rigthSide .content__scrollable .next .next__title a {
   color: #fff;
   font-size: 14px;
   text-decoration: none;
+  opacity: 1 !important;
+}
+main .rigthSide .content__scrollable .next .next__title a:hover {
+  text-decoration: underline;
+  scale: 1.05;
+  transition: all 0s;
 }
 main .rigthSide .content__scrollable .next .next__song {
   width: 340px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 main .rigthSide .content__scrollable .next .next__song img {
   width: 55px;
   height: 55px;
-  border-radius: 5px3px;
+  border-radius: 5px;
+}
+main .rigthSide .content__scrollable .next .next__song .song__play {
+  margin-left: -45px;
+  margin-right: 10px;
+  opacity: 0;
+}
+main .rigthSide .content__scrollable .next .next__song .song__play img {
+  width: 24px;
+  height: 24px;
 }
 main .rigthSide .content__scrollable .next .next__song div {
   gap: 15px;
@@ -2142,9 +2336,13 @@ main .rigthSide .content__scrollable .next .next__song div {
 main .rigthSide .content__scrollable .next .next__song div h4 {
   margin: 0;
   color: #fff;
+  text-wrap: nowrap;
 }
 main .rigthSide .content__scrollable .next .next__song div p {
   margin: 0;
+}
+main .rigthSide .content__scrollable .next .next__song div p:hover {
+  text-decoration: underline;
 }
 main .rigthSide .content__scrollable .next .next__song .next__link {
   display: flex;
@@ -2152,9 +2350,32 @@ main .rigthSide .content__scrollable .next .next__song .next__link {
   width: 70px;
   justify-content: flex-end;
   align-items: flex-start;
+  opacity: 0 !important;
 }
 main .rigthSide .content__scrollable .next .next__song .next__link img {
   width: 25px;
+}
+main .rigthSide .content__scrollable .next .next__song:hover {
+  background-color: rgba(79, 76, 76, 0.431372549);
+}
+main .rigthSide .content__scrollable .next .next__song:hover .next__link {
+  opacity: 0.7 !important;
+}
+main .rigthSide .content__scrollable .next .next__song:hover .next__link:hover {
+  opacity: 1 !important;
+}
+main .rigthSide .content__scrollable .next .next__song:hover .song__play {
+  opacity: 1 !important;
+  z-index: 2;
+}
+main .rigthSide .content__scrollable .next .next__song:hover .song__play:hover {
+  scale: 1.1;
+  transition: 0s;
+}
+main .rigthSide:hover .content__scrollable .amentesSunt .amentes__img .img__icons #img__link {
+  opacity: 1;
+  left: 0px;
+  transition: all 0.4s;
 }
 main .footer {
   border-radius: 0 0 20px 20px;
@@ -2220,10 +2441,15 @@ main .footer .about .articlesPromotion .articlesPromotion__content {
   gap: 20px;
 }
 main .footer .about .articlesPromotion .articlesPromotion__content .promotion {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
   gap: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
+  padding: 10px;
 }
 main .footer .about .articlesPromotion .articlesPromotion__content .promotion img {
   width: 55px;
@@ -2258,6 +2484,13 @@ main .footer .about .articlesPromotion .articlesPromotion__content .promotion .p
   position: relative;
   bottom: 13px;
   right: 10px;
+  opacity: 0;
+}
+main .footer .about .articlesPromotion .articlesPromotion__content .promotion:hover {
+  background-color: rgba(79, 76, 76, 0.431372549);
+}
+main .footer .about .articlesPromotion .articlesPromotion__content .promotion:hover .promotion__link {
+  opacity: 0.7;
 }
 main .footer .aboutLinks h2 {
   color: #fff;
@@ -2302,13 +2535,16 @@ main .footer .aboutLinks .social__media a {
   color: black;
   text-align: center;
   line-height: 30px;
-  /* transition: background-color 0.3s;*/
   justify-content: center;
   align-items: center;
   padding: 3px;
 }
+main .footer .aboutLinks .social__media a, main .footer .aboutLinks .social__media a i {
+  opacity: 1 !important;
+}
 main .footer .aboutLinks .social__media a:hover {
   background-color: #686868;
+  transition: all 0s;
 }
 main .footer .lastLinks .footer__links {
   display: flex;

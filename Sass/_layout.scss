@@ -75,7 +75,7 @@ main{
     grid-template-columns: 2fr 1fr;
     overflow: hidden;
     width: max-content;
-    overflow-y: auto;
+    overflow-y: scroll;
     height: 815px;
     .portade{
         grid-column: 1/9;
@@ -105,9 +105,9 @@ main{
         grid-column: 9 / 11;
         grid-row: 1 / 3;
         background-color: #0f0f0f;
-        padding: 15px;
+        padding: 20px;
         margin: 10px 5px 0px 3px;
-        width: 405px;
+        width: 410px;
         border-radius: 10px 10px;
         height: 805px;
         position: fixed;

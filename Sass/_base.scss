@@ -306,15 +306,18 @@ $fontBold: bold;
     flex-direction: column;
     align-items: center;
     margin: 0px;
+    padding: 5px;
+    border-radius: $radius;
+    box-sizing: border-box;
     figure{
         display: flex;
         flex-direction: column;
         margin: 0px;
-        width: 180px;
+        width: 170px;
         img{
             position: relative;
-            width: 180px;
-            height: 180px;
+            width: 170px;
+            height: 170px;
             border-radius: $radius;
             z-index: 1;
             margin: 0 auto;
@@ -325,22 +328,25 @@ $fontBold: bold;
             justify-content: center;
             align-items: center;
             img {
-                width: 25px;
-                height: 25px;
+                width: 20px;
+                height: 20px;
                 padding: 10px;
                 background-color: $greenStrong;
                 position: relative;
-                left: 65px;
-                bottom: 30px;
+                left: 60px;
+                bottom: 15px;
                 z-index: 2;
                 border-radius: $circleRadius;
+                opacity: 0;
+                box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
+                
             }
         }
         figcaption{
             margin-top: 10px;
             overflow: hidden;
             color: $whiteLight;
-            max-width: 195px;
+            max-width: 170px;
             max-height: 33px;
             overflow: hidden;
             white-space: nowrap;
@@ -348,14 +354,28 @@ $fontBold: bold;
         }
     }
     p{
-        width: 180px;
+        width: 170px;
         margin-top: 5px;
         max-height: 33px;
         font-size: .8rem;
-        padding-left: 10px;
+        padding: 5px 5px;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+    }
+    &:hover{
+        background-color: #4f4c4c6e;
+        i {
+            opacity: 1 !important;
+            img {
+                transition: 0.2s;
+                bottom: 30px;
+                opacity: 1 ;
+                &:hover{
+                    scale: 1.1;
+                }
+            }
+        }
     }
    
 }
@@ -409,32 +429,43 @@ $fontBold: bold;
     height: 240px;
     gap: 20px;
     .promotion{
+        width: fit-content;
+        border-radius: $radius;
         gap: 15px;
         @include artist-album(square);
+        cursor: pointer;
+        padding: 10px;
         img{
             border-radius: 2px;
         }
-       h4{
-        margin: 0;
-        color: $whiteLight;
-        width: 450px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-       }
-       p{
-        font-size: .9rem;
-        width: 450px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-       }
-       .promotion__link{
-        width: 20px;
-        position: relative;
-        bottom: 13px;
-        right: 10px;
-       }
+        h4{
+            margin: 0;
+            color: $whiteLight;
+            width: 450px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        p{
+            font-size: .9rem;
+            width: 450px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .promotion__link{
+            width: 20px;
+            position: relative;
+            bottom: 13px;
+            right: 10px;
+            opacity: 0;
+        }
+        &:hover{
+            background-color: #4f4c4c6e;
+            .promotion__link{
+                opacity: .7;
+            }
+        }
 }
 }
 
