@@ -20,21 +20,27 @@ html {
   background-color: #000;
   color: #c0c0c0;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 body {
   display: grid;
   margin: 0;
-  grid-template-rows: auto 85px;
-  grid-template-columns: 23% 54.5% 22%;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "[header] [main] [rigthSide]" "[controls] [controls] [controls]";
+  width: 100%;
 }
 
 header {
+  flex-grow: 1;
+  grid-area: header;
   overflow: hidden;
   grid-column: 1/2;
+  grid-row: 1;
   max-width: 597px;
   width: 100%;
-  min-width: 277px;
+  min-width: 260px;
   height: 90vh;
   min-height: 510.297px;
   text-wrap: nowrap;
@@ -90,13 +96,16 @@ header .playlist {
 }
 
 main {
-  display: grid;
+  flex-grow: 3;
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
   grid-column: 2;
-  grid-template-columns: 1fr;
-  grid-template-rows: 340px 1fr; /* Los elementos se ajustan automáticamente a la altura necesaria */
+  grid-row: 1;
   overflow: hidden;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
+  min-width: 416px;
   overflow-y: scroll;
   height: 90vh;
   min-height: 510.297px;
@@ -130,9 +139,11 @@ main .content {
 }
 main .footer {
   grid-column: 1;
+  width: 100%;
+  display: flex;
 }
 main .footer .about {
-  width: 965px;
+  width: 100%;
   grid-column: 2/3;
   background-color: #0f0f0f;
   padding: 20px;
@@ -140,6 +151,7 @@ main .footer .about {
 }
 main .footer .about .aboutLinks {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
@@ -151,46 +163,61 @@ main .footer .about hr {
 main .footer .about .lastLinks {
   padding-top: 30px;
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-around;
   align-items: baseline;
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   font-size: 0.8rem;
   height: 100px;
+}
+main .footer .about .lastLinks .footer__links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 2;
+}
+main .footer .about .lastLinks .copyright {
+  flex-grow: 1;
 }
 main:hover {
   padding-left: -5px;
 }
 
 .rigthSide {
+  flex-grow: 1;
+  grid-area: rigthSide;
   z-index: 0;
   box-sizing: border-box;
   grid-column: 3;
   grid-row: 1;
   background-color: #0f0f0f;
-  width: 410px;
   border-radius: 10px 10px;
   height: 88.7vh;
   min-height: 501.219px;
   right: 15px;
   overflow: hidden;
   margin-top: 10px;
+  min-width: 280px;
 }
 
 .controls {
+  display: flex;
+  grid-area: controls;
   grid-column: 1/4;
   grid-row: 2;
   background-color: #000;
   color: #fff;
-  width: 100%;
   min-height: 85px;
   font-family: Arial, sans-serif;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   padding: 10px;
   box-sizing: border-box;
+  width: 100%;
+  min-width: 416px;
 }
 .controls .actualSong {
   grid-column: 1/2;
@@ -217,12 +244,25 @@ main:hover {
   gap: 10px;
 }
 
-@media (max-width: 1010px) {
+@media (max-width: 1390px) {
+  .rigthSide {
+    width: 280px;
+  }
+}
+@media (max-width: 1007px) {
   body {
     display: grid;
     margin: 0;
     grid-template-rows: 2;
-    grid-template-columns: 11% 54.5% 22%;
+    grid-template-columns: 100px 61% auto;
+  }
+  .main {
+    min-width: 416px;
+  }
+}
+@media (max-width: 815px) {
+  html {
+    overflow-x: scroll;
   }
 }
 /* Agrega una media query para que la barra de desplazamiento aparezca solo cuando la altura de la ventana es menor a 600px */
@@ -2911,7 +2951,7 @@ main .footer .lastLinks .copyright {
   padding: 0;
 }
 
-@media (max-width: 1010px) {
+@media (max-width: 1007px) {
   header .home {
     margin-top: 10px;
     margin-left: 12px;
