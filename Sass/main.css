@@ -25,16 +25,17 @@ html {
 body {
   display: grid;
   margin: 0;
-  grid-template-rows: 2;
+  grid-template-rows: auto 85px;
   grid-template-columns: 23% 54.5% 22%;
 }
 
 header {
+  overflow: hidden;
   grid-column: 1/2;
   max-width: 597px;
   width: 100%;
   min-width: 277px;
-  height: 86vh;
+  height: 90vh;
   min-height: 510.297px;
   text-wrap: nowrap;
   flex-wrap: nowrap;
@@ -97,7 +98,7 @@ main {
   width: -moz-fit-content;
   width: fit-content;
   overflow-y: scroll;
-  height: 86vh;
+  height: 90vh;
   min-height: 510.297px;
 }
 main .portade {
@@ -171,7 +172,7 @@ main:hover {
   background-color: #0f0f0f;
   width: 410px;
   border-radius: 10px 10px;
-  height: 84.5vh;
+  height: 88.7vh;
   min-height: 501.219px;
   right: 15px;
   overflow: hidden;
@@ -185,7 +186,6 @@ main:hover {
   color: #fff;
   width: 100%;
   min-height: 85px;
-  height: 85px;
   font-family: Arial, sans-serif;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -251,9 +251,6 @@ body button:hover {
   color: #fff !important;
 }
 
-header {
-  overflow: hidden;
-}
 header .home i:hover a {
   color: #fff;
   font-weight: bold;
@@ -329,7 +326,6 @@ header .playlist {
   /* Estilo del "track" de la barra (fondo de la barra de scroll) */
   /* Estilo de la "thumb" (la parte que se mueve) */
   /* Estilo de la thumb al pasar el ratón por encima */
-  overflow: hidden;
   height: 100%;
 }
 header .playlist -webkit-scrollbar {

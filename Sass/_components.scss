@@ -24,7 +24,6 @@ body{
 }
 
 header{
-    overflow: hidden;
     .home{
         i{
             &:hover{
@@ -101,7 +100,6 @@ header{
         overflow-x: hidden;
         @include scrollBar;
         @include playlistHover;
-        overflow: hidden;
         height: 100%;
         & a {
             display: inline-block;
