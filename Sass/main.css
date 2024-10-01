@@ -941,6 +941,17 @@ main .songs .song__1 {
 main .songs .song__1:nth-of-type(3) .song__name .song__title {
   color: #00ff6a;
 }
+main .songs .song__1:nth-of-type(3) .song__option .options .option__add {
+  display: none;
+}
+main .songs .song__1:nth-of-type(3) .song__option .options .option__added {
+  opacity: 1;
+  display: block;
+}
+main .songs .song__1:nth-of-type(3) .song__option .options .option__added img {
+  opacity: 1;
+  display: block;
+}
 main .songs .song__1 .song__name {
   display: flex;
   flex-direction: row;
@@ -1064,6 +1075,13 @@ main .songs .song__1:hover .name__order i .song-play {
 }
 main .songs .song__1:hover .song__title {
   text-decoration: underline;
+}
+main .songs .song__1:hover:nth-of-type(3) .song__option .options .option__add {
+  opacity: 0;
+  display: none;
+}
+main .songs .song__1:hover:nth-of-type(3) .song__option .options .option__added {
+  opacity: 1;
 }
 main .see {
   margin-top: 0;

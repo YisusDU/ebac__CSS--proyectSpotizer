@@ -408,6 +408,22 @@ main{
                         color: $greenStrong;
                     }
                 }
+                .song__option{
+                    .options{
+                        .option__add{
+                            display: none;
+                        }
+                        .option__added{
+                            opacity: 1;
+                            display: block;
+                            img{
+                                opacity: 1;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                
             }
 
            .song__name{
@@ -528,6 +544,7 @@ main{
                         align-items: center;
                         opacity: .8;
                         display: flex;
+                       
                     }
                 }
                 .name__order{
@@ -540,6 +557,19 @@ main{
                 }
                 .song__title{
                     text-decoration: underline;
+                }
+                &:nth-of-type(3){
+                    .song__option{
+                        .options{
+                            .option__add{
+                                opacity: 0;
+                                display: none;
+                            }
+                            .option__added{
+                                opacity: 1;
+                            }
+                        }
+                    }
                 }
             }
         }
