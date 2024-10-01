@@ -19,6 +19,7 @@ header .nav .buttons button:hover {
 html {
   background-color: #000;
   color: #c0c0c0;
+  overflow-y: hidden;
 }
 
 body {
@@ -33,7 +34,8 @@ header {
   max-width: 597px;
   width: 100%;
   min-width: 277px;
-  height: 811px;
+  height: 86vh;
+  min-height: 510.297px;
   text-wrap: nowrap;
   flex-wrap: nowrap;
 }
@@ -95,7 +97,8 @@ main {
   width: -moz-fit-content;
   width: fit-content;
   overflow-y: scroll;
-  height: 815px;
+  height: 86vh;
+  min-height: 510.297px;
 }
 main .portade {
   grid-column: 1;
@@ -166,12 +169,13 @@ main:hover {
   grid-column: 3;
   grid-row: 1;
   background-color: #0f0f0f;
-  padding: 20px;
-  margin: 10px 5px 0px 3px;
   width: 410px;
   border-radius: 10px 10px;
-  height: 805px;
+  height: 84.5vh;
+  min-height: 501.219px;
   right: 15px;
+  overflow: hidden;
+  margin-top: 10px;
 }
 
 .controls {
@@ -180,7 +184,8 @@ main:hover {
   background-color: #000;
   color: #fff;
   width: 100%;
-  height: 105px;
+  min-height: 85px;
+  height: 85px;
   font-family: Arial, sans-serif;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -220,6 +225,12 @@ main:hover {
     grid-template-columns: 11% 54.5% 22%;
   }
 }
+/* Agrega una media query para que la barra de desplazamiento aparezca solo cuando la altura de la ventana es menor a 600px */
+@media (max-height: 600px) {
+  html {
+    overflow-y: scroll;
+  }
+}
 body i, body a {
   opacity: 0.7;
 }
@@ -240,6 +251,9 @@ body button:hover {
   color: #fff !important;
 }
 
+header {
+  overflow: hidden;
+}
 header .home i:hover a {
   color: #fff;
   font-weight: bold;
@@ -310,12 +324,13 @@ header .nav .options .options__list img {
 header .playlist {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 530px;
   /*Estilos para la escroll bar*/
   /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
   /* Estilo del "track" de la barra (fondo de la barra de scroll) */
   /* Estilo de la "thumb" (la parte que se mueve) */
   /* Estilo de la thumb al pasar el ratón por encima */
+  overflow: hidden;
+  height: 100%;
 }
 header .playlist -webkit-scrollbar {
   /* Firefox scrollbar */
@@ -2032,6 +2047,7 @@ main .footer .lastLinks .copyright {
   flex-direction: row;
   justify-content: space-around;
   height: 57px;
+  padding: 0px 10px;
   gap: 225px;
   margin: 0px;
   width: 380px;
@@ -2071,10 +2087,10 @@ main .footer .lastLinks .copyright {
   cursor: pointer;
 }
 .rigthSide .content__scrollable {
-  width: 382px;
+  margin: 0 auto;
+  width: 400px;
   box-sizing: border-box;
-  height: 720px;
-  overflow: hidden;
+  height: 95%;
   overflow-y: scroll;
   /*Estilos para la escroll bar*/
   /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
@@ -2661,6 +2677,9 @@ main .footer .lastLinks .copyright {
   transition: all 0.4s;
 }
 
+.controls {
+  overflow: hidden;
+}
 .controls .actualSong .actualSong__song {
   width: 340px;
   display: flex;

@@ -24,6 +24,7 @@ body{
 }
 
 header{
+    overflow: hidden;
     .home{
         i{
             &:hover{
@@ -98,10 +99,10 @@ header{
     .playlist{
         overflow-y: scroll;
         overflow-x: hidden;
-        height: 530px;
         @include scrollBar;
         @include playlistHover;
-
+        overflow: hidden;
+        height: 100%;
         & a {
             display: inline-block;
             color: $white;
@@ -860,6 +861,7 @@ main{
         flex-direction: row;
         justify-content: space-around;
         height: 57px;
+        padding: 0px 10px;
         gap: 225px;
         margin: 0px;
         width: 380px;
@@ -885,14 +887,15 @@ main{
         }
     }
     .content__scrollable{
-        width: 382px;
+        margin: 0 auto;
+        width: 400px;
         box-sizing: border-box;
-        height: 720px;
-        overflow: hidden;
+        height: 95%;
         overflow-y: scroll;
         @include scrollBar;
         overscroll-behavior: none;
         box-sizing: border-box;
+        
     /*Secciones de contenido*/
     .amentesSunt{
         display: flex;
@@ -1250,6 +1253,7 @@ main{
 
 
 .controls{
+    overflow: hidden;
     .actualSong{
         .actualSong__song{
             width: 340px;

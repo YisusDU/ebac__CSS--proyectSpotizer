@@ -5,6 +5,7 @@
 html{
     background-color: $black;
     color: $white;
+    overflow-y:hidden;
 }
 body{
     display: grid;
@@ -18,7 +19,8 @@ header{
     max-width: 597px;
     width: 100%;
     min-width: 277px;
-    height: 811px;
+    height: 86vh;
+    min-height: 510.297px;
     text-wrap: nowrap;
     flex-wrap: nowrap;
     .home{
@@ -83,7 +85,8 @@ main{
     overflow: hidden;
     width: fit-content;
     overflow-y: scroll;
-    height: 815px;
+    height: 86vh;
+    min-height: 510.297px;
     .portade{
         grid-column: 1;
         grid-row: 1; /* Asigna .portade a la primera fila */
@@ -158,12 +161,13 @@ main{
     grid-column: 3;
     grid-row: 1;
     background-color: #0f0f0f;
-    padding: 20px;
-    margin: 10px 5px 0px 3px;
     width: 410px;
     border-radius: 10px 10px;
-    height: 805px;
+    height: 84.5vh;
+    min-height: 501.219px;
     right: 15px;
+    overflow: hidden;
+    margin-top: 10px;
 }
 
   .controls{
@@ -172,7 +176,8 @@ main{
     background-color: $black;
     color: #fff;
     width: 100%;
-    height: 105px;
+    min-height: 85px;
+    height: 85px;
     font-family: Arial, sans-serif;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -214,6 +219,14 @@ main{
         grid-template-columns: 11% 54.5% 22%;
     
     }
+  }
+
+/* Agrega una media query para que la barra de desplazamiento aparezca solo cuando la altura de la ventana es menor a 600px */
+@media (max-height: 600px) {
+    html {
+      overflow-y: scroll;
+    }
+
   }
 
 
