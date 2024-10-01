@@ -77,14 +77,16 @@ $fontBold: bold;
         display: none;
         z-index: 1;
         transition: all 0.25s;
+        position: relative;
     }
     /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
     &::-webkit-scrollbar {
-        width: 7px; /* Ancho de la barra de desplazamiento */
+        width: 5px; /* Ancho de la barra de desplazamiento */
         opacity: 0;
         display: none;
         transition: all 0.25s;
         z-index: 1;
+        position: relative;
     }
 
     /* Estilo del "track" de la barra (fondo de la barra de scroll) */
@@ -95,6 +97,7 @@ $fontBold: bold;
         display: none;
         transition: all 0.25s;
         z-index: 1;
+        position: relative;
     }
 
 
@@ -107,6 +110,7 @@ $fontBold: bold;
         display: none;
         transition: all 0.25s;
         z-index: 1;
+        position: relative;
     }
 
     /* Estilo de la thumb al pasar el ratón por encima */
@@ -283,6 +287,8 @@ $fontBold: bold;
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-overflow: ellipsis;
+    
     img{
         width: 55px;
         @if $shape == circle{  
@@ -294,9 +300,15 @@ $fontBold: bold;
     }
     h4, p{
         padding-top: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
     }
     p {
         margin: 5px 0 0 0;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
