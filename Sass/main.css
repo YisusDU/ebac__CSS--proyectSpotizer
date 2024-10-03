@@ -12,6 +12,12 @@ header .nav .buttons button:hover {
   background-color: #393939;
 }
 
+/* @mixin wrap-if-narrow($width, $max-width) {
+   @if $width < $max-width {
+     flex-wrap: wrap;
+     flex-direction: column;
+   }
+ }*/
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -107,6 +113,7 @@ main {
   width: 100%;
   min-width: 416px;
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 90vh;
   min-height: 510.297px;
 }
@@ -141,6 +148,11 @@ main .footer {
   grid-column: 1;
   width: 100%;
   display: flex;
+  grid-column: 1;
+  display: inline-block;
+  width: 94%;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 main .footer .about {
   width: 100%;
@@ -202,6 +214,8 @@ main:hover {
   overflow: hidden;
   margin-top: 10px;
   min-width: 280px;
+  opacity: 0 !important;
+  display: none !important;
 }
 
 .controls {
@@ -1961,10 +1975,9 @@ main .footer .about .articlesPromotion .articlesPromotion__content {
   gap: 20px;
 }
 main .footer .about .articlesPromotion .articlesPromotion__content .promotion {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 90%;
+  justify-content: space-between;
   border-radius: 10px;
-  gap: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1991,17 +2004,20 @@ main .footer .about .articlesPromotion .articlesPromotion__content .promotion p 
 main .footer .about .articlesPromotion .articlesPromotion__content .promotion img {
   border-radius: 2px;
 }
+main .footer .about .articlesPromotion .articlesPromotion__content .promotion div {
+  width: 70%;
+}
 main .footer .about .articlesPromotion .articlesPromotion__content .promotion h4 {
   margin: 0;
   color: #fff;
-  width: 450px;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .footer .about .articlesPromotion .articlesPromotion__content .promotion p {
   font-size: 0.9rem;
-  width: 450px;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -2018,6 +2034,12 @@ main .footer .about .articlesPromotion .articlesPromotion__content .promotion:ho
 }
 main .footer .about .articlesPromotion .articlesPromotion__content .promotion:hover .promotion__link {
   opacity: 0.7;
+}
+@media (max-width: 767px) {
+  main .footer .aboutLinks {
+    display: flex;
+    flex-direction: column;
+  }
 }
 main .footer .aboutLinks h2 {
   color: #fff;
@@ -2073,12 +2095,22 @@ main .footer .aboutLinks .social__media a:hover {
   background-color: #686868;
   transition: all 0s;
 }
+main .footer .lastLinks {
+  display: flex;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  padding-top: 16px;
+  width: 56vw;
+  font-size: 1.1rem;
+}
 main .footer .lastLinks .footer__links {
   display: flex;
   justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
+  line-height: 30px;
 }
 main .footer .lastLinks .footer__links li {
   margin: 0 10px;
@@ -2093,7 +2125,7 @@ main .footer .lastLinks .footer__links a:hover {
   color: #fff;
 }
 main .footer .lastLinks .copyright {
-  margin-left: 160px;
+  text-wrap: nowrap;
 }
 
 .rigthSide .amentes__Song {
@@ -2482,10 +2514,9 @@ main .footer .lastLinks .copyright {
   padding: 20px;
 }
 .rigthSide .content__scrollable .articlesPromotion .promotion {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 90%;
+  justify-content: space-between;
   border-radius: 10px;
-  gap: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2512,17 +2543,20 @@ main .footer .lastLinks .copyright {
 .rigthSide .content__scrollable .articlesPromotion .promotion img {
   border-radius: 2px;
 }
+.rigthSide .content__scrollable .articlesPromotion .promotion div {
+  width: 70%;
+}
 .rigthSide .content__scrollable .articlesPromotion .promotion h4 {
   margin: 0;
   color: #fff;
-  width: 450px;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .rigthSide .content__scrollable .articlesPromotion .promotion p {
   font-size: 0.9rem;
-  width: 450px;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -2568,10 +2602,9 @@ main .footer .lastLinks .copyright {
   padding: 20px;
 }
 .rigthSide .content__scrollable .next .promotion {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 90%;
+  justify-content: space-between;
   border-radius: 10px;
-  gap: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2598,17 +2631,20 @@ main .footer .lastLinks .copyright {
 .rigthSide .content__scrollable .next .promotion img {
   border-radius: 2px;
 }
+.rigthSide .content__scrollable .next .promotion div {
+  width: 70%;
+}
 .rigthSide .content__scrollable .next .promotion h4 {
   margin: 0;
   color: #fff;
-  width: 450px;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .rigthSide .content__scrollable .next .promotion p {
   font-size: 0.9rem;
-  width: 450px;
+  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -3055,5 +3091,15 @@ main .footer .lastLinks .copyright {
   }
   main .content .songs .song__1 .song__heared {
     display: none;
+  }
+}
+@media (max-width: 920px) and (max-width: 992px) {
+  main .footer .about .lastLinks {
+    flex-direction: column;
+  }
+}
+@media (max-width: 920px) {
+  main .footer .about .lastLinks .footer__links {
+    justify-content: flex-start;
   }
 }/*# sourceMappingURL=main.css.map */

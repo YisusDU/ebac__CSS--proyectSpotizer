@@ -230,6 +230,7 @@ header{
 main{
     z-index: 0;
     @include scrollBar;
+    //@include overflow-x;
     overscroll-behavior: none;
     border-radius: $radius;
     .navbar{
@@ -801,82 +802,93 @@ main{
                 }
                 .articlesPromotion__content{
                     @include promotion;
-                    }
+                    
+
+                }
                 }
             }
     //experimentación con Blackbox//
-            .aboutLinks{
-                
-                h2{
-                    color: $whiteLight;
-                    font-size: 1rem;
-                }
-                ul{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                    list-style-type: none;
-                    padding: 0;
-                    justify-content: flex-start;
-                }
-
-            a {
-                color: $white;
-                text-decoration: none;
-                text-wrap: wrap;
-                i{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                img{
-                    width: 20px;
-                }
-            }
-
-            a:hover {
-                text-decoration: underline;
+        .aboutLinks{
+            @include flex--collumn;
+            h2{
                 color: $whiteLight;
+                font-size: 1rem;
             }
-
-            .social__media {
-                margin-top: 20px;
+            ul{
                 display: flex;
-                gap: 10px;
-                a {
-                    display: flex;
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    background-color: rgb(51, 51, 51);
-                    color: black;
-                    text-align: center;
-                    line-height: 30px;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 3px;
-                    &, i{
-                        opacity: 1 !important;
-                    }
-                    &:hover {
-                        background-color: #686868;
-                        transition: all 0s;
-                    }
-                }
+                flex-direction: column;
+                gap: 15px;
+                list-style-type: none;
+                padding: 0;
+                justify-content: flex-start;
             }
 
-            
+        a {
+            color: $white;
+            text-decoration: none;
+            text-wrap: wrap;
+            i{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            img{
+                width: 20px;
+            }
+        }
 
-            
-            }
-            .lastLinks{
-                .footer__links{
-                    @include footerLastLinks;
+        a:hover {
+            text-decoration: underline;
+            color: $whiteLight;
+        }
+
+        .social__media {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            a {
+                display: flex;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: rgb(51, 51, 51);
+                color: black;
+                text-align: center;
+                line-height: 30px;
+                justify-content: center;
+                align-items: center;
+                padding: 3px;
+                &, i{
+                    opacity: 1 !important;
                 }
-                .copyright {
-                    margin-left: 160px;
+                &:hover {
+                    background-color: #686868;
+                    transition: all 0s;
                 }
             }
+        }
+
+        
+
+        
+        }
+        .lastLinks{
+            display: flex;
+            display: flex;
+            flex-flow: column wrap;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            padding-top: 16px;
+            width: 56vw;
+            font-size: 1.1rem;
+            .footer__links{
+                @include footerLastLinks;
+                line-height: 30px;
+            }
+            .copyright {
+                text-wrap: nowrap;
+            }
+        }
 
         }
        
@@ -1542,6 +1554,16 @@ main{
                     }
                     .song__heared{
                         display: none;
+                    }
+                }
+            }
+        }
+        .footer{
+            .about{
+                .lastLinks{
+                    @include wrap-if-narrow(992px);
+                    .footer__links{
+                       justify-content: flex-start;
                     }
                 }
             }

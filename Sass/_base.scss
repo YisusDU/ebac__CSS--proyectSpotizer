@@ -27,6 +27,38 @@ $fontBold: bold;
     background-color: #393939;
 }
 
+//----------Funciones
+ /* @mixin wrap-if-narrow($width, $max-width) {
+    @if $width < $max-width {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  }*/
+//---------mixins media query
+@mixin flex--collumn{
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@mixin overflow-x{
+    @media (max-width: 845px) {
+        overflow-x: scroll;
+    }
+}
+
+@mixin wrap-if-narrow($max-width) {
+    @media (max-width: $max-width) {
+      flex-direction: column;
+    }
+  }
+
+
+
+//---------Mixins
+
+
 @mixin playlistHover{
     section > i:first-of-type{
         display: none;
@@ -441,26 +473,29 @@ $fontBold: bold;
     height: 240px;
     gap: 20px;
     .promotion{
-        width: fit-content;
+        width: 90%;
+        justify-content: space-between;
         border-radius: $radius;
-        gap: 15px;
         @include artist-album(square);
         cursor: pointer;
         padding: 10px;
         img{
             border-radius: 2px;
         }
+        div{
+            width: 70%;
+        }
         h4{
             margin: 0;
             color: $whiteLight;
-            width: 450px;
+            width: 100%;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
         }
         p{
             font-size: .9rem;
-            width: 450px;
+            width: 100%;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
