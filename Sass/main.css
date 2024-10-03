@@ -184,6 +184,7 @@ main .footer .about .lastLinks .copyright {
 }
 main:hover {
   padding-left: -5px;
+  width: calc(100% + 10px);
 }
 
 .rigthSide {
@@ -982,7 +983,7 @@ main .songs .song__1:nth-of-type(3) .song__name .song__title {
   color: #00ff6a;
 }
 main .songs .song__1:nth-of-type(3) .song__option .options .option__add {
-  display: none;
+  display: none !important;
 }
 main .songs .song__1:nth-of-type(3) .song__option .options .option__added {
   opacity: 1;
@@ -997,8 +998,8 @@ main .songs .song__1 .song__name {
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  gap: 20px;
-  width: 500px;
+  gap: 15px;
+  width: 55%;
 }
 main .songs .song__1 .song__name .name__order {
   display: flex;
@@ -1027,24 +1028,26 @@ main .songs .song__1 .song__name .song__picture {
   padding: 0;
 }
 main .songs .song__1 .song__name .song__title {
+  overflow: hidden;
   color: #fff;
   cursor: pointer;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  width: 22vw;
 }
 main .songs .song__1 .song__heared {
   display: flex;
-  align-self: flex-end;
-  margin-right: 70px;
 }
 main .songs .song__1 .song__heared p {
-  text-align: right;
   opacity: 0.8;
+  width: 6vw;
 }
 main .songs .song__1 .song__option {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
 }
 main .songs .song__1 .song__option .options {
   display: flex;
@@ -1058,7 +1061,6 @@ main .songs .song__1 .song__option .options img {
   padding: 0;
 }
 main .songs .song__1 .song__option .options .option__add {
-  display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -1071,7 +1073,6 @@ main .songs .song__1 .song__option .options .option__add {
 main .songs .song__1 .song__option .options .option__added {
   margin: 0;
   padding: 0;
-  display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -1105,7 +1106,6 @@ main .songs .song__1:hover .option__more:hover {
 main .songs .song__1:hover .options .option__add {
   align-items: center;
   opacity: 0.8;
-  display: flex;
 }
 main .songs .song__1:hover .name__order .song-no {
   opacity: 0;
@@ -2951,6 +2951,17 @@ main .footer .lastLinks .copyright {
   padding: 0;
 }
 
+@media (max-width: 1127px) {
+  main .content .songs .song__1 .song__name {
+    width: 80%;
+  }
+  main .content .songs .song__1 .song__name .song__title {
+    width: 26vw;
+  }
+  main .content .songs .song__1 .song__heared {
+    display: none;
+  }
+}
 @media (max-width: 1007px) {
   header .home {
     margin-top: 10px;
@@ -3024,5 +3035,25 @@ main .footer .lastLinks .copyright {
   }
   header .playlist:hover section {
     padding-left: 17px;
+  }
+  main .content .songs .song__1 .song__name {
+    width: 55%;
+  }
+  main .content .songs .song__1 .song__name .song__title {
+    width: 26vw;
+  }
+  main .content .songs .song__1 .song__heared {
+    display: flex;
+  }
+}
+@media (max-width: 920px) {
+  main .content .songs .song__1 .song__name {
+    width: 65%;
+  }
+  main .content .songs .song__1 .song__name .song__title {
+    width: 26vw;
+  }
+  main .content .songs .song__1 .song__heared {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

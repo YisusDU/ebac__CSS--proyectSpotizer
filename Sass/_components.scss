@@ -411,7 +411,7 @@ main{
                 .song__option{
                     .options{
                         .option__add{
-                            display: none;
+                            display: none !important;
                         }
                         .option__added{
                             opacity: 1;
@@ -431,8 +431,8 @@ main{
             flex-direction: row;
             justify-content: left;
             align-items: center;
-            gap: 20px;
-            width: 500px;
+            gap: 15px;
+            width: 55%;
             .name__order{
                 display: flex;
                 flex-direction: row;
@@ -460,8 +460,12 @@ main{
                 padding: 0;
             }
             .song__title{
+                overflow: hidden;
                 color: $whiteLight;
                 cursor: pointer;
+                text-wrap: nowrap;
+                text-overflow: ellipsis;
+                width: 22vw;
             }
             
 
@@ -469,11 +473,9 @@ main{
 
            .song__heared{
             display: flex;
-            align-self: flex-end;
-            margin-right: 70px;
             p{
-                text-align: right;
                 opacity: .8;
+                width: 6vw;
             }
            }
            .song__option{
@@ -481,7 +483,7 @@ main{
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 5px;
             .options{
                 display: flex;
                 flex-direction: row;
@@ -493,7 +495,6 @@ main{
                     padding: 0;
                 }
                 .option__add{
-                    display: none;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
@@ -506,7 +507,6 @@ main{
                 .option__added{
                     margin: 0;
                     padding: 0;
-                    display: none;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
@@ -543,7 +543,6 @@ main{
                     .option__add{
                         align-items: center;
                         opacity: .8;
-                        display: flex;
                        
                     }
                 }
@@ -1410,6 +1409,27 @@ main{
 }
 
 // ---------------Media querys
+@media (max-width: 1127px){
+    main{
+        .content{
+            .songs{
+                .song__1{
+                    .song__name{
+                        width: 80%;
+                        .song__title{
+                            width: 26vw;
+                        }
+                    }
+                    .song__heared{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 @media (max-width: 1007px) {
 
     header{
@@ -1490,7 +1510,46 @@ main{
             }
         }
     }
+    main{
+        .content{
+            .songs{
+                .song__1{
+                    .song__name{
+                        width: 55%;
+                        .song__title{
+                            width: 26vw;
+                        }
+                    }
+                    .song__heared{
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
 }
+
+@media (max-width: 920px){
+    main{
+        .content{
+            .songs{
+                .song__1{
+                    .song__name{
+                        width: 65%;
+                        .song__title{
+                            width: 26vw;
+                        }
+                    }
+                    .song__heared{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 
 
