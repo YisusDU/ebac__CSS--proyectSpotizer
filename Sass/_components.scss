@@ -752,7 +752,7 @@ main{
                     font-size: 20px;
                 }
                 .about__img{
-                    height: 520px;
+                    height: 516px;
                     background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
                     background-size: cover; 
                     background-position: center 4%; 
@@ -774,7 +774,8 @@ main{
                     p{
                         color: $whiteLight;
                         text-align: justify;
-                        width: 655px;
+                        width: 75%;
+                        min-width: 325px;
                         max-height: 70px;
                         line-height: 25px;
                         display: -webkit-box;
