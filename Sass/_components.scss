@@ -729,6 +729,7 @@ main{
             }
         }
         .findOn__albums{
+            @include hiidenLastElement;
             display: flex;
             overflow: hidden;
             justify-content: center;
@@ -752,6 +753,7 @@ main{
                     font-size: 20px;
                 }
                 .about__img{
+                    transition:  all 0.5s;
                     height: 516px;
                     background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
                     background-size: cover; 

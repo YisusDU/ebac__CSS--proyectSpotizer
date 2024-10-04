@@ -34,7 +34,32 @@ $fontBold: bold;
       flex-direction: column;
     }
   }*/
+
 //---------mixins media query
+@mixin hiidenLastElement{
+    @media (max-width: 1515px) {
+        div:nth-child(5){
+            display: none;
+        }
+    }
+    @media (max-width:1326px){
+        div:nth-child(4){
+            display: none;
+        }
+    }
+    @media (max-width:1139px){
+        div:nth-child(3){
+            display: none;
+        }
+    }
+    @media (max-width:1007px){
+        div:nth-child(3){
+            display: flex;
+        }
+    }
+        
+}
+
 @mixin flex--collumn{
     @media (max-width: 767px) {
         display: flex;

@@ -1832,6 +1832,26 @@ main .findOn .findOn__albums {
   justify-content: center;
   gap: 7px;
 }
+@media (max-width: 1515px) {
+  main .findOn .findOn__albums div:nth-child(5) {
+    display: none;
+  }
+}
+@media (max-width: 1326px) {
+  main .findOn .findOn__albums div:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 1139px) {
+  main .findOn .findOn__albums div:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 1007px) {
+  main .findOn .findOn__albums div:nth-child(3) {
+    display: flex;
+  }
+}
 main .findOn .findOn__albums .album {
   display: flex;
   flex-direction: column;
@@ -1919,6 +1939,7 @@ main .footer .about .about__portade .about__title {
   font-size: 20px;
 }
 main .footer .about .about__portade .about__img {
+  transition: all 0.5s;
   height: 516px;
   background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
   background-size: cover;
