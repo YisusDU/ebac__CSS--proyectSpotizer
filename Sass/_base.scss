@@ -57,6 +57,11 @@ $fontBold: bold;
             display: flex;
         }
     }
+    @media (max-width:931px){
+        div:nth-child(3){
+            display: none;
+        }
+    }
         
 }
 
@@ -82,7 +87,59 @@ $fontBold: bold;
 
 
 //---------Mixins
-
+@mixin ajustText{
+    @media (max-width: 1515px) {
+        figure{
+            figcaption{
+                max-width: 13vw;
+            }
+        }
+        p{
+            max-width: 12vw;
+        }
+    }
+    @media (max-width:1326px){
+        figure{
+            figcaption{
+                max-width: 17vw;
+            }
+        }
+        p{
+            max-width: 16vw;
+        }
+    }
+    @media (max-width:1139px){
+        figure{
+            figcaption{
+                max-width: 21vw;
+            }
+        }
+        p{
+            max-width: 21vw;
+        }
+    }
+    @media (max-width:1007px){
+        figure{
+            figcaption{
+                max-width: 17vw;
+            }
+        }
+        p{
+            max-width: 16vw;
+        }
+    }
+    @media (max-width:931px){
+        figure{
+            figcaption{
+                max-width: 25vw;
+            }
+        }
+        p{
+            max-width: 25vw;
+        }
+    }
+        
+}
 
 @mixin playlistHover{
     section > i:first-of-type{
@@ -374,28 +431,41 @@ $fontBold: bold;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     margin: 0px;
     padding: 5px;
     border-radius: $radius;
     box-sizing: border-box;
+    max-width: 269.5px;
+    max-height: 343.5px;
+    gap: 7px;
+    flex-grow: 1;
+    flex-shrink: 1;
     figure{
         display: flex;
         flex-direction: column;
         margin: 0px;
-        width: 170px;
+        width: auto; /* permite que la figura se ajuste automáticamente */
+        height: auto; /* permite que la figura se ajuste automáticamente */
+        overflow: hidden;
+        text-overflow: ellipsis;
         img{
             position: relative;
-            width: 170px;
-            height: 170px;
             border-radius: $radius;
             z-index: 1;
             margin: 0 auto;
+            max-width: 100%; /* establece un ancho máximo del 100% */
+            max-height: 240px; /* establece un alto máximo de 200px */
+            width: auto; /* permite que la imagen se ajuste automáticamente */
+            height: auto; /* permite que la imagen se ajuste automáticamente */
+            object-fit: contain;
         }
         i {
             height: 0px;
             display: flex;
             justify-content: center;
             align-items: center;
+
             img {
                 width: 20px;
                 height: 20px;
@@ -412,10 +482,12 @@ $fontBold: bold;
             }
         }
         figcaption{
+            max-width: 10vw;
+            text-wrap: wrap;
             margin-top: 10px;
             overflow: hidden;
             color: $whiteLight;
-            max-width: 170px;
+            width: auto;
             max-height: 33px;
             overflow: hidden;
             white-space: nowrap;
@@ -423,7 +495,8 @@ $fontBold: bold;
         }
     }
     p{
-        width: 170px;
+        max-width: 10vw;
+        text-wrap: wrap;
         margin-top: 5px;
         max-height: 33px;
         font-size: .8rem;
@@ -431,6 +504,8 @@ $fontBold: bold;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        text-align: left;
+        align-self: flex-start;
     }
     &:hover{
         background-color: #4f4c4c6e;

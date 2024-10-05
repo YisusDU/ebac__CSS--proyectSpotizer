@@ -1204,31 +1204,71 @@ main .discografy .discografy__options .discografy__button--albums {
 main .discografy .discografy__popular {
   display: flex;
   overflow: hidden;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 0px;
 }
+@media (max-width: 1515px) {
+  main .discografy .discografy__popular div:nth-child(5) {
+    display: none;
+  }
+}
+@media (max-width: 1326px) {
+  main .discografy .discografy__popular div:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 1139px) {
+  main .discografy .discografy__popular div:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 1007px) {
+  main .discografy .discografy__popular div:nth-child(3) {
+    display: flex;
+  }
+}
+@media (max-width: 931px) {
+  main .discografy .discografy__popular div:nth-child(3) {
+    display: none;
+  }
+}
 main .discografy .discografy__popular .popular {
+  flex-grow: 1;
+  flex-shrink: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   margin: 0px;
   padding: 5px;
   border-radius: 10px;
   box-sizing: border-box;
+  max-width: 269.5px;
+  max-height: 343.5px;
+  gap: 7px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 main .discografy .discografy__popular .popular figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 170px;
+  width: auto; /* permite que la figura se ajuste automáticamente */
+  height: auto; /* permite que la figura se ajuste automáticamente */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .discografy .discografy__popular .popular figure img {
   position: relative;
-  width: 170px;
-  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
+  max-width: 100%; /* establece un ancho máximo del 100% */
+  max-height: 240px; /* establece un alto máximo de 200px */
+  width: auto; /* permite que la imagen se ajuste automáticamente */
+  height: auto; /* permite que la imagen se ajuste automáticamente */
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main .discografy .discografy__popular .popular figure i {
   height: 0px;
@@ -1250,17 +1290,20 @@ main .discografy .discografy__popular .popular figure i img {
   box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .discografy .discografy__popular .popular figure figcaption {
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 170px;
+  width: auto;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .discografy .discografy__popular .popular p {
-  width: 170px;
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
@@ -1268,6 +1311,8 @@ main .discografy .discografy__popular .popular p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: left;
+  align-self: flex-start;
 }
 main .discografy .discografy__popular .popular:hover {
   background-color: rgba(79, 76, 76, 0.431372549);
@@ -1283,34 +1328,114 @@ main .discografy .discografy__popular .popular:hover i img {
 main .discografy .discografy__popular .popular:hover i img:hover {
   scale: 1.1;
 }
+@media (max-width: 1515px) {
+  main .discografy .discografy__popular .popular figure figcaption {
+    max-width: 13vw;
+  }
+  main .discografy .discografy__popular .popular p {
+    max-width: 12vw;
+  }
+}
+@media (max-width: 1326px) {
+  main .discografy .discografy__popular .popular figure figcaption {
+    max-width: 17vw;
+  }
+  main .discografy .discografy__popular .popular p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 1139px) {
+  main .discografy .discografy__popular .popular figure figcaption {
+    max-width: 21vw;
+  }
+  main .discografy .discografy__popular .popular p {
+    max-width: 21vw;
+  }
+}
+@media (max-width: 1007px) {
+  main .discografy .discografy__popular .popular figure figcaption {
+    max-width: 17vw;
+  }
+  main .discografy .discografy__popular .popular p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 931px) {
+  main .discografy .discografy__popular .popular figure figcaption {
+    max-width: 25vw;
+  }
+  main .discografy .discografy__popular .popular p {
+    max-width: 25vw;
+  }
+}
 main .discografy .discografy__albums {
   display: none;
   overflow: hidden;
   justify-content: center;
   gap: 0px;
 }
+@media (max-width: 1515px) {
+  main .discografy .discografy__albums div:nth-child(5) {
+    display: none;
+  }
+}
+@media (max-width: 1326px) {
+  main .discografy .discografy__albums div:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 1139px) {
+  main .discografy .discografy__albums div:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 1007px) {
+  main .discografy .discografy__albums div:nth-child(3) {
+    display: flex;
+  }
+}
+@media (max-width: 931px) {
+  main .discografy .discografy__albums div:nth-child(3) {
+    display: none;
+  }
+}
 main .discografy .discografy__albums .albums {
+  flex-grow: 1;
+  flex-shrink: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   margin: 0px;
   padding: 5px;
   border-radius: 10px;
   box-sizing: border-box;
+  max-width: 269.5px;
+  max-height: 343.5px;
+  gap: 7px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 main .discografy .discografy__albums .albums figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 170px;
+  width: auto; /* permite que la figura se ajuste automáticamente */
+  height: auto; /* permite que la figura se ajuste automáticamente */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .discografy .discografy__albums .albums figure img {
   position: relative;
-  width: 170px;
-  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
+  max-width: 100%; /* establece un ancho máximo del 100% */
+  max-height: 240px; /* establece un alto máximo de 200px */
+  width: auto; /* permite que la imagen se ajuste automáticamente */
+  height: auto; /* permite que la imagen se ajuste automáticamente */
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main .discografy .discografy__albums .albums figure i {
   height: 0px;
@@ -1332,17 +1457,20 @@ main .discografy .discografy__albums .albums figure i img {
   box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .discografy .discografy__albums .albums figure figcaption {
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 170px;
+  width: auto;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .discografy .discografy__albums .albums p {
-  width: 170px;
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
@@ -1350,6 +1478,8 @@ main .discografy .discografy__albums .albums p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: left;
+  align-self: flex-start;
 }
 main .discografy .discografy__albums .albums:hover {
   background-color: rgba(79, 76, 76, 0.431372549);
@@ -1365,8 +1495,48 @@ main .discografy .discografy__albums .albums:hover i img {
 main .discografy .discografy__albums .albums:hover i img:hover {
   scale: 1.1;
 }
+@media (max-width: 1515px) {
+  main .discografy .discografy__albums .albums figure figcaption {
+    max-width: 13vw;
+  }
+  main .discografy .discografy__albums .albums p {
+    max-width: 12vw;
+  }
+}
+@media (max-width: 1326px) {
+  main .discografy .discografy__albums .albums figure figcaption {
+    max-width: 17vw;
+  }
+  main .discografy .discografy__albums .albums p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 1139px) {
+  main .discografy .discografy__albums .albums figure figcaption {
+    max-width: 21vw;
+  }
+  main .discografy .discografy__albums .albums p {
+    max-width: 21vw;
+  }
+}
+@media (max-width: 1007px) {
+  main .discografy .discografy__albums .albums figure figcaption {
+    max-width: 17vw;
+  }
+  main .discografy .discografy__albums .albums p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 931px) {
+  main .discografy .discografy__albums .albums figure figcaption {
+    max-width: 25vw;
+  }
+  main .discografy .discografy__albums .albums p {
+    max-width: 25vw;
+  }
+}
 main .withPxndx {
-  margin: 30px auto 30px auto;
+  margin: 20px auto 20px auto;
 }
 main .withPxndx .withPxndx__buttons {
   display: flex;
@@ -1391,31 +1561,71 @@ main .withPxndx .withPxndx__buttons a:last-of-type {
 main .withPxndx .withPxndx__collabs {
   display: flex;
   overflow: hidden;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 0px;
 }
+@media (max-width: 1515px) {
+  main .withPxndx .withPxndx__collabs div:nth-child(5) {
+    display: none;
+  }
+}
+@media (max-width: 1326px) {
+  main .withPxndx .withPxndx__collabs div:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 1139px) {
+  main .withPxndx .withPxndx__collabs div:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 1007px) {
+  main .withPxndx .withPxndx__collabs div:nth-child(3) {
+    display: flex;
+  }
+}
+@media (max-width: 931px) {
+  main .withPxndx .withPxndx__collabs div:nth-child(3) {
+    display: none;
+  }
+}
 main .withPxndx .withPxndx__collabs .collab {
+  flex-grow: 1;
+  flex-shrink: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   margin: 0px;
   padding: 5px;
   border-radius: 10px;
   box-sizing: border-box;
+  max-width: 269.5px;
+  max-height: 343.5px;
+  gap: 7px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 main .withPxndx .withPxndx__collabs .collab figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 170px;
+  width: auto; /* permite que la figura se ajuste automáticamente */
+  height: auto; /* permite que la figura se ajuste automáticamente */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .withPxndx .withPxndx__collabs .collab figure img {
   position: relative;
-  width: 170px;
-  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
+  max-width: 100%; /* establece un ancho máximo del 100% */
+  max-height: 240px; /* establece un alto máximo de 200px */
+  width: auto; /* permite que la imagen se ajuste automáticamente */
+  height: auto; /* permite que la imagen se ajuste automáticamente */
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main .withPxndx .withPxndx__collabs .collab figure i {
   height: 0px;
@@ -1437,17 +1647,20 @@ main .withPxndx .withPxndx__collabs .collab figure i img {
   box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .withPxndx .withPxndx__collabs .collab figure figcaption {
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 170px;
+  width: auto;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .withPxndx .withPxndx__collabs .collab p {
-  width: 170px;
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
@@ -1455,6 +1668,8 @@ main .withPxndx .withPxndx__collabs .collab p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: left;
+  align-self: flex-start;
 }
 main .withPxndx .withPxndx__collabs .collab:hover {
   background-color: rgba(79, 76, 76, 0.431372549);
@@ -1470,11 +1685,45 @@ main .withPxndx .withPxndx__collabs .collab:hover i img {
 main .withPxndx .withPxndx__collabs .collab:hover i img:hover {
   scale: 1.1;
 }
-main .withPxndx .withPxndx__collabs .collab figure {
-  width: 170px;
+@media (max-width: 1515px) {
+  main .withPxndx .withPxndx__collabs .collab figure figcaption {
+    max-width: 13vw;
+  }
+  main .withPxndx .withPxndx__collabs .collab p {
+    max-width: 12vw;
+  }
 }
-main .withPxndx .withPxndx__collabs .collab p {
-  width: 170px;
+@media (max-width: 1326px) {
+  main .withPxndx .withPxndx__collabs .collab figure figcaption {
+    max-width: 17vw;
+  }
+  main .withPxndx .withPxndx__collabs .collab p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 1139px) {
+  main .withPxndx .withPxndx__collabs .collab figure figcaption {
+    max-width: 21vw;
+  }
+  main .withPxndx .withPxndx__collabs .collab p {
+    max-width: 21vw;
+  }
+}
+@media (max-width: 1007px) {
+  main .withPxndx .withPxndx__collabs .collab figure figcaption {
+    max-width: 17vw;
+  }
+  main .withPxndx .withPxndx__collabs .collab p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 931px) {
+  main .withPxndx .withPxndx__collabs .collab figure figcaption {
+    max-width: 25vw;
+  }
+  main .withPxndx .withPxndx__collabs .collab p {
+    max-width: 25vw;
+  }
 }
 main .fansLikes {
   margin: 30px auto 30px auto;
@@ -1502,31 +1751,69 @@ main .fansLikes .fansLikes__buttons a:last-of-type {
 main .fansLikes .fansLikes__artist {
   display: flex;
   overflow: hidden;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 7px;
+}
+@media (max-width: 1515px) {
+  main .fansLikes .fansLikes__artist div:nth-child(5) {
+    display: none;
+  }
+}
+@media (max-width: 1326px) {
+  main .fansLikes .fansLikes__artist div:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 1139px) {
+  main .fansLikes .fansLikes__artist div:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 1007px) {
+  main .fansLikes .fansLikes__artist div:nth-child(3) {
+    display: flex;
+  }
+}
+@media (max-width: 931px) {
+  main .fansLikes .fansLikes__artist div:nth-child(3) {
+    display: none;
+  }
 }
 main .fansLikes .fansLikes__artist .artist {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   margin: 0px;
   padding: 5px;
   border-radius: 10px;
   box-sizing: border-box;
+  max-width: 269.5px;
+  max-height: 343.5px;
+  gap: 7px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 main .fansLikes .fansLikes__artist .artist figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 170px;
+  width: auto; /* permite que la figura se ajuste automáticamente */
+  height: auto; /* permite que la figura se ajuste automáticamente */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .fansLikes .fansLikes__artist .artist figure img {
   position: relative;
-  width: 170px;
-  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
+  max-width: 100%; /* establece un ancho máximo del 100% */
+  max-height: 240px; /* establece un alto máximo de 200px */
+  width: auto; /* permite que la imagen se ajuste automáticamente */
+  height: auto; /* permite que la imagen se ajuste automáticamente */
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main .fansLikes .fansLikes__artist .artist figure i {
   height: 0px;
@@ -1548,17 +1835,20 @@ main .fansLikes .fansLikes__artist .artist figure i img {
   box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .fansLikes .fansLikes__artist .artist figure figcaption {
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 170px;
+  width: auto;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .fansLikes .fansLikes__artist .artist p {
-  width: 170px;
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
@@ -1566,6 +1856,8 @@ main .fansLikes .fansLikes__artist .artist p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: left;
+  align-self: flex-start;
 }
 main .fansLikes .fansLikes__artist .artist:hover {
   background-color: rgba(79, 76, 76, 0.431372549);
@@ -1581,11 +1873,51 @@ main .fansLikes .fansLikes__artist .artist:hover i img {
 main .fansLikes .fansLikes__artist .artist:hover i img:hover {
   scale: 1.1;
 }
+@media (max-width: 1515px) {
+  main .fansLikes .fansLikes__artist .artist figure figcaption {
+    max-width: 13vw;
+  }
+  main .fansLikes .fansLikes__artist .artist p {
+    max-width: 12vw;
+  }
+}
+@media (max-width: 1326px) {
+  main .fansLikes .fansLikes__artist .artist figure figcaption {
+    max-width: 17vw;
+  }
+  main .fansLikes .fansLikes__artist .artist p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 1139px) {
+  main .fansLikes .fansLikes__artist .artist figure figcaption {
+    max-width: 21vw;
+  }
+  main .fansLikes .fansLikes__artist .artist p {
+    max-width: 21vw;
+  }
+}
+@media (max-width: 1007px) {
+  main .fansLikes .fansLikes__artist .artist figure figcaption {
+    max-width: 17vw;
+  }
+  main .fansLikes .fansLikes__artist .artist p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 931px) {
+  main .fansLikes .fansLikes__artist .artist figure figcaption {
+    max-width: 25vw;
+  }
+  main .fansLikes .fansLikes__artist .artist p {
+    max-width: 25vw;
+  }
+}
 main .fansLikes .fansLikes__artist .artist img:first-of-type {
   border-radius: 50%;
 }
 main .displayon {
-  margin: 30px auto 30px auto;
+  margin: 20px auto 20px auto;
 }
 main .displayon .displayon__buttons {
   display: flex;
@@ -1610,31 +1942,69 @@ main .displayon .displayon__buttons a:last-of-type {
 main .displayon .displayon__others {
   display: flex;
   overflow: hidden;
-  justify-content: center;
-  gap: 7px;
+  justify-content: space-evenly;
+  gap: 0px;
+}
+@media (max-width: 1515px) {
+  main .displayon .displayon__others div:nth-child(5) {
+    display: none;
+  }
+}
+@media (max-width: 1326px) {
+  main .displayon .displayon__others div:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 1139px) {
+  main .displayon .displayon__others div:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 1007px) {
+  main .displayon .displayon__others div:nth-child(3) {
+    display: flex;
+  }
+}
+@media (max-width: 931px) {
+  main .displayon .displayon__others div:nth-child(3) {
+    display: none;
+  }
 }
 main .displayon .displayon__others .other {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   margin: 0px;
   padding: 5px;
   border-radius: 10px;
   box-sizing: border-box;
+  max-width: 269.5px;
+  max-height: 343.5px;
+  gap: 7px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 main .displayon .displayon__others .other figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 170px;
+  width: auto; /* permite que la figura se ajuste automáticamente */
+  height: auto; /* permite que la figura se ajuste automáticamente */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .displayon .displayon__others .other figure img {
   position: relative;
-  width: 170px;
-  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
+  max-width: 100%; /* establece un ancho máximo del 100% */
+  max-height: 240px; /* establece un alto máximo de 200px */
+  width: auto; /* permite que la imagen se ajuste automáticamente */
+  height: auto; /* permite que la imagen se ajuste automáticamente */
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main .displayon .displayon__others .other figure i {
   height: 0px;
@@ -1656,17 +2026,20 @@ main .displayon .displayon__others .other figure i img {
   box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .displayon .displayon__others .other figure figcaption {
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 170px;
+  width: auto;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .displayon .displayon__others .other p {
-  width: 170px;
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
@@ -1674,6 +2047,8 @@ main .displayon .displayon__others .other p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: left;
+  align-self: flex-start;
 }
 main .displayon .displayon__others .other:hover {
   background-color: rgba(79, 76, 76, 0.431372549);
@@ -1689,11 +2064,51 @@ main .displayon .displayon__others .other:hover i img {
 main .displayon .displayon__others .other:hover i img:hover {
   scale: 1.1;
 }
+@media (max-width: 1515px) {
+  main .displayon .displayon__others .other figure figcaption {
+    max-width: 13vw;
+  }
+  main .displayon .displayon__others .other p {
+    max-width: 12vw;
+  }
+}
+@media (max-width: 1326px) {
+  main .displayon .displayon__others .other figure figcaption {
+    max-width: 17vw;
+  }
+  main .displayon .displayon__others .other p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 1139px) {
+  main .displayon .displayon__others .other figure figcaption {
+    max-width: 21vw;
+  }
+  main .displayon .displayon__others .other p {
+    max-width: 21vw;
+  }
+}
+@media (max-width: 1007px) {
+  main .displayon .displayon__others .other figure figcaption {
+    max-width: 17vw;
+  }
+  main .displayon .displayon__others .other p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 931px) {
+  main .displayon .displayon__others .other figure figcaption {
+    max-width: 25vw;
+  }
+  main .displayon .displayon__others .other p {
+    max-width: 25vw;
+  }
+}
 main .displayon .displayon__others .other .other_caption {
   text-transform: capitalize;
 }
 main .playlist {
-  margin: 30px auto 30px auto;
+  margin: 20px auto 20px auto;
 }
 main .playlist .playlist__buttons {
   display: flex;
@@ -1722,30 +2137,69 @@ main .playlist .playlist__song {
   display: flex;
   overflow: hidden;
   justify-content: flex-start;
-  gap: 7px;
+  gap: 0px;
+}
+@media (max-width: 1515px) {
+  main .playlist .playlist__song div:nth-child(5) {
+    display: none;
+  }
+}
+@media (max-width: 1326px) {
+  main .playlist .playlist__song div:nth-child(4) {
+    display: none;
+  }
+}
+@media (max-width: 1139px) {
+  main .playlist .playlist__song div:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 1007px) {
+  main .playlist .playlist__song div:nth-child(3) {
+    display: flex;
+  }
+}
+@media (max-width: 931px) {
+  main .playlist .playlist__song div:nth-child(3) {
+    display: none;
+  }
 }
 main .playlist .playlist__song .song {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   margin: 0px;
   padding: 5px;
   border-radius: 10px;
   box-sizing: border-box;
+  max-width: 269.5px;
+  max-height: 343.5px;
+  gap: 7px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  opacity: 0;
 }
 main .playlist .playlist__song .song figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 170px;
+  width: auto; /* permite que la figura se ajuste automáticamente */
+  height: auto; /* permite que la figura se ajuste automáticamente */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .playlist .playlist__song .song figure img {
   position: relative;
-  width: 170px;
-  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
+  max-width: 100%; /* establece un ancho máximo del 100% */
+  max-height: 240px; /* establece un alto máximo de 200px */
+  width: auto; /* permite que la imagen se ajuste automáticamente */
+  height: auto; /* permite que la imagen se ajuste automáticamente */
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main .playlist .playlist__song .song figure i {
   height: 0px;
@@ -1767,17 +2221,20 @@ main .playlist .playlist__song .song figure i img {
   box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .playlist .playlist__song .song figure figcaption {
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 170px;
+  width: auto;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .playlist .playlist__song .song p {
-  width: 170px;
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
@@ -1785,6 +2242,8 @@ main .playlist .playlist__song .song p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: left;
+  align-self: flex-start;
 }
 main .playlist .playlist__song .song:hover {
   background-color: rgba(79, 76, 76, 0.431372549);
@@ -1800,8 +2259,51 @@ main .playlist .playlist__song .song:hover i img {
 main .playlist .playlist__song .song:hover i img:hover {
   scale: 1.1;
 }
+@media (max-width: 1515px) {
+  main .playlist .playlist__song .song figure figcaption {
+    max-width: 13vw;
+  }
+  main .playlist .playlist__song .song p {
+    max-width: 12vw;
+  }
+}
+@media (max-width: 1326px) {
+  main .playlist .playlist__song .song figure figcaption {
+    max-width: 17vw;
+  }
+  main .playlist .playlist__song .song p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 1139px) {
+  main .playlist .playlist__song .song figure figcaption {
+    max-width: 21vw;
+  }
+  main .playlist .playlist__song .song p {
+    max-width: 21vw;
+  }
+}
+@media (max-width: 1007px) {
+  main .playlist .playlist__song .song figure figcaption {
+    max-width: 17vw;
+  }
+  main .playlist .playlist__song .song p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 931px) {
+  main .playlist .playlist__song .song figure figcaption {
+    max-width: 25vw;
+  }
+  main .playlist .playlist__song .song p {
+    max-width: 25vw;
+  }
+}
+main .playlist .playlist__song .song:first-of-type {
+  opacity: 1;
+}
 main .findOn {
-  margin: 30px auto 30px auto;
+  margin: 20px auto 20px auto;
 }
 main .findOn .findOn__buttons {
   display: flex;
@@ -1829,8 +2331,8 @@ main .findOn .findOn__buttons a:last-child {
 main .findOn .findOn__albums {
   display: flex;
   overflow: hidden;
-  justify-content: center;
-  gap: 7px;
+  justify-content: space-evenly;
+  gap: 0px;
 }
 @media (max-width: 1515px) {
   main .findOn .findOn__albums div:nth-child(5) {
@@ -1852,28 +2354,46 @@ main .findOn .findOn__albums {
     display: flex;
   }
 }
+@media (max-width: 931px) {
+  main .findOn .findOn__albums div:nth-child(3) {
+    display: none;
+  }
+}
 main .findOn .findOn__albums .album {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   margin: 0px;
   padding: 5px;
   border-radius: 10px;
   box-sizing: border-box;
+  max-width: 269.5px;
+  max-height: 343.5px;
+  gap: 7px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 main .findOn .findOn__albums .album figure {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  width: 170px;
+  width: auto; /* permite que la figura se ajuste automáticamente */
+  height: auto; /* permite que la figura se ajuste automáticamente */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .findOn .findOn__albums .album figure img {
   position: relative;
-  width: 170px;
-  height: 170px;
   border-radius: 10px;
   z-index: 1;
   margin: 0 auto;
+  max-width: 100%; /* establece un ancho máximo del 100% */
+  max-height: 240px; /* establece un alto máximo de 200px */
+  width: auto; /* permite que la imagen se ajuste automáticamente */
+  height: auto; /* permite que la imagen se ajuste automáticamente */
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main .findOn .findOn__albums .album figure i {
   height: 0px;
@@ -1895,17 +2415,20 @@ main .findOn .findOn__albums .album figure i img {
   box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 0.7);
 }
 main .findOn .findOn__albums .album figure figcaption {
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 10px;
   overflow: hidden;
   color: #fff;
-  max-width: 170px;
+  width: auto;
   max-height: 33px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 main .findOn .findOn__albums .album p {
-  width: 170px;
+  max-width: 10vw;
+  text-wrap: wrap;
   margin-top: 5px;
   max-height: 33px;
   font-size: 0.8rem;
@@ -1913,6 +2436,8 @@ main .findOn .findOn__albums .album p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: left;
+  align-self: flex-start;
 }
 main .findOn .findOn__albums .album:hover {
   background-color: rgba(79, 76, 76, 0.431372549);
@@ -1927,6 +2452,46 @@ main .findOn .findOn__albums .album:hover i img {
 }
 main .findOn .findOn__albums .album:hover i img:hover {
   scale: 1.1;
+}
+@media (max-width: 1515px) {
+  main .findOn .findOn__albums .album figure figcaption {
+    max-width: 13vw;
+  }
+  main .findOn .findOn__albums .album p {
+    max-width: 12vw;
+  }
+}
+@media (max-width: 1326px) {
+  main .findOn .findOn__albums .album figure figcaption {
+    max-width: 17vw;
+  }
+  main .findOn .findOn__albums .album p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 1139px) {
+  main .findOn .findOn__albums .album figure figcaption {
+    max-width: 21vw;
+  }
+  main .findOn .findOn__albums .album p {
+    max-width: 21vw;
+  }
+}
+@media (max-width: 1007px) {
+  main .findOn .findOn__albums .album figure figcaption {
+    max-width: 17vw;
+  }
+  main .findOn .findOn__albums .album p {
+    max-width: 16vw;
+  }
+}
+@media (max-width: 931px) {
+  main .findOn .findOn__albums .album figure figcaption {
+    max-width: 25vw;
+  }
+  main .findOn .findOn__albums .album p {
+    max-width: 25vw;
+  }
 }
 main .findOn .findOn__albums .album .other_caption {
   text-transform: capitalize;

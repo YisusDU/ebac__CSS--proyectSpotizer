@@ -598,6 +598,7 @@ main{
         }
     }
     .discografy{
+        
         margin: 20px auto 20px auto ;
         .discografy__buttons{
             @include titleButtons;
@@ -623,10 +624,14 @@ main{
         .discografy__popular{
             display: flex;
             overflow: hidden;
-            justify-content: center;
+            justify-content: space-evenly;
             gap: 0px;
+            @include hiidenLastElement;
             .popular{
+                flex-grow: 1;
+                flex-shrink: 1;
                 @include discografy;
+                @include ajustText;
             }
         }
         .discografy__albums{
@@ -634,30 +639,32 @@ main{
             overflow: hidden;
             justify-content: center;
             gap: 0px;
+            @include hiidenLastElement;
             .albums{
+                flex-grow: 1;
+                flex-shrink: 1;
                 @include discografy;
+                @include ajustText;
             }
             
         }
     }
     .withPxndx{
-        margin: 30px auto 30px auto;
+        margin: 20px auto 20px auto ;
         .withPxndx__buttons{
-       @include titleButtons;
+            @include titleButtons;
         }
         .withPxndx__collabs{
             display: flex;
             overflow: hidden;
-            justify-content: center;
+            justify-content: space-evenly;
             gap: 0px;
+            @include hiidenLastElement;
         .collab{
+            flex-grow: 1;
+            flex-shrink: 1;
             @include discografy;
-            figure{
-                width: 170px;
-            }
-            p{
-                width: 170px;
-            }
+            @include ajustText;
         }
         }
        
@@ -671,10 +678,12 @@ main{
         .fansLikes__artist{
             display: flex;
             overflow: hidden;
-            justify-content: center;
+            justify-content: space-evenly;
             gap: 7px;
+            @include hiidenLastElement;
             .artist{
                 @include discografy;
+                @include ajustText;
                 img:first-of-type{
                     border-radius: 50%;
                 }
@@ -682,17 +691,19 @@ main{
         }
     }
     .displayon{
-        margin: 30px auto 30px auto;
+        margin: 20px auto 20px auto ;
         .displayon__buttons{
             @include titleButtons;
         }
         .displayon__others{
             display: flex;
             overflow: hidden;
-            justify-content: center;
-            gap: 7px;
+            justify-content: space-evenly;
+            gap: 0px;
+            @include hiidenLastElement;
             .other{
                 @include discografy;
+                @include ajustText;
                 .other_caption{
                     text-transform:capitalize;
                   }
@@ -702,7 +713,7 @@ main{
     }
 
     .playlist{
-        margin: 30px auto 30px auto;
+        margin: 20px auto 20px auto ;
         .playlist__buttons{
             @include titleButtons;
             a:last-child{
@@ -713,15 +724,21 @@ main{
             display: flex;
             overflow: hidden;
             justify-content: flex-start;
-            gap: 7px;
+            gap: 0px;
+            @include hiidenLastElement;
             .song{
                 @include discografy;
+                @include ajustText;
+                opacity: 0;
+                &:first-of-type{
+                    opacity: 1;
+                }
             }
             
         }
     }
     .findOn{
-        margin: 30px auto 30px auto;
+        margin: 20px auto 20px auto ;
         .findOn__buttons{
             @include titleButtons;
             a:last-child{
@@ -732,10 +749,11 @@ main{
             @include hiidenLastElement;
             display: flex;
             overflow: hidden;
-            justify-content: center;
-            gap: 7px;
+            justify-content: space-evenly;
+            gap: 0px;
             .album{
                 @include discografy;
+                @include ajustText;
                 .other_caption{
                     text-transform:capitalize;
                   }
