@@ -51,6 +51,7 @@ header {
   min-height: 510.297px;
   text-wrap: nowrap;
   flex-wrap: nowrap;
+  margin-right: 5px;
 }
 header .home {
   display: flex;
@@ -102,6 +103,9 @@ header .playlist {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-grow: 3;
   grid-area: main;
   display: flex;
@@ -110,7 +114,7 @@ main {
   grid-column: 2;
   grid-row: 1;
   overflow: hidden;
-  width: 100%;
+  max-width: 1344px;
   min-width: 416px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -130,7 +134,7 @@ main .portade {
   display: block;
   flex-direction: column;
   gap: 80px;
-  width: 94%;
+  width: 96%;
   height: 340px;
 }
 main .content {
@@ -140,7 +144,7 @@ main .content {
   background: linear-gradient(rgb(5, 124, 136) 0%, #0f0f0f 8%);
   padding: 20px;
   margin: 0 5px 0 5px;
-  width: 94%;
+  width: 96%;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -148,9 +152,9 @@ main .footer {
   grid-column: 1;
   width: 100%;
   display: flex;
+  justify-content: center;
   grid-column: 1;
-  display: inline-block;
-  width: 94%;
+  width: calc(100% + 6px);
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -179,7 +183,7 @@ main .footer .about .lastLinks {
   flex-direction: row;
   justify-content: space-around;
   align-items: baseline;
-  width: 100%;
+  width: 98%;
   margin: 0 auto;
   text-align: center;
   font-size: 0.8rem;
@@ -195,11 +199,13 @@ main .footer .about .lastLinks .copyright {
   flex-grow: 1;
 }
 main:hover {
-  padding-left: -5px;
-  width: calc(100% + 10px);
+  width: calc(100% + 7px);
 }
 
 .rigthSide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-grow: 1;
   grid-area: rigthSide;
   z-index: 0;
@@ -212,10 +218,8 @@ main:hover {
   min-height: 501.219px;
   right: 15px;
   overflow: hidden;
-  margin-top: 10px;
-  min-width: 280px;
-  opacity: 0 !important;
-  display: none !important;
+  margin: 10px 5px;
+  width: 98%;
 }
 
 .controls {
@@ -269,7 +273,12 @@ main:hover {
     display: grid;
     margin: 0;
     grid-template-rows: 2;
-    grid-template-columns: 100px 61% auto;
+    grid-template-columns: 105px 61% auto;
+  }
+  header {
+    padding-top: 10px;
+    height: 88vh;
+    min-height: 500.297px;
   }
   .main {
     min-width: 416px;
@@ -391,7 +400,7 @@ header .playlist -webkit-scrollbar {
   display: none;
   z-index: 1;
   transition: all 0.25s;
-  position: relative;
+  position: fixed;
 }
 header .playlist::-webkit-scrollbar {
   width: 5px; /* Ancho de la barra de desplazamiento */
@@ -400,7 +409,7 @@ header .playlist::-webkit-scrollbar {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   z-index: 1;
-  position: relative;
+  position: fixed;
 }
 header .playlist::-webkit-scrollbar-track {
   background: transparent; /* Color del track */
@@ -410,7 +419,7 @@ header .playlist::-webkit-scrollbar-track {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   z-index: 1;
-  position: relative;
+  position: fixed;
 }
 header .playlist::-webkit-scrollbar-thumb {
   background-color: #888; /* Color de la thumb */
@@ -421,7 +430,7 @@ header .playlist::-webkit-scrollbar-thumb {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   z-index: 1;
-  position: relative;
+  position: fixed;
 }
 header .playlist::-webkit-scrollbar-thumb:hover {
   background-color: #555; /* Cambia el color al pasar el ratón */
@@ -455,11 +464,12 @@ header .playlist:hover -webkit-scrollbar:hover {
 }
 header .playlist:hover::-webkit-scrollbar {
   width: 7px; /* Ancho de la barra de desplazamiento */
-  opacity: 0.9;
+  opacity: 0;
   display: block;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   z-index: 1;
+  background: transparent;
 }
 header .playlist:hover::-webkit-scrollbar:hover {
   scrollbar-color: #b1b1b1 transparent;
@@ -692,7 +702,7 @@ header .playlist .album p {
 }
 
 main {
-  z-index: 0;
+  z-index: 2;
   /*Estilos para la escroll bar*/
   /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
   /* Estilo del "track" de la barra (fondo de la barra de scroll) */
@@ -709,7 +719,7 @@ main -webkit-scrollbar {
   display: none;
   z-index: 1;
   transition: all 0.25s;
-  position: relative;
+  position: fixed;
 }
 main::-webkit-scrollbar {
   width: 5px; /* Ancho de la barra de desplazamiento */
@@ -718,7 +728,7 @@ main::-webkit-scrollbar {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   z-index: 1;
-  position: relative;
+  position: fixed;
 }
 main::-webkit-scrollbar-track {
   background: transparent; /* Color del track */
@@ -728,7 +738,7 @@ main::-webkit-scrollbar-track {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   z-index: 1;
-  position: relative;
+  position: fixed;
 }
 main::-webkit-scrollbar-thumb {
   background-color: #888; /* Color de la thumb */
@@ -739,7 +749,7 @@ main::-webkit-scrollbar-thumb {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   z-index: 1;
-  position: relative;
+  position: fixed;
 }
 main::-webkit-scrollbar-thumb:hover {
   background-color: #555; /* Cambia el color al pasar el ratón */
@@ -773,11 +783,12 @@ main:hover -webkit-scrollbar:hover {
 }
 main:hover::-webkit-scrollbar {
   width: 7px; /* Ancho de la barra de desplazamiento */
-  opacity: 0.9;
+  opacity: 0;
   display: block;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   z-index: 1;
+  background: transparent;
 }
 main:hover::-webkit-scrollbar:hover {
   scrollbar-color: #b1b1b1 transparent;
@@ -2715,56 +2726,72 @@ main .footer .lastLinks .copyright {
   text-wrap: nowrap;
 }
 
-.rigthSide .amentes__Song {
+.rigthSide .aside__header {
+  width: 98%;
+}
+.rigthSide .aside__header .amentes__Song {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   height: 57px;
   padding: 0px 10px;
-  gap: 225px;
   margin: 0px;
-  width: 380px;
+  width: 98%;
   position: relative;
+  gap: 25%;
 }
-.rigthSide .amentes__Song .actualSong__buttons {
+.rigthSide .aside__header .amentes__Song .actualSong__buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.rigthSide .amentes__Song .actualSong__buttons a:first-of-type {
+.rigthSide .aside__header .amentes__Song .actualSong__buttons a:first-of-type {
   color: #fff;
   text-decoration: none;
   font-size: 22px;
 }
-.rigthSide .amentes__Song .actualSong__buttons a:first-of-type h4 {
+.rigthSide .aside__header .amentes__Song .actualSong__buttons a:first-of-type h4 {
   margin-bottom: 15px;
 }
-.rigthSide .amentes__Song .actualSong__buttons a:last-of-type {
+.rigthSide .aside__header .amentes__Song .actualSong__buttons a:last-of-type {
   color: #c0c0c0;
   opacity: 0.8;
   text-decoration: none;
   font-size: 14px;
 }
-.rigthSide .amentes__Song .actualSong__buttons:first-child .button__title {
+.rigthSide .aside__header .amentes__Song .actualSong__buttons:first-child {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.rigthSide .aside__header .amentes__Song .actualSong__buttons:first-child .button__title {
   font-size: 1rem;
   font-weight: bold;
 }
-.rigthSide .amentes__Song .actualSong__buttons:last-child {
+.rigthSide .aside__header .amentes__Song .actualSong__buttons:last-child {
   display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
   flex-direction: row;
   gap: 20px;
 }
-.rigthSide .amentes__Song .actualSong__buttons:last-child img {
+.rigthSide .aside__header .amentes__Song .actualSong__buttons:last-child img {
   scale: 0.8;
   cursor: pointer;
 }
 .rigthSide .content__scrollable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
-  width: 400px;
+  width: 94%;
   box-sizing: border-box;
   height: 95%;
   overflow-y: scroll;
+  overflow-x: hidden;
   /*Estilos para la escroll bar*/
   /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
   /* Estilo del "track" de la barra (fondo de la barra de scroll) */
@@ -2782,7 +2809,7 @@ main .footer .lastLinks .copyright {
   display: none;
   z-index: 1;
   transition: all 0.25s;
-  position: relative;
+  position: fixed;
 }
 .rigthSide .content__scrollable::-webkit-scrollbar {
   width: 5px; /* Ancho de la barra de desplazamiento */
@@ -2791,7 +2818,7 @@ main .footer .lastLinks .copyright {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   z-index: 1;
-  position: relative;
+  position: fixed;
 }
 .rigthSide .content__scrollable::-webkit-scrollbar-track {
   background: transparent; /* Color del track */
@@ -2801,7 +2828,7 @@ main .footer .lastLinks .copyright {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   z-index: 1;
-  position: relative;
+  position: fixed;
 }
 .rigthSide .content__scrollable::-webkit-scrollbar-thumb {
   background-color: #888; /* Color de la thumb */
@@ -2812,7 +2839,7 @@ main .footer .lastLinks .copyright {
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   z-index: 1;
-  position: relative;
+  position: fixed;
 }
 .rigthSide .content__scrollable::-webkit-scrollbar-thumb:hover {
   background-color: #555; /* Cambia el color al pasar el ratón */
@@ -2846,11 +2873,12 @@ main .footer .lastLinks .copyright {
 }
 .rigthSide .content__scrollable:hover::-webkit-scrollbar {
   width: 7px; /* Ancho de la barra de desplazamiento */
-  opacity: 0.9;
+  opacity: 0;
   display: block;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   z-index: 1;
+  background: transparent;
 }
 .rigthSide .content__scrollable:hover::-webkit-scrollbar:hover {
   scrollbar-color: #b1b1b1 transparent;
@@ -2896,6 +2924,7 @@ main .footer .lastLinks .copyright {
 }
 .rigthSide .content__scrollable .amentesSunt {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -2959,11 +2988,13 @@ main .footer .lastLinks .copyright {
   scale: 0.8;
 }
 .rigthSide .content__scrollable .about__artist {
-  width: 375px;
+  width: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
   margin: 20px auto;
   background-color: #181818;
   border-radius: 10px;
-  overflow: hidden;
 }
 .rigthSide .content__scrollable .about__artist .artist__photo {
   display: flex;
@@ -3035,7 +3066,6 @@ main .footer .lastLinks .copyright {
   margin: 20px auto;
   background-color: #181818;
   border-radius: 10px;
-  overflow: hidden;
 }
 .rigthSide .content__scrollable .credits .credits__title {
   display: flex;
@@ -3097,7 +3127,6 @@ main .footer .lastLinks .copyright {
   margin: 20px auto;
   background-color: #181818;
   border-radius: 10px;
-  overflow: hidden;
   padding: 20px;
 }
 .rigthSide .content__scrollable .articlesPromotion .promotion {
@@ -3180,12 +3209,11 @@ main .footer .lastLinks .copyright {
   justify-content: flex-start;
   height: 240px;
   gap: 20px;
-  width: 335px;
+  width: 98%;
   height: auto;
   margin: 20px auto;
   background-color: #181818;
   border-radius: 10px;
-  overflow: hidden;
   padding: 20px;
 }
 .rigthSide .content__scrollable .next .promotion {
@@ -3346,7 +3374,7 @@ main .footer .lastLinks .copyright {
   transition: 0s;
 }
 .rigthSide:hover .content__scrollable {
-  padding-left: 5px;
+  padding-left: 7px;
 }
 .rigthSide:hover .content__scrollable .amentesSunt .amentes__img .img__icons #img__link {
   opacity: 1;

@@ -191,7 +191,7 @@ $fontBold: bold;
         display: none;
         z-index: 1;
         transition: all 0.25s;
-        position: relative;
+        position: fixed;
     }
     /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
     &::-webkit-scrollbar {
@@ -200,7 +200,7 @@ $fontBold: bold;
         display: none;
         transition: all 0.25s;
         z-index: 1;
-        position: relative;
+        position: fixed;
     }
 
     /* Estilo del "track" de la barra (fondo de la barra de scroll) */
@@ -211,7 +211,7 @@ $fontBold: bold;
         display: none;
         transition: all 0.25s;
         z-index: 1;
-        position: relative;
+        position: fixed;
     }
 
 
@@ -224,7 +224,7 @@ $fontBold: bold;
         display: none;
         transition: all 0.25s;
         z-index: 1;
-        position: relative;
+        position: fixed;
     }
 
     /* Estilo de la thumb al pasar el ratón por encima */
@@ -256,10 +256,11 @@ $fontBold: bold;
         /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
         &::-webkit-scrollbar {
             width: 7px; /* Ancho de la barra de desplazamiento */
-            opacity: .9;
+            opacity: 0;
             display: block;
             transition: all 0.25s;
             z-index: 1;
+            background: transparent;
             &:hover{
                 scrollbar-color: #b1b1b1 transparent;
                 opacity: .9;

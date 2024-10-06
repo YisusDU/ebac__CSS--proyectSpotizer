@@ -228,9 +228,8 @@ header{
 
 
 main{
-    z-index: 0;
+    z-index: 2;
     @include scrollBar;
-    //@include overflow-x;
     overscroll-behavior: none;
     border-radius: $radius;
     .navbar{
@@ -916,42 +915,54 @@ main{
 }
 
 .rigthSide{
-    .amentes__Song{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        height: 57px;
-        padding: 0px 10px;
-        gap: 225px;
-        margin: 0px;
-        width: 380px;
-        position: relative;
-        .actualSong__buttons{
-            @include titleButtons;
-            &:first-child{
-                .button__title{
-                    font-size: 1rem;
-                    font-weight: bold;
-            }
-            }
-            &:last-child{
+    .aside__header{
+        width: 98%;
+        .amentes__Song{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 57px;
+            padding: 0px 10px;
+            margin: 0px;
+            width: 98%;
+            position: relative;
+            gap: 25%;
+            .actualSong__buttons{
                 display: flex;
-                flex-direction: row;
-                gap: 20px;
-                img {
-                    scale: .8;
-                    cursor: pointer;
+                width: 100%;
+                justify-content: space-evenly;
+                @include titleButtons;
+                &:first-child{
+                    width: fit-content;
+                    .button__title{
+                        font-size: 1rem;
+                        font-weight: bold;
                 }
+                }
+                &:last-child{
+                    display: flex;
+                    width: fit-content;
+                    flex-direction: row;
+                    gap: 20px;
+                    img {
+                        scale: .8;
+                        cursor: pointer;
+                    }
+                }
+            
             }
-        
         }
     }
     .content__scrollable{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin: 0 auto;
-        width: 400px;
+        width: 94%;
         box-sizing: border-box;
         height: 95%;
         overflow-y: scroll;
+        overflow-x: hidden;
         @include scrollBar;
         overscroll-behavior: none;
         box-sizing: border-box;
@@ -959,6 +970,7 @@ main{
     /*Secciones de contenido*/
     .amentesSunt{
         display: flex;
+        width: 100%;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -1024,11 +1036,13 @@ main{
             }
     }
     .about__artist{
-        width: 375px;
+        width: 100%;
+        width: auto;
+        display: flex;
+        flex-direction: column;
         margin: 20px auto;
         background-color: #181818;
         border-radius: 10px;
-        overflow: hidden;
         .artist__photo{
             display: flex;
             justify-content: flex-start;
@@ -1104,7 +1118,6 @@ main{
         margin: 20px auto;
         background-color: #181818;
         border-radius: 10px;
-        overflow: hidden;
         .credits__title{
             display: flex;
             flex-direction: row;
@@ -1162,7 +1175,6 @@ main{
         margin: 20px auto;
         background-color: #181818;
         border-radius: 10px;
-        overflow: hidden;
         padding: 20px;
         h5{
             margin: 0px;
@@ -1181,12 +1193,11 @@ main{
 
     .next{
         @include promotion;
-        width: 335px;
+        width: 98%;
         height: auto;
         margin: 20px auto;
         background-color: #181818;
         border-radius: 10px;
-        overflow: hidden;
         padding: 20px;
         .next__title{
             display: flex;
@@ -1292,10 +1303,11 @@ main{
         }
     }
     }
+    
     &:hover{
-        
         .content__scrollable{
-            padding-left: 5px;
+            padding-left: 7px;
+            
             .amentesSunt{
                 .amentes__img{
                     .img__icons{
