@@ -98,10 +98,9 @@ header{
     .playlist{
         overflow-y: scroll;
         overflow-x: hidden;
-        height: 530px;
         @include scrollBar;
         @include playlistHover;
-
+        height: 100%;
         & a {
             display: inline-block;
             color: $white;
@@ -229,7 +228,7 @@ header{
 
 
 main{
-    z-index: 0;
+    z-index: 2;
     @include scrollBar;
     overscroll-behavior: none;
     border-radius: $radius;
@@ -409,6 +408,22 @@ main{
                         color: $greenStrong;
                     }
                 }
+                .song__option{
+                    .options{
+                        .option__add{
+                            display: none !important;
+                        }
+                        .option__added{
+                            opacity: 1;
+                            display: block;
+                            img{
+                                opacity: 1;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                
             }
 
            .song__name{
@@ -416,8 +431,8 @@ main{
             flex-direction: row;
             justify-content: left;
             align-items: center;
-            gap: 20px;
-            width: 500px;
+            gap: 15px;
+            width: 55%;
             .name__order{
                 display: flex;
                 flex-direction: row;
@@ -445,8 +460,12 @@ main{
                 padding: 0;
             }
             .song__title{
+                overflow: hidden;
                 color: $whiteLight;
                 cursor: pointer;
+                text-wrap: nowrap;
+                text-overflow: ellipsis;
+                width: 22vw;
             }
             
 
@@ -454,11 +473,9 @@ main{
 
            .song__heared{
             display: flex;
-            align-self: flex-end;
-            margin-right: 70px;
             p{
-                text-align: right;
                 opacity: .8;
+                width: 6vw;
             }
            }
            .song__option{
@@ -466,7 +483,7 @@ main{
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 5px;
             .options{
                 display: flex;
                 flex-direction: row;
@@ -478,7 +495,6 @@ main{
                     padding: 0;
                 }
                 .option__add{
-                    display: none;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
@@ -491,7 +507,6 @@ main{
                 .option__added{
                     margin: 0;
                     padding: 0;
-                    display: none;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
@@ -528,7 +543,7 @@ main{
                     .option__add{
                         align-items: center;
                         opacity: .8;
-                        display: flex;
+                       
                     }
                 }
                 .name__order{
@@ -541,6 +556,19 @@ main{
                 }
                 .song__title{
                     text-decoration: underline;
+                }
+                &:nth-of-type(3){
+                    .song__option{
+                        .options{
+                            .option__add{
+                                opacity: 0;
+                                display: none;
+                            }
+                            .option__added{
+                                opacity: 1;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -569,6 +597,7 @@ main{
         }
     }
     .discografy{
+        
         margin: 20px auto 20px auto ;
         .discografy__buttons{
             @include titleButtons;
@@ -594,10 +623,14 @@ main{
         .discografy__popular{
             display: flex;
             overflow: hidden;
-            justify-content: center;
+            justify-content: space-evenly;
             gap: 0px;
+            @include hiidenLastElement;
             .popular{
+                flex-grow: 1;
+                flex-shrink: 1;
                 @include discografy;
+                @include ajustText;
             }
         }
         .discografy__albums{
@@ -605,30 +638,32 @@ main{
             overflow: hidden;
             justify-content: center;
             gap: 0px;
+            @include hiidenLastElement;
             .albums{
+                flex-grow: 1;
+                flex-shrink: 1;
                 @include discografy;
+                @include ajustText;
             }
             
         }
     }
     .withPxndx{
-        margin: 30px auto 30px auto;
+        margin: 20px auto 20px auto ;
         .withPxndx__buttons{
-       @include titleButtons;
+            @include titleButtons;
         }
         .withPxndx__collabs{
             display: flex;
             overflow: hidden;
-            justify-content: center;
+            justify-content: space-evenly;
             gap: 0px;
+            @include hiidenLastElement;
         .collab{
+            flex-grow: 1;
+            flex-shrink: 1;
             @include discografy;
-            figure{
-                width: 170px;
-            }
-            p{
-                width: 170px;
-            }
+            @include ajustText;
         }
         }
        
@@ -642,10 +677,12 @@ main{
         .fansLikes__artist{
             display: flex;
             overflow: hidden;
-            justify-content: center;
+            justify-content: space-evenly;
             gap: 7px;
+            @include hiidenLastElement;
             .artist{
                 @include discografy;
+                @include ajustText;
                 img:first-of-type{
                     border-radius: 50%;
                 }
@@ -653,17 +690,19 @@ main{
         }
     }
     .displayon{
-        margin: 30px auto 30px auto;
+        margin: 20px auto 20px auto ;
         .displayon__buttons{
             @include titleButtons;
         }
         .displayon__others{
             display: flex;
             overflow: hidden;
-            justify-content: center;
-            gap: 7px;
+            justify-content: space-evenly;
+            gap: 0px;
+            @include hiidenLastElement;
             .other{
                 @include discografy;
+                @include ajustText;
                 .other_caption{
                     text-transform:capitalize;
                   }
@@ -673,7 +712,7 @@ main{
     }
 
     .playlist{
-        margin: 30px auto 30px auto;
+        margin: 20px auto 20px auto ;
         .playlist__buttons{
             @include titleButtons;
             a:last-child{
@@ -684,15 +723,21 @@ main{
             display: flex;
             overflow: hidden;
             justify-content: flex-start;
-            gap: 7px;
+            gap: 0px;
+            @include hiidenLastElement;
             .song{
                 @include discografy;
+                @include ajustText;
+                opacity: 0;
+                &:first-of-type{
+                    opacity: 1;
+                }
             }
             
         }
     }
     .findOn{
-        margin: 30px auto 30px auto;
+        margin: 20px auto 20px auto ;
         .findOn__buttons{
             @include titleButtons;
             a:last-child{
@@ -700,12 +745,14 @@ main{
             }
         }
         .findOn__albums{
+            @include hiidenLastElement;
             display: flex;
             overflow: hidden;
-            justify-content: center;
-            gap: 7px;
+            justify-content: space-evenly;
+            gap: 0px;
             .album{
                 @include discografy;
+                @include ajustText;
                 .other_caption{
                     text-transform:capitalize;
                   }
@@ -723,7 +770,8 @@ main{
                     font-size: 20px;
                 }
                 .about__img{
-                    height: 520px;
+                    transition:  all 0.5s;
+                    height: 516px;
                     background-image: url(https://www.excelsiorcalifornia.com/wp-content/uploads/migration/2011/201101/lfe6b7-lfe6aypanda3.jpg?w=879);
                     background-size: cover; 
                     background-position: center 4%; 
@@ -745,7 +793,8 @@ main{
                     p{
                         color: $whiteLight;
                         text-align: justify;
-                        width: 655px;
+                        width: 75%;
+                        min-width: 325px;
                         max-height: 70px;
                         line-height: 25px;
                         display: -webkit-box;
@@ -773,136 +822,162 @@ main{
                 }
                 .articlesPromotion__content{
                     @include promotion;
-                    }
+                    
+
+                }
                 }
             }
     //experimentación con Blackbox//
-            .aboutLinks{
-                
-                h2{
-                    color: $whiteLight;
-                    font-size: 1rem;
-                }
-                ul{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 15px;
-                    list-style-type: none;
-                    padding: 0;
-                    justify-content: flex-start;
-                }
-
-            a {
-                color: $white;
-                text-decoration: none;
-                text-wrap: wrap;
-                i{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                img{
-                    width: 20px;
-                }
-            }
-
-            a:hover {
-                text-decoration: underline;
+        .aboutLinks{
+            @include flex--collumn;
+            h2{
                 color: $whiteLight;
+                font-size: 1rem;
             }
-
-            .social__media {
-                margin-top: 20px;
+            ul{
                 display: flex;
-                gap: 10px;
-                a {
-                    display: flex;
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    background-color: rgb(51, 51, 51);
-                    color: black;
-                    text-align: center;
-                    line-height: 30px;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 3px;
-                    &, i{
-                        opacity: 1 !important;
-                    }
-                    &:hover {
-                        background-color: #686868;
-                        transition: all 0s;
-                    }
-                }
+                flex-direction: column;
+                gap: 15px;
+                list-style-type: none;
+                padding: 0;
+                justify-content: flex-start;
             }
 
-            
+        a {
+            color: $white;
+            text-decoration: none;
+            text-wrap: wrap;
+            i{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            img{
+                width: 20px;
+            }
+        }
 
-            
-            }
-            .lastLinks{
-                .footer__links{
-                    @include footerLastLinks;
+        a:hover {
+            text-decoration: underline;
+            color: $whiteLight;
+        }
+
+        .social__media {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+            a {
+                display: flex;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: rgb(51, 51, 51);
+                color: black;
+                text-align: center;
+                line-height: 30px;
+                justify-content: center;
+                align-items: center;
+                padding: 3px;
+                &, i{
+                    opacity: 1 !important;
                 }
-                .copyright {
-                    margin-left: 160px;
+                &:hover {
+                    background-color: #686868;
+                    transition: all 0s;
                 }
             }
+        }
+
+        
+
+        
+        }
+        .lastLinks{
+            display: flex;
+            display: flex;
+            flex-flow: column wrap;
+            -webkit-box-pack: justify;
+            justify-content: space-between;
+            padding-top: 16px;
+            width: 56vw;
+            font-size: 1.1rem;
+            .footer__links{
+                @include footerLastLinks;
+                line-height: 30px;
+            }
+            .copyright {
+                text-wrap: nowrap;
+            }
+        }
 
         }
        
 }
 
 .rigthSide{
-    .amentes__Song{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        height: 57px;
-        gap: 225px;
-        margin: 0px;
-        width: 380px;
-        position: relative;
-        .actualSong__buttons{
-            @include titleButtons;
-            &:first-child{
-                .button__title{
-                    font-size: 1rem;
-                    font-weight: bold;
-            }
-            }
-            &:last-child{
+    .aside__header{
+        width: 98%;
+        .amentes__Song{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 57px;
+            padding: 0px 10px;
+            margin: 0px;
+            width: 98%;
+            position: relative;
+            gap: 25%;
+            .actualSong__buttons{
                 display: flex;
-                flex-direction: row;
-                gap: 20px;
-                img {
-                    scale: .8;
-                    cursor: pointer;
+                width: 100%;
+                justify-content: space-evenly;
+                @include titleButtons;
+                &:first-child{
+                    width: fit-content;
+                    .button__title{
+                        font-size: 1rem;
+                        font-weight: bold;
                 }
+                }
+                &:last-child{
+                    display: flex;
+                    width: fit-content;
+                    flex-direction: row;
+                    gap: 20px;
+                    img {
+                        scale: .8;
+                        cursor: pointer;
+                    }
+                }
+            
             }
-        
         }
     }
     .content__scrollable{
-        width: 382px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        width: 94%;
         box-sizing: border-box;
-        height: 720px;
-        overflow: hidden;
+        height: 95%;
         overflow-y: scroll;
+        overflow-x: hidden;
         @include scrollBar;
         overscroll-behavior: none;
         box-sizing: border-box;
+        
     /*Secciones de contenido*/
     .amentesSunt{
         display: flex;
+        width: 100%;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         position: relative;
-        
         .amentes__img{
             display: flex;
+            width: 100%;
             flex-direction: column;
             align-items: flex-end;
             padding: 0;
@@ -911,10 +986,11 @@ main{
                 flex-direction: column;
                 padding: 0;
                 margin: 0;
-                width: 375px;
+                width: 100%;
                 align-items: flex-start;
                 .img__portade{
-                    width: 375px;
+                    width: 100%;
+                    height: auto;
                     border-radius: $radius;
                 }
                 .img__title{
@@ -961,11 +1037,13 @@ main{
             }
     }
     .about__artist{
-        width: 375px;
+        width: 100%;
+        width: auto;
+        display: flex;
+        flex-direction: column;
         margin: 20px auto;
         background-color: #181818;
         border-radius: 10px;
-        overflow: hidden;
         .artist__photo{
             display: flex;
             justify-content: flex-start;
@@ -985,16 +1063,39 @@ main{
         }
         .artist__descript {
             padding: 20px;
-            height: 130px;
+            height: max-content;
+            padding-bottom: 11%;
             h3 {
                 margin: 10px 0;
                 font-size: 16px;
                 color: #ffffff;
             }
-            .artist__ear{
-                font-size: 16px;
-                color: #b3b3b3;
-                margin-bottom: 0;
+            div{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 60%;
+                .artist__ear{
+                    font-size: 16px;
+                    color: #b3b3b3;
+                    margin-bottom: 0;
+                    width: 71%;
+                    overflow: hidden;
+                    text-wrap: wrap;
+                }
+                button {
+                    padding: 7px 14px;
+                    color: #ffffff;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    margin: 0;
+                    height: 30px;
+                    background-color: transparent;
+                    border: 1px solid #464646;
+                    font-weight: bold;
+                    text-wrap: nowrap;
+                }
             }
             .artist__text {
                 font-size: 13px;
@@ -1015,58 +1116,45 @@ main{
                 text-overflow: ellipsis;
                 
             }
-            button {
-                position: relative;
-                left: 220px;
-                bottom: 25px;
-                display: inline-block;
-                padding: 7px 14px;
-                color: #ffffff;
-                border-radius: 20px;
-                cursor: pointer;
-                font-size: 14px;
-                margin: 0;
-                height: 30px;
-                background-color: transparent;
-                border: 1px solid #464646;
-                font-weight: bold;
-                
-            }
+            
             
         }
         
     }
     .credits{
-        width: 375px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
         margin: 20px auto;
         background-color: #181818;
         border-radius: 10px;
-        overflow: hidden;
         .credits__title{
             display: flex;
+            width: 90%;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
             flex-wrap: nowrap;
             h3{
                 color: $whiteLight;
-                padding-left: 25px;
                 font-size: 1.1rem;
+                text-align: center;
             }
             a{
                 color: $whiteLight;
                 text-decoration: none;
-                padding-right: 25px;
                 font-size: 1rem;
+                text-align: center;
             }
         }
         .credits__band{
             display: flex;
+            width: 90%;
             flex-direction: row;
             color: $whiteLight;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            gap: 50px;
             h3{
                 margin-bottom: 5px;
             }
@@ -1086,6 +1174,7 @@ main{
                 background-color: transparent;
                 border: 1px solid #464646;
                 font-weight: bold;
+                text-wrap: nowrap;
             }
             .button:hover {
                 scale: 1.2;
@@ -1094,14 +1183,17 @@ main{
     }
     .articlesPromotion{
         @include promotion;
-        width: 335px;
+        width: 100%;
+        display: flex;
+        align-items: center;
         height: auto;
         margin: 20px auto;
         background-color: #181818;
         border-radius: 10px;
-        overflow: hidden;
-        padding: 20px;
+        padding: 20px 0;
         h5{
+            width: fit-content;
+
             margin: 0px;
             font-size: 1.1rem;
             color: $whiteLight;
@@ -1109,7 +1201,7 @@ main{
         div{
         overflow: hidden;
         .promotion__text{
-            width: 230px;
+            width: 100%;
             text-overflow: ellipsis;
             font-weight: normal;
         }
@@ -1118,30 +1210,36 @@ main{
 
     .next{
         @include promotion;
-        width: 335px;
+        width: 100%;
         height: auto;
         margin: 20px auto;
         background-color: #181818;
         border-radius: 10px;
-        overflow: hidden;
-        padding: 20px;
+        padding: 20px 0;
+        justify-content: center;
+        align-items: center;
         .next__title{
             display: flex;
+            width: 90%;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: flex-start;
             align-items: center;
-            gap: 10px;
             text-wrap: nowrap;
             color: $whiteLight;
-            gap: 20px;
+
             h3{
+                width: 80%;
                 font-size: 15px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                flex-shrink: 2.5;
             }
             a{
                 color: $whiteLight;
                 font-size: 14px;
                 text-decoration: none;
                 opacity: 1 !important;
+                flex-shrink: 1;
                 &:hover{
                     text-decoration: underline;
                     scale: 1.05;
@@ -1150,15 +1248,16 @@ main{
             }
         }
         .next__song{
-            width: 340px;
+            width: 90%;
             display: flex;
             flex-direction: row;
-            justify-content: flex-start;
+            justify-content: space-around;
             align-items: center;
             gap: 10px;
             padding: 10px;
             border-radius: $radius;
             cursor: pointer;
+            overflow: hidden;
             img{
                 width: 55px;
                 height: 55px;
@@ -1174,16 +1273,21 @@ main{
                 opacity: 0;
             }
             div{
+                width: 1102%;
                 gap: 15px;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: center;
                 gap: 5px;
+                overflow: hidden;
                 h4{
                     margin: 0;
                     color: $whiteLight;
                     text-wrap: nowrap;
+                    width: 110%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 p{
                     margin: 0;
@@ -1228,11 +1332,14 @@ main{
             
         }
     }
-    }
     &:hover{
-        
+        padding-left: -7px;
+    }
+    }
+    
+    &:hover{
         .content__scrollable{
-            padding-left: 5px;
+            
             .amentesSunt{
                 .amentes__img{
                     .img__icons{
@@ -1252,7 +1359,7 @@ main{
 .controls{
     .actualSong{
         .actualSong__song{
-            width: 340px;
+            width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -1263,15 +1370,21 @@ main{
                 border-radius: 5px;
             }
             div{
+                width: 50%;
                 gap: 15px;
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 justify-content: center;
                 gap: 5px;
+                overflow: hidden;
                 h4{
+                    width: 100%;
                     margin: 0;
                     color: $whiteLight;
+                    text-wrap: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 p{
                     margin: 0;
@@ -1338,7 +1451,8 @@ main{
                 color: $white;
             }
             .reproduction__range{
-                width: 65%;
+                width: 80%;
+                min-width: 20px;
                @include inputRange;
 
             }
@@ -1347,12 +1461,14 @@ main{
 
     }
     .settings{
+        scale: 0.85;
         i{
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 10px;        
+            gap: 10px;
+                    
             img{
                 width: 25px;
                 height: 25px;
@@ -1360,6 +1476,11 @@ main{
             .setting__range{
                 width: 65%;
                 @include inputRange;
+            }
+            &:nth-of-type(5){
+                width: 100%;
+                min-width: 25%;
+            
             }
         }
 
@@ -1378,13 +1499,35 @@ main{
 }
 
 // ---------------Media querys
-@media (max-width: 1010px) {
+@media (max-width: 1127px){
+    main{
+        .content{
+            .songs{
+                .song__1{
+                    .song__name{
+                        width: 80%;
+                        .song__title{
+                            width: 26vw;
+                        }
+                    }
+                    .song__heared{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1007px) {
+
     header{
 
         .home{
             margin-top: 10px;
             margin-left: 12px;
-            width: 80px;
+            width: 60px;
             align-items: center;
             scale: 1.2;
             border-radius: $radius $radius 0 0 ;
@@ -1402,7 +1545,7 @@ main{
         }
         .nav{
             border-radius: 0 0;
-            width: 95px;
+            width: 73px;
             .menu{
                 justify-content: center;
                 i{
@@ -1435,7 +1578,7 @@ main{
         }
         .playlist{
             border-radius: 0 0 $radius $radius;
-            width: 95px;
+            width: 72px;
             height: 627px;
             display: flex;
             flex-direction: column;
@@ -1457,7 +1600,56 @@ main{
             }
         }
     }
+    main{
+        .content{
+            .songs{
+                .song__1{
+                    .song__name{
+                        width: 55%;
+                        .song__title{
+                            width: 26vw;
+                        }
+                    }
+                    .song__heared{
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
 }
+
+@media (max-width: 920px){
+    main{
+        .content{
+            .songs{
+                .song__1{
+                    .song__name{
+                        width: 65%;
+                        .song__title{
+                            width: 26vw;
+                        }
+                    }
+                    .song__heared{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .footer{
+            .about{
+                .lastLinks{
+                    @include wrap-if-narrow(992px);
+                    .footer__links{
+                       justify-content: flex-start;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 
 

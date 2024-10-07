@@ -27,6 +27,120 @@ $fontBold: bold;
     background-color: #393939;
 }
 
+//----------Funciones
+ /* @mixin wrap-if-narrow($width, $max-width) {
+    @if $width < $max-width {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  }*/
+
+//---------mixins media query
+@mixin hiidenLastElement{
+    @media (max-width: 1515px) {
+        div:nth-child(5){
+            display: none;
+        }
+    }
+    @media (max-width:1326px){
+        div:nth-child(4){
+            display: none;
+        }
+    }
+    @media (max-width:1139px){
+        div:nth-child(3){
+            display: none;
+        }
+    }
+    @media (max-width:1007px){
+        div:nth-child(3){
+            display: flex;
+        }
+    }
+    @media (max-width:931px){
+        div:nth-child(3){
+            display: none;
+        }
+    }
+        
+}
+
+@mixin flex--collumn{
+    @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@mixin overflow-x{
+    @media (max-width: 845px) {
+        overflow-x: scroll;
+    }
+}
+
+@mixin wrap-if-narrow($max-width) {
+    @media (max-width: $max-width) {
+      flex-direction: column;
+    }
+  }
+
+
+
+//---------Mixins
+@mixin ajustText{
+    @media (max-width: 1515px) {
+        figure{
+            figcaption{
+                max-width: 13vw;
+            }
+        }
+        p{
+            max-width: 12vw;
+        }
+    }
+    @media (max-width:1326px){
+        figure{
+            figcaption{
+                max-width: 15vw;
+            }
+        }
+        p{
+            max-width: 14vw;
+        }
+    }
+    @media (max-width:1139px){
+        figure{
+            figcaption{
+                max-width: 21vw;
+            }
+        }
+        p{
+            max-width: 19vw;
+        }
+    }
+    @media (max-width:1007px){
+        figure{
+            figcaption{
+                max-width: 18vw;
+            }
+        }
+        p{
+            max-width: 15vw;
+        }
+    }
+    @media (max-width:931px){
+        figure{
+            figcaption{
+                max-width: 23vw;
+            }
+        }
+        p{
+            max-width: 22vw;
+        }
+    }
+        
+}
+
 @mixin playlistHover{
     section > i:first-of-type{
         display: none;
@@ -77,7 +191,7 @@ $fontBold: bold;
         display: none;
         z-index: 1;
         transition: all 0.25s;
-        position: relative;
+        position: fixed;
     }
     /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
     &::-webkit-scrollbar {
@@ -86,7 +200,7 @@ $fontBold: bold;
         display: none;
         transition: all 0.25s;
         z-index: 1;
-        position: relative;
+        position: fixed;
     }
 
     /* Estilo del "track" de la barra (fondo de la barra de scroll) */
@@ -97,7 +211,7 @@ $fontBold: bold;
         display: none;
         transition: all 0.25s;
         z-index: 1;
-        position: relative;
+        position: fixed;
     }
 
 
@@ -110,7 +224,7 @@ $fontBold: bold;
         display: none;
         transition: all 0.25s;
         z-index: 1;
-        position: relative;
+        position: fixed;
     }
 
     /* Estilo de la thumb al pasar el ratón por encima */
@@ -142,10 +256,11 @@ $fontBold: bold;
         /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
         &::-webkit-scrollbar {
             width: 7px; /* Ancho de la barra de desplazamiento */
-            opacity: .9;
+            opacity: 0;
             display: block;
             transition: all 0.25s;
             z-index: 1;
+            background: transparent;
             &:hover{
                 scrollbar-color: #b1b1b1 transparent;
                 opacity: .9;
@@ -317,28 +432,41 @@ $fontBold: bold;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     margin: 0px;
     padding: 5px;
     border-radius: $radius;
     box-sizing: border-box;
+    max-width: 269.5px;
+    max-height: 343.5px;
+    gap: 7px;
+    flex-grow: 1;
+    flex-shrink: 1;
     figure{
         display: flex;
         flex-direction: column;
         margin: 0px;
-        width: 170px;
+        width: auto; /* permite que la figura se ajuste automáticamente */
+        height: auto; /* permite que la figura se ajuste automáticamente */
+        overflow: hidden;
+        text-overflow: ellipsis;
         img{
             position: relative;
-            width: 170px;
-            height: 170px;
             border-radius: $radius;
             z-index: 1;
             margin: 0 auto;
+            max-width: 100%; /* establece un ancho máximo del 100% */
+            max-height: 240px; /* establece un alto máximo de 200px */
+            width: auto; /* permite que la imagen se ajuste automáticamente */
+            height: auto; /* permite que la imagen se ajuste automáticamente */
+            object-fit: contain;
         }
         i {
             height: 0px;
             display: flex;
             justify-content: center;
             align-items: center;
+
             img {
                 width: 20px;
                 height: 20px;
@@ -355,10 +483,12 @@ $fontBold: bold;
             }
         }
         figcaption{
+            max-width: 10vw;
+            text-wrap: wrap;
             margin-top: 10px;
             overflow: hidden;
             color: $whiteLight;
-            max-width: 170px;
+            width: auto;
             max-height: 33px;
             overflow: hidden;
             white-space: nowrap;
@@ -366,7 +496,8 @@ $fontBold: bold;
         }
     }
     p{
-        width: 170px;
+        max-width: 10vw;
+        text-wrap: wrap;
         margin-top: 5px;
         max-height: 33px;
         font-size: .8rem;
@@ -374,6 +505,8 @@ $fontBold: bold;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        text-align: left;
+        align-self: flex-start;
     }
     &:hover{
         background-color: #4f4c4c6e;
@@ -441,26 +574,29 @@ $fontBold: bold;
     height: 240px;
     gap: 20px;
     .promotion{
-        width: fit-content;
+        width: 90%;
+        justify-content: space-between;
         border-radius: $radius;
-        gap: 15px;
         @include artist-album(square);
         cursor: pointer;
         padding: 10px;
         img{
             border-radius: 2px;
         }
+        div{
+            width: 70%;
+        }
         h4{
             margin: 0;
             color: $whiteLight;
-            width: 450px;
+            width: 100%;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
         }
         p{
             font-size: .9rem;
-            width: 450px;
+            width: 100%;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
