@@ -208,11 +208,13 @@ main{
     right: 15px;
     overflow: hidden;
     margin: 10px 5px;
-    width: 98%;
+    width: 97%;
 }
 
   .controls{
+    overflow: hidden;
     display: flex;
+    justify-content: space-between;
     grid-area: controls;
     grid-column: 1/4;
     grid-row: 2;
@@ -220,13 +222,12 @@ main{
     color: #fff;
     min-height: 85px;
     font-family: Arial, sans-serif;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    padding: 10px;
+    padding: 10px 0;
     box-sizing: border-box;
     width: 100%;
     min-width: 416px;
     .actualSong{
+        width: 21%;
         grid-column: 1/2;
         background-color: $black;
         display: flex;
@@ -236,6 +237,7 @@ main{
                
     }
     .reproduction{
+        width: 50%;
         grid-column: 2/3;
         background-color: $black;
         display: flex;
@@ -266,7 +268,7 @@ main{
         margin: 0;
         grid-template-rows: 2;
         //grid-template-columns: 9% 54.5% 22%;
-        grid-template-columns: 105px 61% auto;
+        grid-template-columns: 82px 2fr auto;
     }
     header{
         padding-top: 10px;

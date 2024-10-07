@@ -219,11 +219,13 @@ main:hover {
   right: 15px;
   overflow: hidden;
   margin: 10px 5px;
-  width: 98%;
+  width: 97%;
 }
 
 .controls {
+  overflow: hidden;
   display: flex;
+  justify-content: space-between;
   grid-area: controls;
   grid-column: 1/4;
   grid-row: 2;
@@ -231,14 +233,13 @@ main:hover {
   color: #fff;
   min-height: 85px;
   font-family: Arial, sans-serif;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  padding: 10px;
+  padding: 10px 0;
   box-sizing: border-box;
   width: 100%;
   min-width: 416px;
 }
 .controls .actualSong {
+  width: 21%;
   grid-column: 1/2;
   background-color: #000;
   display: flex;
@@ -247,6 +248,7 @@ main:hover {
   align-items: baseline;
 }
 .controls .reproduction {
+  width: 50%;
   grid-column: 2/3;
   background-color: #000;
   display: flex;
@@ -273,7 +275,7 @@ main:hover {
     display: grid;
     margin: 0;
     grid-template-rows: 2;
-    grid-template-columns: 105px 61% auto;
+    grid-template-columns: 82px 2fr auto;
   }
   header {
     padding-top: 10px;
@@ -1349,10 +1351,10 @@ main .discografy .discografy__popular .popular:hover i img:hover {
 }
 @media (max-width: 1326px) {
   main .discografy .discografy__popular .popular figure figcaption {
-    max-width: 17vw;
+    max-width: 15vw;
   }
   main .discografy .discografy__popular .popular p {
-    max-width: 16vw;
+    max-width: 14vw;
   }
 }
 @media (max-width: 1139px) {
@@ -1360,23 +1362,23 @@ main .discografy .discografy__popular .popular:hover i img:hover {
     max-width: 21vw;
   }
   main .discografy .discografy__popular .popular p {
-    max-width: 21vw;
+    max-width: 19vw;
   }
 }
 @media (max-width: 1007px) {
   main .discografy .discografy__popular .popular figure figcaption {
-    max-width: 17vw;
+    max-width: 18vw;
   }
   main .discografy .discografy__popular .popular p {
-    max-width: 16vw;
+    max-width: 15vw;
   }
 }
 @media (max-width: 931px) {
   main .discografy .discografy__popular .popular figure figcaption {
-    max-width: 25vw;
+    max-width: 23vw;
   }
   main .discografy .discografy__popular .popular p {
-    max-width: 25vw;
+    max-width: 22vw;
   }
 }
 main .discografy .discografy__albums {
@@ -1516,10 +1518,10 @@ main .discografy .discografy__albums .albums:hover i img:hover {
 }
 @media (max-width: 1326px) {
   main .discografy .discografy__albums .albums figure figcaption {
-    max-width: 17vw;
+    max-width: 15vw;
   }
   main .discografy .discografy__albums .albums p {
-    max-width: 16vw;
+    max-width: 14vw;
   }
 }
 @media (max-width: 1139px) {
@@ -1527,23 +1529,23 @@ main .discografy .discografy__albums .albums:hover i img:hover {
     max-width: 21vw;
   }
   main .discografy .discografy__albums .albums p {
-    max-width: 21vw;
+    max-width: 19vw;
   }
 }
 @media (max-width: 1007px) {
   main .discografy .discografy__albums .albums figure figcaption {
-    max-width: 17vw;
+    max-width: 18vw;
   }
   main .discografy .discografy__albums .albums p {
-    max-width: 16vw;
+    max-width: 15vw;
   }
 }
 @media (max-width: 931px) {
   main .discografy .discografy__albums .albums figure figcaption {
-    max-width: 25vw;
+    max-width: 23vw;
   }
   main .discografy .discografy__albums .albums p {
-    max-width: 25vw;
+    max-width: 22vw;
   }
 }
 main .withPxndx {
@@ -1706,10 +1708,10 @@ main .withPxndx .withPxndx__collabs .collab:hover i img:hover {
 }
 @media (max-width: 1326px) {
   main .withPxndx .withPxndx__collabs .collab figure figcaption {
-    max-width: 17vw;
+    max-width: 15vw;
   }
   main .withPxndx .withPxndx__collabs .collab p {
-    max-width: 16vw;
+    max-width: 14vw;
   }
 }
 @media (max-width: 1139px) {
@@ -1717,23 +1719,23 @@ main .withPxndx .withPxndx__collabs .collab:hover i img:hover {
     max-width: 21vw;
   }
   main .withPxndx .withPxndx__collabs .collab p {
-    max-width: 21vw;
+    max-width: 19vw;
   }
 }
 @media (max-width: 1007px) {
   main .withPxndx .withPxndx__collabs .collab figure figcaption {
-    max-width: 17vw;
+    max-width: 18vw;
   }
   main .withPxndx .withPxndx__collabs .collab p {
-    max-width: 16vw;
+    max-width: 15vw;
   }
 }
 @media (max-width: 931px) {
   main .withPxndx .withPxndx__collabs .collab figure figcaption {
-    max-width: 25vw;
+    max-width: 23vw;
   }
   main .withPxndx .withPxndx__collabs .collab p {
-    max-width: 25vw;
+    max-width: 22vw;
   }
 }
 main .fansLikes {
@@ -1894,10 +1896,10 @@ main .fansLikes .fansLikes__artist .artist:hover i img:hover {
 }
 @media (max-width: 1326px) {
   main .fansLikes .fansLikes__artist .artist figure figcaption {
-    max-width: 17vw;
+    max-width: 15vw;
   }
   main .fansLikes .fansLikes__artist .artist p {
-    max-width: 16vw;
+    max-width: 14vw;
   }
 }
 @media (max-width: 1139px) {
@@ -1905,23 +1907,23 @@ main .fansLikes .fansLikes__artist .artist:hover i img:hover {
     max-width: 21vw;
   }
   main .fansLikes .fansLikes__artist .artist p {
-    max-width: 21vw;
+    max-width: 19vw;
   }
 }
 @media (max-width: 1007px) {
   main .fansLikes .fansLikes__artist .artist figure figcaption {
-    max-width: 17vw;
+    max-width: 18vw;
   }
   main .fansLikes .fansLikes__artist .artist p {
-    max-width: 16vw;
+    max-width: 15vw;
   }
 }
 @media (max-width: 931px) {
   main .fansLikes .fansLikes__artist .artist figure figcaption {
-    max-width: 25vw;
+    max-width: 23vw;
   }
   main .fansLikes .fansLikes__artist .artist p {
-    max-width: 25vw;
+    max-width: 22vw;
   }
 }
 main .fansLikes .fansLikes__artist .artist img:first-of-type {
@@ -2085,10 +2087,10 @@ main .displayon .displayon__others .other:hover i img:hover {
 }
 @media (max-width: 1326px) {
   main .displayon .displayon__others .other figure figcaption {
-    max-width: 17vw;
+    max-width: 15vw;
   }
   main .displayon .displayon__others .other p {
-    max-width: 16vw;
+    max-width: 14vw;
   }
 }
 @media (max-width: 1139px) {
@@ -2096,23 +2098,23 @@ main .displayon .displayon__others .other:hover i img:hover {
     max-width: 21vw;
   }
   main .displayon .displayon__others .other p {
-    max-width: 21vw;
+    max-width: 19vw;
   }
 }
 @media (max-width: 1007px) {
   main .displayon .displayon__others .other figure figcaption {
-    max-width: 17vw;
+    max-width: 18vw;
   }
   main .displayon .displayon__others .other p {
-    max-width: 16vw;
+    max-width: 15vw;
   }
 }
 @media (max-width: 931px) {
   main .displayon .displayon__others .other figure figcaption {
-    max-width: 25vw;
+    max-width: 23vw;
   }
   main .displayon .displayon__others .other p {
-    max-width: 25vw;
+    max-width: 22vw;
   }
 }
 main .displayon .displayon__others .other .other_caption {
@@ -2280,10 +2282,10 @@ main .playlist .playlist__song .song:hover i img:hover {
 }
 @media (max-width: 1326px) {
   main .playlist .playlist__song .song figure figcaption {
-    max-width: 17vw;
+    max-width: 15vw;
   }
   main .playlist .playlist__song .song p {
-    max-width: 16vw;
+    max-width: 14vw;
   }
 }
 @media (max-width: 1139px) {
@@ -2291,23 +2293,23 @@ main .playlist .playlist__song .song:hover i img:hover {
     max-width: 21vw;
   }
   main .playlist .playlist__song .song p {
-    max-width: 21vw;
+    max-width: 19vw;
   }
 }
 @media (max-width: 1007px) {
   main .playlist .playlist__song .song figure figcaption {
-    max-width: 17vw;
+    max-width: 18vw;
   }
   main .playlist .playlist__song .song p {
-    max-width: 16vw;
+    max-width: 15vw;
   }
 }
 @media (max-width: 931px) {
   main .playlist .playlist__song .song figure figcaption {
-    max-width: 25vw;
+    max-width: 23vw;
   }
   main .playlist .playlist__song .song p {
-    max-width: 25vw;
+    max-width: 22vw;
   }
 }
 main .playlist .playlist__song .song:first-of-type {
@@ -2474,10 +2476,10 @@ main .findOn .findOn__albums .album:hover i img:hover {
 }
 @media (max-width: 1326px) {
   main .findOn .findOn__albums .album figure figcaption {
-    max-width: 17vw;
+    max-width: 15vw;
   }
   main .findOn .findOn__albums .album p {
-    max-width: 16vw;
+    max-width: 14vw;
   }
 }
 @media (max-width: 1139px) {
@@ -2485,23 +2487,23 @@ main .findOn .findOn__albums .album:hover i img:hover {
     max-width: 21vw;
   }
   main .findOn .findOn__albums .album p {
-    max-width: 21vw;
+    max-width: 19vw;
   }
 }
 @media (max-width: 1007px) {
   main .findOn .findOn__albums .album figure figcaption {
-    max-width: 17vw;
+    max-width: 18vw;
   }
   main .findOn .findOn__albums .album p {
-    max-width: 16vw;
+    max-width: 15vw;
   }
 }
 @media (max-width: 931px) {
   main .findOn .findOn__albums .album figure figcaption {
-    max-width: 25vw;
+    max-width: 23vw;
   }
   main .findOn .findOn__albums .album p {
-    max-width: 25vw;
+    max-width: 22vw;
   }
 }
 main .findOn .findOn__albums .album .other_caption {
@@ -2932,6 +2934,7 @@ main .footer .lastLinks .copyright {
 }
 .rigthSide .content__scrollable .amentesSunt .amentes__img {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: flex-end;
   padding: 0;
@@ -2941,11 +2944,12 @@ main .footer .lastLinks .copyright {
   flex-direction: column;
   padding: 0;
   margin: 0;
-  width: 375px;
+  width: 100%;
   align-items: flex-start;
 }
 .rigthSide .content__scrollable .amentesSunt .amentes__img .img__figure .img__portade {
-  width: 375px;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 .rigthSide .content__scrollable .amentesSunt .amentes__img .img__figure .img__title {
@@ -3015,17 +3019,41 @@ main .footer .lastLinks .copyright {
 }
 .rigthSide .content__scrollable .about__artist .artist__descript {
   padding: 20px;
-  height: 130px;
+  height: -moz-max-content;
+  height: max-content;
+  padding-bottom: 11%;
 }
 .rigthSide .content__scrollable .about__artist .artist__descript h3 {
   margin: 10px 0;
   font-size: 16px;
   color: #ffffff;
 }
-.rigthSide .content__scrollable .about__artist .artist__descript .artist__ear {
+.rigthSide .content__scrollable .about__artist .artist__descript div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 60%;
+}
+.rigthSide .content__scrollable .about__artist .artist__descript div .artist__ear {
   font-size: 16px;
   color: #b3b3b3;
   margin-bottom: 0;
+  width: 71%;
+  overflow: hidden;
+  text-wrap: wrap;
+}
+.rigthSide .content__scrollable .about__artist .artist__descript div button {
+  padding: 7px 14px;
+  color: #ffffff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #464646;
+  font-weight: bold;
+  text-wrap: nowrap;
 }
 .rigthSide .content__scrollable .about__artist .artist__descript .artist__text {
   font-size: 13px;
@@ -3045,30 +3073,18 @@ main .footer .lastLinks .copyright {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.rigthSide .content__scrollable .about__artist .artist__descript button {
-  position: relative;
-  left: 220px;
-  bottom: 25px;
-  display: inline-block;
-  padding: 7px 14px;
-  color: #ffffff;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 14px;
-  margin: 0;
-  height: 30px;
-  background-color: transparent;
-  border: 1px solid #464646;
-  font-weight: bold;
-}
 .rigthSide .content__scrollable .credits {
-  width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   margin: 20px auto;
   background-color: #181818;
   border-radius: 10px;
 }
 .rigthSide .content__scrollable .credits .credits__title {
   display: flex;
+  width: 90%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -3076,22 +3092,22 @@ main .footer .lastLinks .copyright {
 }
 .rigthSide .content__scrollable .credits .credits__title h3 {
   color: #fff;
-  padding-left: 25px;
   font-size: 1.1rem;
+  text-align: center;
 }
 .rigthSide .content__scrollable .credits .credits__title a {
   color: #fff;
   text-decoration: none;
-  padding-right: 25px;
   font-size: 1rem;
+  text-align: center;
 }
 .rigthSide .content__scrollable .credits .credits__band {
   display: flex;
+  width: 90%;
   flex-direction: row;
   color: #fff;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 50px;
 }
 .rigthSide .content__scrollable .credits .credits__band h3 {
   margin-bottom: 5px;
@@ -3112,6 +3128,7 @@ main .footer .lastLinks .copyright {
   background-color: transparent;
   border: 1px solid #464646;
   font-weight: bold;
+  text-wrap: nowrap;
 }
 .rigthSide .content__scrollable .credits .credits__band .button:hover {
   scale: 1.2;
@@ -3122,12 +3139,14 @@ main .footer .lastLinks .copyright {
   justify-content: flex-start;
   height: 240px;
   gap: 20px;
-  width: 335px;
+  width: 100%;
+  display: flex;
+  align-items: center;
   height: auto;
   margin: 20px auto;
   background-color: #181818;
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px 0;
 }
 .rigthSide .content__scrollable .articlesPromotion .promotion {
   width: 90%;
@@ -3191,6 +3210,8 @@ main .footer .lastLinks .copyright {
   opacity: 0.7;
 }
 .rigthSide .content__scrollable .articlesPromotion h5 {
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 0px;
   font-size: 1.1rem;
   color: #fff;
@@ -3199,7 +3220,7 @@ main .footer .lastLinks .copyright {
   overflow: hidden;
 }
 .rigthSide .content__scrollable .articlesPromotion div .promotion__text {
-  width: 230px;
+  width: 100%;
   text-overflow: ellipsis;
   font-weight: normal;
 }
@@ -3209,12 +3230,14 @@ main .footer .lastLinks .copyright {
   justify-content: flex-start;
   height: 240px;
   gap: 20px;
-  width: 98%;
+  width: 100%;
   height: auto;
   margin: 20px auto;
   background-color: #181818;
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
 }
 .rigthSide .content__scrollable .next .promotion {
   width: 90%;
@@ -3279,22 +3302,26 @@ main .footer .lastLinks .copyright {
 }
 .rigthSide .content__scrollable .next .next__title {
   display: flex;
+  width: 90%;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
-  gap: 10px;
   text-wrap: nowrap;
   color: #fff;
-  gap: 20px;
 }
 .rigthSide .content__scrollable .next .next__title h3 {
+  width: 80%;
   font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 2.5;
 }
 .rigthSide .content__scrollable .next .next__title a {
   color: #fff;
   font-size: 14px;
   text-decoration: none;
   opacity: 1 !important;
+  flex-shrink: 1;
 }
 .rigthSide .content__scrollable .next .next__title a:hover {
   text-decoration: underline;
@@ -3302,15 +3329,16 @@ main .footer .lastLinks .copyright {
   transition: all 0s;
 }
 .rigthSide .content__scrollable .next .next__song {
-  width: 340px;
+  width: 90%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   gap: 10px;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  overflow: hidden;
 }
 .rigthSide .content__scrollable .next .next__song img {
   width: 55px;
@@ -3327,17 +3355,22 @@ main .footer .lastLinks .copyright {
   height: 24px;
 }
 .rigthSide .content__scrollable .next .next__song div {
+  width: 1102%;
   gap: 15px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 5px;
+  overflow: hidden;
 }
 .rigthSide .content__scrollable .next .next__song div h4 {
   margin: 0;
   color: #fff;
   text-wrap: nowrap;
+  width: 110%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .rigthSide .content__scrollable .next .next__song div p {
   margin: 0;
@@ -3373,8 +3406,8 @@ main .footer .lastLinks .copyright {
   scale: 1.1;
   transition: 0s;
 }
-.rigthSide:hover .content__scrollable {
-  padding-left: 7px;
+.rigthSide .content__scrollable:hover {
+  padding-left: -7px;
 }
 .rigthSide:hover .content__scrollable .amentesSunt .amentes__img .img__icons #img__link {
   opacity: 1;
@@ -3382,11 +3415,8 @@ main .footer .lastLinks .copyright {
   transition: all 0.4s;
 }
 
-.controls {
-  overflow: hidden;
-}
 .controls .actualSong .actualSong__song {
-  width: 340px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -3398,16 +3428,22 @@ main .footer .lastLinks .copyright {
   border-radius: 5px;
 }
 .controls .actualSong .actualSong__song div {
+  width: 50%;
   gap: 15px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 5px;
+  overflow: hidden;
 }
 .controls .actualSong .actualSong__song div h4 {
+  width: 100%;
   margin: 0;
   color: #fff;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .controls .actualSong .actualSong__song div p {
   margin: 0;
@@ -3467,7 +3503,8 @@ main .footer .lastLinks .copyright {
   color: #c0c0c0;
 }
 .controls .reproduction .reproduction__bar .reproduction__range {
-  width: 65%;
+  width: 80%;
+  min-width: 20px;
   /* Estilo para el rango (la barra) */
   /* Pseudo-clase para el estilo del thumb (círculo que se mueve) en navegadores WebKit (Chrome, Safari, etc.) */
   /* Pseudo-clase para el thumb en Firefox */
@@ -3522,6 +3559,9 @@ main .footer .lastLinks .copyright {
   border-radius: 10px;
   border: none;
   color: transparent; /* Quitar estilos predeterminados */
+}
+.controls .settings {
+  scale: 0.85;
 }
 .controls .settings i {
   display: flex;
@@ -3591,6 +3631,10 @@ main .footer .lastLinks .copyright {
   border: none;
   color: transparent; /* Quitar estilos predeterminados */
 }
+.controls .settings i:nth-of-type(5) {
+  width: 100%;
+  min-width: 25%;
+}
 .controls .settings .setting__devices {
   padding: 0;
   width: 30px;
@@ -3617,7 +3661,7 @@ main .footer .lastLinks .copyright {
   header .home {
     margin-top: 10px;
     margin-left: 12px;
-    width: 80px;
+    width: 60px;
     align-items: center;
     scale: 1.2;
     border-radius: 10px 10px 0 0;
@@ -3635,7 +3679,7 @@ main .footer .lastLinks .copyright {
   }
   header .nav {
     border-radius: 0 0;
-    width: 95px;
+    width: 73px;
   }
   header .nav .menu {
     justify-content: center;
@@ -3668,7 +3712,7 @@ main .footer .lastLinks .copyright {
   }
   header .playlist {
     border-radius: 0 0 10px 10px;
-    width: 95px;
+    width: 72px;
     height: 627px;
     display: flex;
     flex-direction: column;
