@@ -39,6 +39,8 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   grid-area: header;
   overflow: hidden;
@@ -197,9 +199,6 @@ main .footer .about .lastLinks .footer__links {
 }
 main .footer .about .lastLinks .copyright {
   flex-grow: 1;
-}
-main:hover {
-  width: calc(100% + 7px);
 }
 
 .rigthSide {
@@ -387,133 +386,74 @@ header .nav .options .options__list img {
 header .playlist {
   overflow-y: scroll;
   overflow-x: hidden;
-  /*Estilos para la escroll bar*/
   /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
   /* Estilo del "track" de la barra (fondo de la barra de scroll) */
   /* Estilo de la "thumb" (la parte que se mueve) */
   /* Estilo de la thumb al pasar el ratón por encima */
   height: 100%;
 }
-header .playlist -webkit-scrollbar {
-  /* Firefox scrollbar */
-  scrollbar-width: thin; /* Opción: auto, thin */
-  scrollbar-color: #888 transparent; /* thumb color y track color */
-  opacity: 0;
-  display: none;
-  z-index: 1;
-  transition: all 0.25s;
-  position: fixed;
-}
 header .playlist::-webkit-scrollbar {
-  width: 5px; /* Ancho de la barra de desplazamiento */
+  position: absolute;
+  width: 10px;
+  height: 319px;
+  right: 10px;
+  top: 0px;
+  background: transparent;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  text-shadow: none !important;
+  order: 0 solid #e5e7eb;
+  box-sizing: border-box;
   opacity: 0;
-  display: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-  position: fixed;
+  -webkit-transition: all 0.3s !important;
+  transition: all 0.3s !important;
 }
 header .playlist::-webkit-scrollbar-track {
-  background: transparent; /* Color del track */
-  border-radius: 6px; /* Bordes redondeados */
+  position: absolute;
+  width: 10px;
+  height: 319px;
+  right: 10px;
+  top: 0px;
+  background: transparent;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  text-shadow: none !important;
+  order: 0 solid #e5e7eb;
+  box-sizing: border-box;
   opacity: 0;
-  display: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-  position: fixed;
+  -webkit-transition: all 0.3s !important;
+  transition: all 0.3s !important;
 }
 header .playlist::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color de la thumb */
-  border-radius: 6px; /* Bordes redondeados */
-  border: 3px solid transparent; /* Espacio alrededor de la thumb */
-  opacity: 0;
-  display: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-  position: fixed;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  right: 10px;
+  width: 10px;
+  transform: translate3d(0px, 0px, 0px);
+  contain: strict;
+  height: 58px;
+  text-shadow: none !important;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  background: transparent;
+  -webkit-transition: all 0.3s !important;
+  transition: all 0.3s !important;
 }
 header .playlist::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Cambia el color al pasar el ratón */
-  opacity: 0.9;
-  display: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
+  background: hsla(0, 0%, 55%, 0.827); /* Cambia el color al pasar el ratón */
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 header .playlist:hover {
-  /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
-  /* Estilo del "track" de la barra (fondo de la barra de scroll) */
-  /* Estilo de la "thumb" (la parte que se mueve) */
-  /* Estilo de la thumb al pasar el ratón por encima */
+  transition-delay: 0.5s; /* Agregamos un retraso de 0.5 segundos */
 }
-header .playlist:hover -webkit-scrollbar {
-  /* Firefox scrollbar */
-  scrollbar-width: thin; /* Opción: auto, thin */
-  scrollbar-color: #888 transparent; /* thumb color y track color */
-  opacity: 0.9;
-  display: block;
-  z-index: 0;
-  transition: all 0.25s;
-  z-index: 1;
-}
-header .playlist:hover -webkit-scrollbar:hover {
-  scrollbar-color: #b1b1b1 transparent;
-  opacity: 0.9;
-  transition: all 0.25s;
-  z-index: 1;
-}
-header .playlist:hover::-webkit-scrollbar {
-  width: 7px; /* Ancho de la barra de desplazamiento */
-  opacity: 0;
-  display: block;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-  background: transparent;
-}
-header .playlist:hover::-webkit-scrollbar:hover {
-  scrollbar-color: #b1b1b1 transparent;
-  opacity: 0.9;
-  display: block;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-}
-header .playlist:hover::-webkit-scrollbar-track {
-  background: transparent; /* Color del track */
-  border-radius: 6px; /* Bordes redondeados */
-  opacity: 0.9;
-  display: block;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-}
-header .playlist:hover::-webkit-scrollbar-track:hover {
-  display: block;
-  opacity: 0.9;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-}
-header .playlist:hover::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color de la thumb */
-  border-radius: 6px; /* Bordes redondeados */
-  border: 3px solid transparent; /* Espacio alrededor de la thumb */
-  opacity: 0.9;
-  display: block;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-}
-header .playlist:hover::-webkit-scrollbar-thumb:hover {
-  background-color: #acacac; /* Cambia el color al pasar el ratón */
-  display: block;
-  opacity: 0.9;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
+header .playlist:hover:hover::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 39%, 0.4);
+  -webkit-transition: all 0.5s !important;
+  transition: all 0.5s !important;
+  opacity: 0.7;
+  transition-delay: 0.5s; /* Agregamos un retraso de 0.5 segundos */
 }
 header .playlist section > i:first-of-type {
   display: none;
@@ -597,7 +537,7 @@ header .playlist .favsongs .favsongs__heart {
   display: flex;
   flex-wrap: wrap;
   width: 20px;
-  height: 30px;
+  height: 25px;
   padding: 15px 18px;
   background: linear-gradient(135deg, rgb(61, 0, 227), rgb(150, 150, 189) 70%, rgb(187, 228, 217) 95%);
   border-radius: 10px;
@@ -631,7 +571,7 @@ header .playlist .songsave .songsave__bookmark {
   display: flex;
   flex-wrap: wrap;
   width: 20px;
-  height: 30px;
+  height: 25px;
   padding: 15px 18px;
   background-color: #2d7c4e;
   border-radius: 10px;
@@ -664,8 +604,10 @@ header .playlist .artist {
   align-items: center;
   text-overflow: ellipsis;
 }
-header .playlist .artist img {
-  width: 55px;
+header .playlist .artist > img {
+  box-sizing: border-box;
+  width: 50px !important;
+  height: 50px !important;
   border-radius: 50%;
 }
 header .playlist .artist h4, header .playlist .artist p {
@@ -686,8 +628,10 @@ header .playlist .album {
   align-items: center;
   text-overflow: ellipsis;
 }
-header .playlist .album img {
-  width: 55px;
+header .playlist .album > img {
+  box-sizing: border-box;
+  width: 50px !important;
+  height: 50px !important;
   border-radius: 10px;
 }
 header .playlist .album h4, header .playlist .album p {
@@ -705,7 +649,6 @@ header .playlist .album p {
 
 main {
   z-index: 2;
-  /*Estilos para la escroll bar*/
   /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
   /* Estilo del "track" de la barra (fondo de la barra de scroll) */
   /* Estilo de la "thumb" (la parte que se mueve) */
@@ -713,126 +656,68 @@ main {
   overscroll-behavior: none;
   border-radius: 10px;
 }
-main -webkit-scrollbar {
-  /* Firefox scrollbar */
-  scrollbar-width: thin; /* Opción: auto, thin */
-  scrollbar-color: #888 transparent; /* thumb color y track color */
-  opacity: 0;
-  display: none;
-  z-index: 1;
-  transition: all 0.25s;
-  position: fixed;
-}
 main::-webkit-scrollbar {
-  width: 5px; /* Ancho de la barra de desplazamiento */
+  position: absolute;
+  width: 10px;
+  height: 319px;
+  right: 10px;
+  top: 0px;
+  background: transparent;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  text-shadow: none !important;
+  order: 0 solid #e5e7eb;
+  box-sizing: border-box;
   opacity: 0;
-  display: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-  position: fixed;
+  -webkit-transition: all 0.3s !important;
+  transition: all 0.3s !important;
 }
 main::-webkit-scrollbar-track {
-  background: transparent; /* Color del track */
-  border-radius: 6px; /* Bordes redondeados */
+  position: absolute;
+  width: 10px;
+  height: 319px;
+  right: 10px;
+  top: 0px;
+  background: transparent;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  text-shadow: none !important;
+  order: 0 solid #e5e7eb;
+  box-sizing: border-box;
   opacity: 0;
-  display: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-  position: fixed;
+  -webkit-transition: all 0.3s !important;
+  transition: all 0.3s !important;
 }
 main::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color de la thumb */
-  border-radius: 6px; /* Bordes redondeados */
-  border: 3px solid transparent; /* Espacio alrededor de la thumb */
-  opacity: 0;
-  display: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-  position: fixed;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  right: 10px;
+  width: 10px;
+  transform: translate3d(0px, 0px, 0px);
+  contain: strict;
+  height: 58px;
+  text-shadow: none !important;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  background: transparent;
+  -webkit-transition: all 0.3s !important;
+  transition: all 0.3s !important;
 }
 main::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Cambia el color al pasar el ratón */
-  opacity: 0.9;
-  display: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
+  background: hsla(0, 0%, 55%, 0.827); /* Cambia el color al pasar el ratón */
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 main:hover {
-  /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
-  /* Estilo del "track" de la barra (fondo de la barra de scroll) */
-  /* Estilo de la "thumb" (la parte que se mueve) */
-  /* Estilo de la thumb al pasar el ratón por encima */
+  transition-delay: 0.5s; /* Agregamos un retraso de 0.5 segundos */
 }
-main:hover -webkit-scrollbar {
-  /* Firefox scrollbar */
-  scrollbar-width: thin; /* Opción: auto, thin */
-  scrollbar-color: #888 transparent; /* thumb color y track color */
-  opacity: 0.9;
-  display: block;
-  z-index: 0;
-  transition: all 0.25s;
-  z-index: 1;
-}
-main:hover -webkit-scrollbar:hover {
-  scrollbar-color: #b1b1b1 transparent;
-  opacity: 0.9;
-  transition: all 0.25s;
-  z-index: 1;
-}
-main:hover::-webkit-scrollbar {
-  width: 7px; /* Ancho de la barra de desplazamiento */
-  opacity: 0;
-  display: block;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-  background: transparent;
-}
-main:hover::-webkit-scrollbar:hover {
-  scrollbar-color: #b1b1b1 transparent;
-  opacity: 0.9;
-  display: block;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-}
-main:hover::-webkit-scrollbar-track {
-  background: transparent; /* Color del track */
-  border-radius: 6px; /* Bordes redondeados */
-  opacity: 0.9;
-  display: block;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-}
-main:hover::-webkit-scrollbar-track:hover {
-  display: block;
-  opacity: 0.9;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-}
-main:hover::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color de la thumb */
-  border-radius: 6px; /* Bordes redondeados */
-  border: 3px solid transparent; /* Espacio alrededor de la thumb */
-  opacity: 0.9;
-  display: block;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-}
-main:hover::-webkit-scrollbar-thumb:hover {
-  background-color: #acacac; /* Cambia el color al pasar el ratón */
-  display: block;
-  opacity: 0.9;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
+main:hover:hover::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 39%, 0.4);
+  -webkit-transition: all 0.5s !important;
+  transition: all 0.5s !important;
+  opacity: 0.7;
+  transition-delay: 0.5s; /* Agregamos un retraso de 0.5 segundos */
 }
 main .navbar {
   display: flex;
@@ -2585,8 +2470,10 @@ main .footer .about .articlesPromotion .articlesPromotion__content .promotion {
   cursor: pointer;
   padding: 10px;
 }
-main .footer .about .articlesPromotion .articlesPromotion__content .promotion img {
-  width: 55px;
+main .footer .about .articlesPromotion .articlesPromotion__content .promotion > img {
+  box-sizing: border-box;
+  width: 50px !important;
+  height: 50px !important;
   border-radius: 10px;
 }
 main .footer .about .articlesPromotion .articlesPromotion__content .promotion h4, main .footer .about .articlesPromotion .articlesPromotion__content .promotion p {
@@ -2794,7 +2681,6 @@ main .footer .lastLinks .copyright {
   height: 95%;
   overflow-y: scroll;
   overflow-x: hidden;
-  /*Estilos para la escroll bar*/
   /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
   /* Estilo del "track" de la barra (fondo de la barra de scroll) */
   /* Estilo de la "thumb" (la parte que se mueve) */
@@ -2803,126 +2689,68 @@ main .footer .lastLinks .copyright {
   box-sizing: border-box;
   /*Secciones de contenido*/
 }
-.rigthSide .content__scrollable -webkit-scrollbar {
-  /* Firefox scrollbar */
-  scrollbar-width: thin; /* Opción: auto, thin */
-  scrollbar-color: #888 transparent; /* thumb color y track color */
-  opacity: 0;
-  display: none;
-  z-index: 1;
-  transition: all 0.25s;
-  position: fixed;
-}
 .rigthSide .content__scrollable::-webkit-scrollbar {
-  width: 5px; /* Ancho de la barra de desplazamiento */
+  position: absolute;
+  width: 10px;
+  height: 319px;
+  right: 10px;
+  top: 0px;
+  background: transparent;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  text-shadow: none !important;
+  order: 0 solid #e5e7eb;
+  box-sizing: border-box;
   opacity: 0;
-  display: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-  position: fixed;
+  -webkit-transition: all 0.3s !important;
+  transition: all 0.3s !important;
 }
 .rigthSide .content__scrollable::-webkit-scrollbar-track {
-  background: transparent; /* Color del track */
-  border-radius: 6px; /* Bordes redondeados */
+  position: absolute;
+  width: 10px;
+  height: 319px;
+  right: 10px;
+  top: 0px;
+  background: transparent;
+  -webkit-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  text-shadow: none !important;
+  order: 0 solid #e5e7eb;
+  box-sizing: border-box;
   opacity: 0;
-  display: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-  position: fixed;
+  -webkit-transition: all 0.3s !important;
+  transition: all 0.3s !important;
 }
 .rigthSide .content__scrollable::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color de la thumb */
-  border-radius: 6px; /* Bordes redondeados */
-  border: 3px solid transparent; /* Espacio alrededor de la thumb */
-  opacity: 0;
-  display: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-  position: fixed;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  right: 10px;
+  width: 10px;
+  transform: translate3d(0px, 0px, 0px);
+  contain: strict;
+  height: 58px;
+  text-shadow: none !important;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  background: transparent;
+  -webkit-transition: all 0.3s !important;
+  transition: all 0.3s !important;
 }
 .rigthSide .content__scrollable::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Cambia el color al pasar el ratón */
-  opacity: 0.9;
-  display: none;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
+  background: hsla(0, 0%, 55%, 0.827); /* Cambia el color al pasar el ratón */
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .rigthSide .content__scrollable:hover {
-  /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
-  /* Estilo del "track" de la barra (fondo de la barra de scroll) */
-  /* Estilo de la "thumb" (la parte que se mueve) */
-  /* Estilo de la thumb al pasar el ratón por encima */
+  transition-delay: 0.5s; /* Agregamos un retraso de 0.5 segundos */
 }
-.rigthSide .content__scrollable:hover -webkit-scrollbar {
-  /* Firefox scrollbar */
-  scrollbar-width: thin; /* Opción: auto, thin */
-  scrollbar-color: #888 transparent; /* thumb color y track color */
-  opacity: 0.9;
-  display: block;
-  z-index: 0;
-  transition: all 0.25s;
-  z-index: 1;
-}
-.rigthSide .content__scrollable:hover -webkit-scrollbar:hover {
-  scrollbar-color: #b1b1b1 transparent;
-  opacity: 0.9;
-  transition: all 0.25s;
-  z-index: 1;
-}
-.rigthSide .content__scrollable:hover::-webkit-scrollbar {
-  width: 7px; /* Ancho de la barra de desplazamiento */
-  opacity: 0;
-  display: block;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-  background: transparent;
-}
-.rigthSide .content__scrollable:hover::-webkit-scrollbar:hover {
-  scrollbar-color: #b1b1b1 transparent;
-  opacity: 0.9;
-  display: block;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-}
-.rigthSide .content__scrollable:hover::-webkit-scrollbar-track {
-  background: transparent; /* Color del track */
-  border-radius: 6px; /* Bordes redondeados */
-  opacity: 0.9;
-  display: block;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-}
-.rigthSide .content__scrollable:hover::-webkit-scrollbar-track:hover {
-  display: block;
-  opacity: 0.9;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-}
-.rigthSide .content__scrollable:hover::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color de la thumb */
-  border-radius: 6px; /* Bordes redondeados */
-  border: 3px solid transparent; /* Espacio alrededor de la thumb */
-  opacity: 0.9;
-  display: block;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
-}
-.rigthSide .content__scrollable:hover::-webkit-scrollbar-thumb:hover {
-  background-color: #acacac; /* Cambia el color al pasar el ratón */
-  display: block;
-  opacity: 0.9;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  z-index: 1;
+.rigthSide .content__scrollable:hover:hover::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 39%, 0.4);
+  -webkit-transition: all 0.5s !important;
+  transition: all 0.5s !important;
+  opacity: 0.7;
+  transition-delay: 0.5s; /* Agregamos un retraso de 0.5 segundos */
 }
 .rigthSide .content__scrollable .amentesSunt {
   display: flex;
@@ -3159,8 +2987,10 @@ main .footer .lastLinks .copyright {
   cursor: pointer;
   padding: 10px;
 }
-.rigthSide .content__scrollable .articlesPromotion .promotion img {
-  width: 55px;
+.rigthSide .content__scrollable .articlesPromotion .promotion > img {
+  box-sizing: border-box;
+  width: 50px !important;
+  height: 50px !important;
   border-radius: 10px;
 }
 .rigthSide .content__scrollable .articlesPromotion .promotion h4, .rigthSide .content__scrollable .articlesPromotion .promotion p {
@@ -3250,8 +3080,10 @@ main .footer .lastLinks .copyright {
   cursor: pointer;
   padding: 10px;
 }
-.rigthSide .content__scrollable .next .promotion img {
-  width: 55px;
+.rigthSide .content__scrollable .next .promotion > img {
+  box-sizing: border-box;
+  width: 50px !important;
+  height: 50px !important;
   border-radius: 10px;
 }
 .rigthSide .content__scrollable .next .promotion h4, .rigthSide .content__scrollable .next .promotion p {
@@ -3405,9 +3237,6 @@ main .footer .lastLinks .copyright {
 .rigthSide .content__scrollable .next .next__song:hover .song__play:hover {
   scale: 1.1;
   transition: 0s;
-}
-.rigthSide .content__scrollable:hover {
-  padding-left: -7px;
 }
 .rigthSide:hover .content__scrollable .amentesSunt .amentes__img .img__icons #img__link {
   opacity: 1;
@@ -3711,12 +3540,14 @@ main .footer .lastLinks .copyright {
     display: none;
   }
   header .playlist {
+    margin: 0;
+    margin-left: 5px;
+    padding: 0;
     border-radius: 0 0 10px 10px;
-    width: 72px;
-    height: 627px;
+    width: 73px;
+    height: 77%;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
   header .playlist section {
     width: -moz-fit-content;
@@ -3727,9 +3558,6 @@ main .footer .lastLinks .copyright {
   }
   header .playlist section div {
     display: none !important;
-  }
-  header .playlist:hover section {
-    padding-left: 17px;
   }
   main .content .songs .song__1 .song__name {
     width: 55%;
