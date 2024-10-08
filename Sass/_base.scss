@@ -182,129 +182,80 @@ $fontBold: bold;
 }
 
 @mixin scrollBar{
-    /*Estilos para la escroll bar*/
-    -webkit-scrollbar{
-        /* Firefox scrollbar */
-        scrollbar-width: thin; /* Opción: auto, thin */
-        scrollbar-color: #888 transparent; /* thumb color y track color */
-        opacity: 0;
-        display: none;
-        z-index: 1;
-        transition: all 0.25s;
-        position: fixed;
-    }
+    
     /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
     &::-webkit-scrollbar {
-        width: 5px; /* Ancho de la barra de desplazamiento */
+        position: absolute;
+        width: 10px;
+        height: 319px;
+        right: 10px;
+        top: 0px;
+        background: transparent;
+        -webkit-transition: opacity .1s linear;
+        transition: opacity .1s linear;
+        text-shadow: none !important;
+        order: 0 solid #e5e7eb;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
         opacity: 0;
-        display: none;
-        transition: all 0.25s;
-        z-index: 1;
-        position: fixed;
+        transition: all 0.3s !important;       
     }
 
     /* Estilo del "track" de la barra (fondo de la barra de scroll) */
     &::-webkit-scrollbar-track {
-        background: transparent; /* Color del track */
-        border-radius: 6px;   /* Bordes redondeados */
+        position: absolute;
+        width: 10px;
+        height: 319px;
+        right: 10px;
+        top: 0px;
+        background: transparent;
+        -webkit-transition: opacity .1s linear;
+        transition: opacity .1s linear;
+        text-shadow: none !important;
+        order: 0 solid #e5e7eb;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
         opacity: 0;
-        display: none;
-        transition: all 0.25s;
-        z-index: 1;
-        position: fixed;
+        transition: all 0.3s !important;
     }
 
 
     /* Estilo de la "thumb" (la parte que se mueve) */
     &::-webkit-scrollbar-thumb {
-        background-color: #888; /* Color de la thumb */
-        border-radius: 6px;     /* Bordes redondeados */
-        border: 3px solid transparent; /* Espacio alrededor de la thumb */
-        opacity: 0;
-        display: none;
-        transition: all 0.25s;
-        z-index: 1;
-        position: fixed;
+        position: absolute;
+        top: 10px;
+        left: 0px;
+        right: 10px;
+        width: 10px;
+        transform: translate3d(0px, 0px, 0px);
+        contain: strict;
+        height: 58px;
+        text-shadow: none !important;
+        border: 0 solid #e5e7eb;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        background: transparent;
+        transition: all 0.3s !important;
     }
 
     /* Estilo de la thumb al pasar el ratón por encima */
     &::-webkit-scrollbar-thumb:hover {
-        background-color: #555; /* Cambia el color al pasar el ratón */
-        opacity: .9;
-        display: none;
-        transition: all 0.25s;
-        z-index: 1;
+        background: hsla(0, 0%, 55%, 0.827);/* Cambia el color al pasar el ratón */
+        transition: all 0.3s;
     }
     //---------------------------------
     &:hover{
-        -webkit-scrollbar{
-            /* Firefox scrollbar */
-            scrollbar-width: thin; /* Opción: auto, thin */
-            scrollbar-color: #888 transparent; /* thumb color y track color */
-            opacity: .9;
-            display: block;
-            z-index: 0;
-            transition: all 0.25s;
-            z-index: 1;
-            &:hover{
-                scrollbar-color: #b1b1b1 transparent;
-                opacity: .9;
-                transition: all 0.25s;
-                z-index: 1;
+        &:hover{
+            &::-webkit-scrollbar-thumb {
+                background-color: hsla(0, 0%, 39%, .4);
+                transition: all 0.5s !important;
+                opacity: .7;
+                transition-delay: 0.5s; /* Agregamos un retraso de 0.5 segundos */
             }
+            
         }
-        /* Estilizando la barra de desplazamiento (para navegadores WebKit) */
-        &::-webkit-scrollbar {
-            width: 7px; /* Ancho de la barra de desplazamiento */
-            opacity: 0;
-            display: block;
-            transition: all 0.25s;
-            z-index: 1;
-            background: transparent;
-            &:hover{
-                scrollbar-color: #b1b1b1 transparent;
-                opacity: .9;
-                display: block;
-                transition: all 0.25s;
-                z-index: 1;
-            }
-        }
-
-        /* Estilo del "track" de la barra (fondo de la barra de scroll) */
-        &::-webkit-scrollbar-track {
-            background: transparent; /* Color del track */
-            border-radius: 6px;   /* Bordes redondeados */
-            opacity: .9;
-            display: block;
-            transition: all 0.25s;
-            z-index: 1;
-            &:hover{
-                display: block;
-                opacity: .9;
-                transition: all 0.25s;
-                z-index: 1;
-            }
-        }
-        /* Estilo de la "thumb" (la parte que se mueve) */
-    &::-webkit-scrollbar-thumb {
-        background-color: #888; /* Color de la thumb */
-        border-radius: 6px;     /* Bordes redondeados */
-        border: 3px solid transparent; /* Espacio alrededor de la thumb */
-        opacity: .9;
-        display: block;
-        transition: all 0.25s;
-        z-index: 1;
-    }
-
-    /* Estilo de la thumb al pasar el ratón por encima */
-    &::-webkit-scrollbar-thumb:hover {
-        background-color: #acacac; /* Cambia el color al pasar el ratón */
-        display: block;
-        opacity: .9;
-        transition: all 0.25s;
-        z-index: 1;
-    }
-    }
+        transition-delay: 0.5s; /* Agregamos un retraso de 0.5 segundos */
+    }   
 }
 
 @mixin inputRange {
@@ -404,8 +355,10 @@ $fontBold: bold;
     align-items: center;
     text-overflow: ellipsis;
     
-    img{
-        width: 55px;
+    & > img{
+        box-sizing: border-box;
+        width: 50px !important;
+        height: 50px !important;
         @if $shape == circle{  
             border-radius: 50%;
         } @else{

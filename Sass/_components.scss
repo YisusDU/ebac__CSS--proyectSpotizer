@@ -150,7 +150,7 @@ header{
             display: flex;
             flex-wrap: wrap;
             width: 20px;
-            height: 30px;
+            height: 25px;
             padding: 15px 18px;
             background: linear-gradient(135deg, rgb(61 0 227), rgb(150 150 189) 70%, rgb(187, 228, 217) 95%);        border-radius: $radius;
             align-items: center;
@@ -185,7 +185,7 @@ header{
                 display: flex;
                 flex-wrap: wrap;
                 width: 20px;
-                height: 30px;
+                height: 25px;
                 padding: 15px 18px;
                 background-color: #2d7c4e;
                 border-radius: $radius;
@@ -223,6 +223,7 @@ header{
             @include artist-album(square);
         }
     }
+    
 }
 
 
@@ -911,7 +912,7 @@ main{
         }
 
         }
-       
+        
 }
 
 .rigthSide{
@@ -1332,12 +1333,11 @@ main{
             
         }
     }
-    &:hover{
-        padding-left: -7px;
-    }
+    
     }
     
     &:hover{
+        
         .content__scrollable{
             
             .amentesSunt{
@@ -1577,12 +1577,14 @@ main{
             }
         }
         .playlist{
+            margin: 0;
+            margin-left: 5px;
+            padding: 0;
             border-radius: 0 0 $radius $radius;
-            width: 72px;
-            height: 627px;
+            width: 73px;
+            height: 77%;
             display: flex;
             flex-direction: column;
-            align-items: center;
             section{
                 width: fit-content;
                 display: flex !important;
@@ -1593,11 +1595,7 @@ main{
                     display: none !important;
                 }
             }
-            &:hover{
-                section{
-                    padding-left: 17px;
-                }
-            }
+           
         }
     }
     main{

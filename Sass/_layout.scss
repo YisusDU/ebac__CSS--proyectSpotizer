@@ -22,6 +22,8 @@ body{
 }
 
 header{
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
     grid-area: header;
     overflow: hidden;
@@ -185,9 +187,7 @@ main{
             }
         }
       }
-      &:hover{
-        width: calc(100% + 7px);
-      }
+      
 }
 
 //----------Aside
