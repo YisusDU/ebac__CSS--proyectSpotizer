@@ -15,11 +15,14 @@ body{
             }
         }
     }
+   
     button:hover{
-        scale: 1.05;
-        transition: .5s;
-        color: $whiteLight !important;
+    scale: 1.05;
+    transition: .5s;
+    color: $whiteLight !important;
     }
+    
+    
     
 }
 
